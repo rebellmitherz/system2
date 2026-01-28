@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategie-Finder | Rebell mit Herz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        /* Zusätzliche Styles für die Elemente */
+        .wait-text {
+            color: #d32f2f; 
+            font-weight: 900; 
+            font-size: 1.4rem; 
+            margin-top: 15px; 
+            margin-bottom: 5px;
+            display: none; 
+        }
+        .offer-text {
+            color: #000; 
+            font-weight: 700; 
+            font-size: 1.1rem; 
+            margin-bottom: 15px;
+            display: none; 
+        }
+        /* Neuer Style für den Ghost-Button (Nein-Option) */
+        .ghost-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            margin-top: 10px;
+            background-color: transparent;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            color: #555;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .ghost-btn:hover {
+            border-color: #999;
+            color: #000;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<div style="background: white; border-bottom: 1px solid #eee; padding: 15px 0;">
+    <div class="container">
+        <a href="index.html" style="text-decoration: none; color: #666; font-size: 0.9rem; font-weight: 600;">
+            <i class="fas fa-arrow-left"></i> Zurück zur Startseite
+        </a>
+    </div>
+</div>
+
+<section class="container" style="padding-top: 40px; padding-bottom: 60px;">
+    
+    <div class="text-center" style="max-width: 700px; margin: 0 auto 40px;">
+        <span class="badge">Interaktive Analyse</span>
+        <h1 id="hero-title">Wo brennt es gerade?</h1>
+        <p id="hero-text" class="hero-subtext">
+            Wähle dein aktuelles Hindernis. Das System ermittelt die passende Gegenwehr aus dem Archiv.
+        </p>
+    </div>
+
+    <div class="quiz-wrap">
+        <div class="progress-bar">
+            <div class="progress-fill" id="pFill"></div>
+        </div>
+
+        <section id="quiz-container">
+            <form id="quizForm">
+                <div class="options">
+                    <label class="opt" style="border-color: #d32f2f; background-color: #fff5f5;">
+                        <input type="radio" name="product" value="umgang"> 
+                        <span class="opt-text" style="color: #d32f2f; font-weight: bold;">
+                            ⚠️ Umgangsblockade (Akut)
+                        </span>
+                    </label>
+
+                    <label class="opt">
+                        <input type="radio" name="product" value="akteneinsicht"> 
+                        <span class="opt-text">Akteneinsicht erzwingen</span>
+                    </label>
+
+                    <label class="opt">
+                        <input type="radio" name="product" value="gutachten"> 
+                        <span class="opt-text">Gutachten überstehen</span>
+                    </label>
+
+                    <label class="opt">
+                        <input type="radio" name="product" value="beschluss"> 
+                        <span class="opt-text">Beschluss wird ignoriert</span>
+                    </label>
+
+                    <label class="opt">
+                        <input type="radio" name="product" value="protokoll"> 
+                        <span class="opt-text">Falsche Protokolle / Berichte</span>
+                    </label>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-large" style="margin-top: 30px;" onclick="evaluateQuiz()">
+                    Lösung ermitteln <i class="fas fa-search" style="margin-left: 10px;"></i>
+                </button>
+            </form>
+
+            <div id="loading-area">
+                <div class="spinner"></div>
+                <p style="font-weight: 700; color: var(--primary); margin-bottom: 5px;" id="loading-status">
+                    Verbinde mit Datenbank...
+                </p>
+                <p style="color: #666; font-size: 0.9rem;">Prüfe Strategie-Optionen...</p>
+            </div>
+
+            <div id="result" class="result-area" style="margin-bottom: 50px;">
+                <span class="badge" style="background: #2ecc71;">Match Gefunden</span>
+                
+                <p id="waitMsg" class="wait-text">Aber warte kurz</p>
+                <p id="offerMsg" class="offer-text">Einmaliges Angebot:</p>
+                
+                <h2 id="resTitle" style="margin-top: 15px; margin-bottom: 10px; color: #2c3e50;">Lösung bereit</h2>
+                <div id="resDesc" style="color: #555; margin-bottom: 25px; line-height: 1.6;"></div>
+                
+                <a href="#" id="resLink" class="btn btn-primary btn-large" style="box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    JETZT ZUGRIFF
+                </a>
+                
+                <div id="alt-link-area" style="margin-top: 15px; display: none;">
+                    <a href="#" id="altLinkTag" class="ghost-btn">
+                        Nein, ich verzichte auf das Master-System (Nur Vorlage 7€)
+                    </a>
+                </div>
+
+                <p style="text-align: center; margin-top: 25px;">
+                    <a href="masterpaket.html" style="color: #888; text-decoration: underline; font-size: 0.85rem;">
+                        ↻ Zurück zur Auswahl (Neustart)
+                    </a>
+                </p>
+                
+                <div class="trust-badge" style="margin-top: 30px; margin-bottom: 30px;">
+                    <span><i class="fas fa-lock"></i> SSL-Sicher</span>
+                    <span style="margin: 0 10px;">•</span>
+                    <span><i class="fas fa-bolt"></i> Sofort-Download</span>
+                </div>
+
+                <div style="border-top: 2px solid #f0f0f0; padding-top: 25px; text-align: left;">
+                    <p class="text-center" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 15px; font-weight: bold;">
+                        Bestätigte Erfolge
+                    </p>
+                    
+                    <div class="review-card" style="margin-bottom: 15px; padding: 15px; font-size: 0.9rem;">
+                        <div class="stars" style="font-size: 0.8rem;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 5px;">"Nach der ersten strategischen E-Mail aus dem Paket kippte die Stimmung sofort. Ich habe mein Kind dieses Wochenende endlich wiedergesehen."</p>
+                        <div style="font-size: 0.75rem; font-weight: bold; color: #555;">– Markus T., Köln</div>
+                    </div>
+
+                    <div class="review-card" style="padding: 15px; font-size: 0.9rem;">
+                        <div class="stars" style="font-size: 0.8rem;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 5px;">"Deine Strategie hat mir gezeigt, wie ich Emotionen aus der Akte halte. Der Gutachter musste mir plötzlich zustimmen."</p>
+                        <div style="font-size: 0.75rem; font-weight: bold; color: #555;">– Julia S., Hamburg</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container text-center">
+        <p style="margin-bottom: 15px;">© 2026 Rebell mit Herz</p>
+        <div class="footer-links">
+            <a href="index.html">Startseite</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Datenbank der Lösungen
+    const products = {
+      umgang: { 
+        title: "Notfall-Plan Umgang", 
+        desc: "Stopp die Blockade sofort. Erhalte den exakten Leitfaden für die ersten 72h und die Wiederanbahnung.", 
+        link: "https://ko-fi.com/s/bad9f7daf5",
+        loadText: "Analysiere Umgangs-Verweigerung...",
+        price: "17€"
+      },
+      akteneinsicht: { 
+        title: "Paket: Akten-Hoheit", 
+        desc: "Hole dir Transparenz. Mit dieser Vorlage muss das Amt dir alle internen Vermerke offenlegen.", 
+        link: "https://ko-fi.com/s/deea689269",
+        loadText: "Prüfe Rechtsgrundlage für Einsicht...",
+        price: "7€"
+      },
+      gutachten: { 
+        title: "Gutachter-Schutz", 
+        desc: "Neutralisiere manipulative Fragen. Bereite dich so vor, dass dir kein Wort im Mund umgedreht wird.", 
+        link: "https://ko-fi.com/s/c33c71ab3b",
+        loadText: "Analysiere psychologische Fallen...",
+        price: "7€"
+      },
+      beschluss: { 
+        title: "System: Erzwingung", 
+        desc: "Ein Beschluss ist Gesetz. Zwinge das Amt mit dieser Vorlage zur sofortigen Umsetzung.", 
+        link: "https://ko-fi.com/s/0daa935e6c",
+        loadText: "Prüfe Zwangsmittel-Optionen...",
+        price: "7€"
+      },
+      protokoll: { 
+        title: "Berichtigungs-Matrix", 
+        desc: "Lass Lügen nicht stehen. Nutze die Gegendarstellungs-Vorlage für sofortige Korrektur in der Akte.", 
+        link: "https://ko-fi.com/s/e6351f9887",
+        loadText: "Scanne Protokoll-Fehlerquellen...",
+        price: "7€"
+      },
+      allgemein: { 
+        title: "ELTERN-MASTER KOMPASS PRO", 
+        desc: "<b>Schluss mit der Opferrolle!</b> Hol dir das komplette taktische Arsenal, um sofort unangreifbar zu werden.<br><br><b>Enthalten im System:</b><br>✅ Der 24h-Notfallplan (Sofort-Schritte)<br>✅ Die Beweis-Matrix & Strategie-Kompass<br>✅ Die 5 mächtigsten Mustersätze<br><br>🔥 <b>INKLUSIVE: Alle 4 Pro-Vorlagen</b><br>1️⃣ Akteneinsicht erzwingen<br>2️⃣ Gutachter-Schutz<br>3️⃣ Protokoll-Korrektur<br>4️⃣ Beschluss-Durchsetzung<br><br>Das ist dein Schild gegen Willkür.", 
+        link: "https://ko-fi.com/s/7e0b24d2bb",
+        loadText: "Konfiguriere Komplett-Schutz...",
+        price: "27€"
+      }
+    };
+
+    function evaluateQuiz() {
+      const selected = document.querySelector('input[name="product"]:checked');
+      
+      if (!selected) {
+          alert("Bitte wähle zuerst eine Situation aus.");
+          return;
+      }
+      
+      const form = document.getElementById('quizForm');
+      const loader = document.getElementById('loading-area');
+      const statusText = document.getElementById('loading-status');
+      const pFill = document.getElementById('pFill');
+      
+      const selectionKey = selected.value;
+      const originalData = products[selectionKey];
+      
+      // Referenz auf das große Paket für die Überschreibung
+      const masterPackage = products['allgemein'];
+
+      // 1. Form ausblenden, Loader zeigen
+      form.style.display = 'none';
+      loader.style.display = 'block';
+      pFill.style.width = "30%";
+
+      // 2. Animation
+      setTimeout(() => { 
+          statusText.innerText = originalData.loadText; 
+          pFill.style.width = "70%";
+      }, 400); 
+      
+      setTimeout(() => { 
+          statusText.innerText = "Finalisiere Strategie-Plan..."; 
+          pFill.style.width = "90%";
+      }, 800); 
+
+      // 3. Ergebnis anzeigen
+      setTimeout(() => {
+        loader.style.display = 'none';
+        const result = document.getElementById('result');
+        const resTitle = document.getElementById('resTitle');
+        const resDesc = document.getElementById('resDesc');
+        const linkBtn = document.getElementById('resLink');
+        const altLinkArea = document.getElementById('alt-link-area');
+        const altLinkTag = document.getElementById('altLinkTag');
+        
+        // --- ÄNDERUNG: Überschrift austauschen ---
+        const heroTitle = document.getElementById('hero-title');
+        heroTitle.innerText = "Deine Gegenstrategie steht bereit";
+        // Untertext ausblenden
+        document.getElementById('hero-text').style.display = 'none';
+        
+        // Referenzen für Warn-Texte
+        const waitMsg = document.getElementById('waitMsg');
+        const offerMsg = document.getElementById('offerMsg');
+        
+        result.style.display = 'block';
+        
+        // --- LOGIK ENTSCHEIDUNG ---
+        
+        if(selectionKey === 'umgang' || selectionKey === 'allgemein') {
+            // FALL 1: STANDARD
+            resTitle.innerText = originalData.title;
+            resDesc.innerHTML = originalData.desc; 
+            linkBtn.href = originalData.link;
+            linkBtn.innerText = "JETZT ZUGRIFF (" + originalData.price + ")";
+            
+            // Design: Grün
+            linkBtn.style.backgroundColor = "#2ecc71";
+            linkBtn.style.borderColor = "#2ecc71";
+            linkBtn.style.boxShadow = "0 5px 15px rgba(46, 204, 113, 0.3)";
+            
+            // Elemente ausblenden, falls sie existieren
+            if(waitMsg) waitMsg.style.display = "none";
+            if(offerMsg) offerMsg.style.display = "none";
+            if(altLinkArea) altLinkArea.style.display = 'none';
+            
+        } else {
+            // FALL 2: UPSELL
+            resTitle.innerText = masterPackage.title;
+            resDesc.innerHTML = masterPackage.desc;
+            linkBtn.href = masterPackage.link;
+            linkBtn.innerText = "JETZT ZUGRIFF (" + masterPackage.price + ")";
+            
+            // Design: Rot
+            linkBtn.style.backgroundColor = "#d32f2f";
+            linkBtn.style.borderColor = "#d32f2f";
+            linkBtn.style.boxShadow = "0 5px 15px rgba(211, 47, 47, 0.3)";
+            
+            // Texte einblenden
+            if(waitMsg) waitMsg.style.display = "block";
+            if(offerMsg) offerMsg.style.display = "block";
+            
+            if(altLinkArea) {
+                altLinkArea.style.display = 'block';
+                if(altLinkTag) {
+                    altLinkTag.href = originalData.link; 
+                    // Das Wording im Ghost-Button
+                    altLinkTag.innerText = "Nein, ich verzichte auf das Master-System. (Nur Vorlage " + originalData.price + ")";
+                }
+            }
+        }
+        
+        pFill.style.width = "100%";
+      }, 1200); 
+    }
+</script>
+
+<div id="exit-popup-overlay" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="background: white; padding: 30px; border-radius: 12px; max-width: 500px; width: 90%; text-align: center; font-family: 'Inter', sans-serif; position: relative;">
+        <h2 style="font-family: 'Montserrat', sans-serif; color: #d32f2f; margin-top: 0; font-size: 1.8rem; font-weight: 900;">Stopp – 10 Sekunden.</h2>
+        <p style="color: #333; font-size: 1.1rem; line-height: 1.5; margin: 20px 0;">Willst du das Ergebnis sichern, bevor du gehst? Ich schicke dir die Soforthilfe kostenlos.</p>
+        
+        <a href="gratis.html" style="display: block; width: 100%; background-color: #d32f2f; color: white; padding: 15px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">Kostenlos sichern</a>
+        
+        <button id="close-exit-popup" style="background: transparent; border: none; color: #777; font-size: 0.9rem; cursor: pointer; text-decoration: underline; padding: 10px;">Nein, ich gehe</button>
+        
+        <p style="font-size: 0.8rem; color: #999; margin-top: 15px;">Kein Spam. 1 Mail. Fertig.</p>
+    </div>
+</div>
+
+<script>
+(function() {
+    const overlay = document.getElementById('exit-popup-overlay');
+    const closeBtn = document.getElementById('close-exit-popup');
+    // NEUER KEY, um das Testen zu ermöglichen (reset)
+    const storageKey = 'rmh_popup_force_v1';
+    
+    function showPopup() {
+        if (sessionStorage.getItem(storageKey)) return;
+        overlay.style.display = 'flex';
+        sessionStorage.setItem(storageKey, 'true');
+    }
+
+    // Modal schließen - FIX: Explizite Weiterleitung zur Startseite, um Back-Loop zu entkommen
+    closeBtn.addEventListener('click', function() {
+        overlay.style.display = 'none';
+        window.location.href = 'index.html'; 
+    });
+
+    // 1. Desktop Exit Intent (Maus verlässt Fenster oben)
+    document.addEventListener('mouseleave', function(e) {
+        if (e.clientY <= 20) {
+            showPopup();
+        }
+    });
+
+    // 2. Mobile / Back-Button (History API)
+    // Wir setzen einen State. Wenn der User "Zurück" drückt, feuert popstate.
+    history.pushState({popup: true}, document.title, window.location.href);
+
+    window.addEventListener('popstate', function(event) {
+        // Nur feuern, wenn wir es in dieser Session noch nicht gezeigt haben
+        if (!sessionStorage.getItem(storageKey)) {
+            // Um den User auf der Seite zu halten und Popup zu zeigen:
+            // Wir pushen den State erneut, damit der "Zurück"-Klick quasi neutralisiert wird
+            history.pushState({popup: true}, document.title, window.location.href);
+            showPopup();
+        }
+        // Falls schon gezeigt: Browser geht normal zurück (da wir nichts tun)
+    });
+})();
+</script>
+</body>
+</html>

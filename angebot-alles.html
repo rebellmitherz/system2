@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonderangebot | Rebell mit Herz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=6">
+    <style>
+        .upsell-box {
+            background: white;
+            border: 2px solid var(--secondary);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 700px;
+            margin: 40px auto;
+        }
+        .price-tag {
+            background: #fff9c4;
+            color: #f57f17;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        .benefit-list {
+            text-align: left;
+            margin: 30px 0;
+            display: inline-block;
+        }
+        .benefit-list li {
+            margin-bottom: 12px;
+            list-style: none;
+            font-size: 1.05rem;
+        }
+        .benefit-list i {
+            color: #2ecc71;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<section class="container" style="padding: 60px 0;">
+    
+    <div style="text-align: center; margin-bottom: 30px;">
+        <span class="badge" style="background-color: #d32f2f;">Warte kurz!</span>
+        <h1>Einmaliges <span class="highlight">Angebot</span></h1>
+        <p class="hero-subtext">Bevor du dir die Einzellösung holst: Willst du nicht lieber das komplette Arsenal?</p>
+    </div>
+
+    <div class="upsell-box">
+        <h2 style="font-size: 1.8rem; margin-bottom: 15px;">Das Elternschutz-Paket (All-in-One)</h2>
+        
+        <p style="line-height: 1.6;">
+            Du erhältst weit mehr als nur Vorlagen: Dieses Paket ist dein strategisches Fundament. <br>
+            Es enthält den <strong>Eltern-Master Kompass</strong> (Leitfaden, 24h-Notfallplan, Beweis-Matrix) <br>
+            PLUS <strong>alle rechtssicheren Musterbriefe</strong> für Jugendamt und Gericht.
+        </p>
+        
+        <div class="price-tag">
+            Nur 27 € <small style="color: #999; text-decoration: line-through; margin-left: 5px;">statt 99 €</small>
+        </div>
+
+        <ul class="benefit-list">
+            <li><i class="fas fa-check-circle"></i> <strong>Strategie-Guide:</strong> Verstehe die Psychologie des Systems.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Akteneinsicht:</strong> Vorlagen zur Prüfung.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Gutachten:</strong> Anti-Manipulations-Strategie.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Protokolle:</strong> Berichtigungs-Matrix.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Durchsetzung:</strong> Beschlüsse erzwingen.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Bonus:</strong> Roter-Alarm-Leitfaden (Notfallplan).</li>
+        </ul>
+
+        <a href="https://ko-fi.com/s/7e0b24d2bb" target="_blank" class="btn btn-primary btn-large" style="width: 100%; font-size: 1.2rem;">
+            Ja, ich will alles für 27 €
+        </a>
+
+        <div style="margin-top: 30px;">
+            <a href="strategie-finder.html" id="declineLink" style="color: #222; text-decoration: underline; font-size: 1.1rem; font-weight: 800;">
+                Nein danke, zurück zur Auswahl
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container text-center">
+        <a href="impressum.html" style="color: #666; margin: 0 10px;">Impressum</a>
+        <a href="datenschutz.html" style="color: #666; margin: 0 10px;">Datenschutz</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetUrl = urlParams.get('target');
+        
+        const link = document.getElementById('declineLink');
+        
+        if(targetUrl && link) {
+            link.href = targetUrl;
+            link.innerText = "Nein danke, nur die einzelne Vorlage";
+            link.target = "_blank"; 
+        }
+    });
+</script>
+
+</body>
+</html>
