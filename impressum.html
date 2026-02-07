@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – Rebell mit Herz</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .legal-block {
+      margin-bottom: 25px;
+    }
+    .legal-block h2 {
+      font-size: 1rem;
+      color: var(--brand-blue);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .legal-text {
+      line-height: 1.6;
+      color: #eee;
+    }
+    .disclaimer {
+      margin-top: 30px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+
+<body data-page="legal">
+  <main class="wrap">
+    <header class="hero">
+      <span class="kicker">Transparenz</span>
+      <h1>Impressum</h1>
+    </header>
+
+    <section class="card animate-fade">
+      <div class="legal-block">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <div class="legal-text">
+          Emilio Allegro<br>
+          Kaiserstrasse 6a<br>
+          66787 Wadgassen
+        </div>
+      </div>
+
+      <div class="legal-block">
+        <h2>Kontakt</h2>
+        <div class="legal-text">
+          <span style="color: var(--brand-blue);">E-Mail: rebellmitherz@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="legal-block">
+        <h2>Redaktionell verantwortlich</h2>
+        <div class="legal-text">
+          Emilio Allegro<br>
+          Kaiserstrasse 6a<br>
+          66787 Wadgassen
+        </div>
+      </div>
+
+      <button class="btn btn-ghost btn-large" type="button" style="margin-top: 10px;" onclick="history.back()">
+        ZURÜCK ZUM SYSTEM
+      </button>
+
+      <div class="disclaimer muted">
+        <strong style="color: #fff; display: block; margin-bottom: 5px;">Haftungsausschluss:</strong>
+        Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+      </div>
+    </section>
+
+    <footer class="footer">
+      <nav class="footer-nav">
+        <a href="index.html">Startseite</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+      <p class="fine">© <span id="year"></span> Rebell mit Herz</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
