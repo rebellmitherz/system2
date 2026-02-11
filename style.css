@@ -1,0 +1,402 @@
+/* 1. GRUNDKONFIGURATION & FARBEN */
+:root {
+    --primary: #d32f2f;       /* Rebell-Rot (Alarm/Handlung) */
+    --primary-dark: #b71c1c;
+    --secondary: #1a237e;     /* Seriöses Dunkelblau (Amt/Recht) */
+    --accent: #ffd600;        /* Gold (Trust/Sterne) */
+    --bg: #f8f9fa;            /* Heller Hintergrund */
+    --text: #2c3e50;          /* Dunkle Schrift */
+    --white: #ffffff;
+    --success: #2ecc71;       /* Grün für Erfolg/Download */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Globaler Bild-Schutz gegen Layout-Sprengung */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Verhindert kleine Abstände unter Bildern */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.6;
+    padding-bottom: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center { text-align: center; }
+
+/* 2. TYPOGRAFIE */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary);
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+h1 { 
+    font-size: 2.0rem; 
+    margin-bottom: 15px; 
+}
+
+h2 { 
+    font-size: 1.6rem; 
+    margin-bottom: 20px; 
+}
+
+.highlight { color: var(--primary); }
+
+/* 3. HERO BEREICH */
+.hero {
+    background: white;
+    padding: 30px 0 40px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.badge {
+    background: var(--primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.5;
+}
+
+/* 4. BUTTONS & CTA */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px auto 10px;
+}
+
+.btn {
+    padding: 16px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.25);
+    border: 2px solid var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:active {
+    transform: translateY(-2px);
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    box-shadow: 0 12px 25px rgba(211, 47, 47, 0.35);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--secondary);
+    border: 2px solid var(--secondary); /* Hoher Kontrast */
+}
+
+.btn-secondary:hover {
+    background: #f0f0f5;
+}
+
+.btn-large {
+    padding: 18px 28px;
+    font-size: 1.1rem;
+}
+
+/* 5. TRUST & REVIEWS */
+.trust-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.stars {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.review-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+/* 6. EXPERT / FOUNDER SECTION */
+.founder-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+    padding: 60px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.expert-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 5px solid var(--secondary);
+}
+
+.expert-icon img {
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.founder-label {
+    background: var(--secondary);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.disclaimer-box {
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 7. FOOTER */
+footer {
+    background: white;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--primary); }
+
+/* 8. QUIZ / OPTIONS (Masterpaket) */
+.quiz-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    background: #eee;
+    height: 6px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+.progress-fill {
+    background: var(--primary);
+    height: 100%;
+    width: 0;
+    transition: width 0.4s ease;
+    border-radius: 3px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.opt {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.opt:hover {
+    border-color: var(--primary);
+    background: #fff5f5;
+    transform: translateX(5px);
+}
+
+.opt input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: grid;
+    place-content: center;
+    flex-shrink: 0;
+}
+
+.opt input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: var(--primary);
+}
+
+.opt input[type="radio"]:checked::before { transform: scale(1); }
+.opt input[type="radio"]:checked { border-color: var(--primary); }
+
+.opt-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Loading & Result Animation */
+#loading-area {
+    display: none;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #eee;
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.result-area {
+    display: none;
+    padding: 30px 25px;
+    border: 2px solid var(--success);
+    border-radius: 16px;
+    background: white;
+    text-align: center;
+    animation: fadeIn 0.6s ease forwards;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.15);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 9. ALARM & NOTFALL-BOXEN (Umgang) */
+.alert-hero {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+    border-bottom: 2px solid var(--primary);
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+.check-list { list-style: none; padding: 0; }
+.check-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+.check-list i {
+    color: var(--primary);
+    margin-right: 12px;
+    margin-top: 4px;
+}
+
+/* 10. RESPONSIVE ANPASSUNGEN */
+@media (min-width: 768px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.2rem; }
+    
+    .hero { padding: 60px 0 80px 0; }
+    .hero-subtext { font-size: 1.3rem; }
+    
+    .cta-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .btn { width: auto; min-width: 250px; }
+
+    .expert-box {
+        flex-direction: row;
+        text-align: left;
+        padding: 50px;
+        border-top: none;
+        border-left: 8px solid var(--primary);
+    }
+}
