@@ -1,68 +1,176 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dein Elternschutzpaket ist da! | Rebell mit Herz</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein Elternschutzpaket ist da! | Rebell mit Herz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .error-container {
+      text-align: center;
+      padding: 100px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    }
+    .error-box {
+      background: white;
+      border: 3px solid #d32f2f;
+      border-radius: 16px;
+      padding: 50px;
+      max-width: 600px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .error-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .error-title {
+      color: #d32f2f;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
+    .error-text {
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .error-link {
+      display: inline-block;
+      background: #d32f2f;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.3s;
+    }
+    .error-link:hover {
+      background: #b71c1c;
+    }
+    #content {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <section class="container" style="text-align: center; padding-top: 60px;">
-        <div class="success-badge" style="display: inline-block; background: #2ecc71; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; margin-bottom: 30px;">
-            ✓ ZAHLUNG ERFOLGREICH
+  <div id="error-message" class="error-container">
+    <div class="error-box">
+      <div class="error-icon">🔒</div>
+      <div class="error-title">Zugriff nicht autorisiert</div>
+      <p class="error-text">
+        Diese Seite ist nur nach einer erfolgreichen Zahlung verfügbar.
+        <br><br>
+        Bitte verwenden Sie den Link aus Ihrer Bestätigungsemail oder tätigen Sie eine neue Zahlung.
+      </p>
+      <a href="angebot-alles.html" class="error-link">Zur Zahlungsseite</a>
+    </div>
+  </div>
+
+  <section id="content" class="container" style="padding: 70px 20px;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <div class="success-badge" style="display: inline-block; background: #2ecc71; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; margin-bottom: 30px;">
+        ✓ ZAHLUNG ERFOLGREICH
+      </div>
+
+      <h1 class="highlight" style="color: #1a237e; font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2;">
+        Dein Elternschutzpaket ist bereit!
+      </h1>
+
+      <p style="font-size: 1.2rem; color: #555; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Danke für dein Vertrauen! Hier sind alle deine Dokumente zum sofortigen Download.
+      </p>
+    </div>
+
+    <div class="download-box" style="background: white; border: 3px solid #d32f2f; border-radius: 16px; padding: 40px; max-width: 650px; margin: 0 auto 40px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+      <h2 style="color: #d32f2f; margin-bottom: 30px; font-size: 1.8rem;">📦 Deine Downloads</h2>
+
+      <div class="download-list" style="text-align: left;">
+        <!-- Komplett-Paket jetzt oben in der Liste -->
+        <div class="download-item" style="background: #fff9c4; border: 2px solid #f9a825; border-radius: 8px; padding: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 700; color: #f57c00;">⭐Elternschutzpaket</span>
+          <a href="PDFS/elterschutzpaket-komplett.pdf" download style="background: #d32f2f; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700;">Download →</a>
         </div>
 
-        <h1 class="highlight" style="color: #1a237e; font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2;">Dein Elternschutzpaket ist bereit!</h1>
+        <p style="color: #666; margin-bottom: 15px; font-size: 0.9rem; font-weight: 600;">Einzelne Dokumente:</p>
 
-        <p style="font-size: 1.2rem; color: #555; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Danke für dein Vertrauen! Hier sind alle deine Dokumente zum sofortigen Download.
-        </p>
-
-        <div class="download-box" style="background: white; border: 3px solid #d32f2f; border-radius: 16px; padding: 40px; max-width: 650px; margin: 0 auto 40px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
-            <h2 style="color: #d32f2f; margin-bottom: 30px; font-size: 1.8rem;">📦 Deine Downloads</h2>
-
-            <div class="download-list" style="text-align: left;">
-                <!-- Komplett-Paket jetzt oben in der Liste -->
-                <div class="download-item" style="background: #fff9c4; border: 2px solid #f9a825; border-radius: 8px; padding: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-weight: 700; color: #f57c00;">⭐Elternschutzpaket</span>
-                    <a href="PDFS/elterschutzpaket-komplett.pdf" download style="background: #d32f2f; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700;">Download →</a>
-                </div>
-
-                <p style="color: #666; margin-bottom: 15px; font-size: 0.9rem; font-weight: 600;">Einzelne Dokumente:</p>
-
-                <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-weight: 600; color: #333;">📄 Akteneinsicht</span>
-                    <a href="PDFS/akteneinsicht.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
-                </div>
-                <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-weight: 600; color: #333;">📄 Arbeitsvorlage Durchsetzung</span>
-                    <a href="PDFS/arbeitsvorlage-durchsetzung.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
-                </div>
-                <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-weight: 600; color: #333;">📄 Durchsetzung nach Beschluss</span>
-                    <a href="PDFS/durchsetzung.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
-                </div>
-                <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-weight: 600; color: #333;">📄 Gutachten</span>
-                    <a href="PDFS/gutachten.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
-                </div>
-                <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-weight: 600; color: #333;">📄 Protokollberichtigung</span>
-                    <a href="PDFS/protokollberichtigung.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
-                </div>
-                <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-weight: 600; color: #333;">📄 Umgangsblockade-Leitfaden</span>
-                    <a href="PDFS/umgangsblockade-leitfaden.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
-                </div>
-            </div>
+        <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 600; color: #333;">📄 Akteneinsicht</span>
+          <a href="PDFS/akteneinsicht.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
         </div>
 
-        <p style="font-size: 1rem; color: #666; margin-bottom: 15px;">💌 Du bekommst außerdem eine E-Mail mit allen Links</p>
-        <p style="font-size: 0.9rem; color: #999;">(Prüfe auch deinen Spam-Ordner)</p>
+        <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 600; color: #333;">📄 Arbeitsvorlage Durchsetzung</span>
+          <a href="PDFS/arbeitsvorlage-durchsetzung.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
+        </div>
 
-        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 50px auto; max-width: 400px;">
-        <p style="font-size: 0.95rem; color: #666; margin-bottom: 10px;"><a href="impressum.html" style="color: #666; text-decoration: none;">Impressum</a> | <a href="datenschutz.html" style="color: #666; text-decoration: none;">Datenschutz</a></p>
-    </section>
+        <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 600; color: #333;">📄 Durchsetzung nach Beschluss</span>
+          <a href="PDFS/durchsetzung.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
+        </div>
+
+        <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 600; color: #333;">📄 Gutachten</span>
+          <a href="PDFS/gutachten.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
+        </div>
+
+        <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 600; color: #333;">📄 Protokollberichtigung</span>
+          <a href="PDFS/protokollberichtigung.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
+        </div>
+
+        <div class="download-item" style="background: #f5f5f5; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 600; color: #333;">📄 Umgangsblockade-Leitfaden</span>
+          <a href="PDFS/umgangsblockade-leitfaden.pdf" download style="color: #d32f2f; text-decoration: none; font-weight: 600;">Download →</a>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size: 1rem; color: #666; margin-bottom: 15px; text-align: center;">💌 Du bekommst außerdem eine E-Mail mit allen Links</p>
+    <p style="font-size: 0.9rem; color: #999; text-align: center;">(Prüfe auch deinen Spam-Ordner)</p>
+
+    <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 50px auto; max-width: 400px;">
+
+    <p style="font-size: 0.95rem; color: #666; margin-bottom: 10px; text-align: center;">
+      <a href="impressum.html" style="color: #666; text-decoration: none;">Impressum</a> | 
+      <a href="datenschutz.html" style="color: #666; text-decoration: none;">Datenschutz</a>
+    </p>
+  </section>
+
+  <script>
+    // Token-Validierung
+    function validateToken() {
+      // Hole Token aus URL-Parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const token = urlParams.get('token');
+      
+      // Falls kein Token oder leerer Token
+      if (!token || token.trim() === '') {
+        document.getElementById('error-message').style.display = 'flex';
+        document.getElementById('content').style.display = 'none';
+        return false;
+      }
+      
+      // Token muss mindestens 20 Zeichen lang sein (Sicherheit)
+      if (token.length < 20) {
+        document.getElementById('error-message').style.display = 'flex';
+        document.getElementById('content').style.display = 'none';
+        return false;
+      }
+      
+      // Token validiert - Inhalt anzeigen
+      document.getElementById('error-message').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+      return true;
+    }
+    
+    // Starte Validierung wenn DOM geladen ist
+    document.addEventListener('DOMContentLoaded', validateToken);
+  </script>
 </body>
 </html>
-
