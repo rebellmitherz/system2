@@ -258,11 +258,11 @@ document.getElementById('freeOptinForm').addEventListener('submit', function(e) 
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer YOUR_MAILERLITE_API_KEY' // <-- HIER DEINEN API-KEY EINTRAGEN
+      'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNGExNjBlMWY3YWQwOWNlOGQ1ODU4NjcwMjNhYWQwNzAyOWJlOWY1ZGQ5ZTAwNTI4MTEzOThkY2RlNzUwNzk5NDVkYjhiOGRkM2JmOGI3NTUiLCJpYXQiOjE3NzExNDQzMDUuNzM0NTksIm5iZiI6MTc3MTE0NDMwNS43MzQ1OTMsImV4cCI6NDkyNjgxNzkwNS43MjQ2ODgsInN1YiI6IjIwNzIxMjAiLCJzY29wZXMiOltdfQ.ABZ86ogHuvdjdoV6enNE0POtlw39lsUVBPG18od5lLVD-o4XjFSGBKNRxFgxuucONAOzaQ9jU9qjgNfTTn6IxGNbPoYSb89WptYWzUwwBLcc6FMxkyirv1l3V9pN8V1RPtFYcUHf_xsO26SFUAS3LQRbWXPbVDd_z5WahxSEg-XKReNDBGS1Z1Yr71IDnDnHWq-6zjnvBg0NMI-4Yn0G_LwzV6Af3rWxGO4XYnzm68u1wN2p_-XzcL5y7IQ07LzOHW3FQ8vGP7-HzyKPjy-TAE8x-KZkjGevcJJDQEjUZbFQUxhDnMLpxSy0GCComU2DYwj6u7LTM8WUFnSTqzk5U6fYi--1Mcr13G6DfL18fPCOkWqZc0aUXftmdiyJAi5T3Iyx6VFBJoMDOKOD05pnJRzjFp3HaDHucS9IScxX0hsh1XRZ9FInPrQdpsN8hOkmY2x-0ezv1CWok7p7Nq8HP1XPU0Xq4xyV9yIwjyCyQ1BLTXdwBek-_b-IU_w-OohzBwaFaCpqzNIVnY6EWkZDOAXl6ndNsmQpYgGLEIdmOjm9wFAWgygnQ_hgg8XQ_c0oFt3xBKQs-Rn1_BvUlrOr7jepSUnoJo-_tbXVz1kY7JR0JfrOX3AZP9r4Zq-LNdeOXzStXM24zkKW-U6BEai-SfRJcTfrmDUV9LkwN8PitDQ' // <-- HIER DEINEN API-KEY EINTRAGEN
     },
     body: JSON.stringify({
       email: email,
-      groups: ['YOUR_GROUP_ID'], // <-- HIER DEINE GRUPPE EINTRAGEN (z.B. "123456")
+      groups: ['179457719981311428'], // <-- HIER DEINE GRUPPE EINTRAGEN (z.B. "123456")
       status: 'active' // Direkt als aktiv speichern (kein Double-Opt-In)
     })
   })
@@ -277,6 +277,7 @@ document.getElementById('freeOptinForm').addEventListener('submit', function(e) 
   });
 });
 </script>
+
 
 
 
