@@ -246,15 +246,37 @@ document.getElementById('freeOptinForm').addEventListener('submit', function(e) 
   
   const email = document.getElementById('freeOptinEmail').value;
   
-  // Redirect directly to download page
-  window.location.href = '/grundabsicherung-download.html';
+<script>
+// MailerLite Integration - Speichert E-Mail OHNE Versand
+document.getElementById('freeOptinForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const email = document.getElementById('freeOptinEmail').value;
+  
+  // MailerLite API Request (OHNE Double-Opt-In)
+  fetch('https://connect.mailerlite.com/api/subscribers', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer YOUR_MAILERLITE_API_KEY' // <-- HIER DEINEN API-KEY EINTRAGEN
+    },
+    body: JSON.stringify({
+      email: email,
+      groups: ['YOUR_GROUP_ID'], // <-- HIER DEINE GRUPPE EINTRAGEN (z.B. "123456")
+      status: 'active' // Direkt als aktiv speichern (kein Double-Opt-In)
+    })
+  })
+  .then(response => {
+    // Sofort zur Download-Seite weiterleiten (egal ob MailerLite erfolgreich war)
+    window.location.href = '/grundabsicherung-download.html';
+  })
+  .catch(error => {
+    console.log('MailerLite Error:', error);
+    // Trotz Fehler zur Download-Seite weiterleiten
+    window.location.href = '/grundabsicherung-download.html';
+  });
 });
 </script>
-</body>
-</html>
-
-
-
 
 
 
