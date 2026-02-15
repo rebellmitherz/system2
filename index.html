@@ -109,6 +109,42 @@
       <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
         Sichere Zahlung · Sofortzugang
       </p>
+
+        <!-- FREE OPTIN BLOCK -->
+<div style="margin-top: 60px; padding: 0;">
+  <div style="max-width: 520px; margin: 0 auto; padding: 30px 20px; background: #fafafa; border-radius: 12px; border: 1px solid #e5e5e5; text-align: center;">
+    <h3 style="font-size: 1rem; font-weight: 600; color: #333; margin: 0 0 8px 0;">
+      Neu hier? Kostenlose Grundabsicherung
+    </h3>
+    <p style="font-size: 0.9rem; color: #777; margin: 0 0 18px 0; line-height: 1.4;">
+      Kurze Übersicht zur Vermeidung typischer Fehler im Familienverfahren.
+    </p>
+    
+    <form id="freeOptinForm" style="display: flex; flex-direction: column; gap: 12px;">
+      <input 
+        type="email" 
+        name="email" 
+        id="freeOptinEmail" 
+        placeholder="E-Mail-Adresse" 
+        required
+        style="padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem; font-family: 'Inter', sans-serif;"
+      />
+      <button 
+        type="submit" 
+        style="padding: 10px 16px; background: #666; color: white; border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.3s;"
+        onmouseover="this.style.background='#555'"
+        onmouseout="this.style.background='#666'"
+      >
+        Kostenlos öffnen
+      </button>
+    </form>
+    
+    <p style="font-size: 0.75rem; color: #999; margin: 12px 0 0 0;">
+      Mit dem Eintrag akzeptierst du die <a href="datenschutz.html" style="color: #666; text-decoration: none; font-weight: 500;">Datenschutzerklärung</a>.
+    </p>
+  </div>
+</div>
+<!-- /FREE OPTIN BLOCK -->
     </div>
 
   </div>
@@ -203,8 +239,20 @@
     </div>
 </footer>
 
+        
+<script>
+document.getElementById('freeOptinForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const email = document.getElementById('freeOptinEmail').value;
+  
+  // Redirect directly to download page
+  window.location.href = '/grundabsicherung-download.html';
+});
+</script>
 </body>
 </html>
+
 
 
 
