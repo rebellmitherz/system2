@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahlung wird verarbeitet...</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .container {
+      text-align: center;
+      background: white;
+      padding: 60px 40px;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #667eea;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 30px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    h1 {
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    
+    p {
+      color: #666;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    
+    .error {
+      display: none;
+      background: #fee;
+      border: 2px solid #d32f2f;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: left;
+    }
+    
+    .error h2 {
+      color: #d32f2f;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .error p {
+      color: #d32f2f;
+      font-size: 1rem;
+    }
+    
+    .error a {
+      color: #d32f2f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .error a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="spinner"></div>
+    <h1>Zahlung wird verarbeitet...</h1>
+    <p>Bitte warten Sie. Wir leiten Sie gleich zu Ihren Downloads weiter.</p>
+    
+    <div class="error" id="error-message">
+      <h2>Es gab ein Problem</h2>
+      <p id="error-text"></p>
+      <p><a href="angebot-alles.html">Zurück zur Zahlungsseite</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Generiere einen eindeutigen Token
+    function generateToken() {
+      // Token Format: token_[random]_[timestamp]
+      // Mindestlänge: 20 Zeichen
+      const random = Math.random().toString(36).substr(2, 32);
+      const timestamp = Date.now().toString(36);
+      const token = 'token_' + random + '_' + timestamp;
+      return token;
+    }
+    
+    function processPayment() {
+      try {
+        // Generiere Token
+        const token = generateToken();
+        
+        // Speichere Token im localStorage (bleibt für 48 Stunden)
+        const expiryTime = Date.now() + (48 * 60 * 60 * 1000); // 48 Stunden
+        localStorage.setItem('paymentToken', token);
+        localStorage.setItem('paymentTokenExpiry', expiryTime);
+        
+        // Validiere Token Länge
+        if (token.length < 20) {
+          showError('Token ist zu kurz. Bitte versuchen Sie es erneut.');
+          return;
+        }
+        
+        // Warte 1.5 Sekunden für visuellen Effekt
+        setTimeout(() => {
+          // Leite zu danke.html mit Token um
+          window.location.href = 'danke.html?token=' + encodeURIComponent(token);
+        }, 1500);
+        
+      } catch (error) {
+        showError('Es gab einen Fehler bei der Verarbeitung Ihrer Zahlung: ' + error.message);
+      }
+    }
+    
+    function showError(message) {
+      document.querySelector('.spinner').style.display = 'none';
+      document.querySelector('h1').style.display = 'none';
+      document.querySelector('p').style.display = 'none';
+      
+      const errorDiv = document.getElementById('error-message');
+      document.getElementById('error-text').textContent = message;
+      errorDiv.style.display = 'block';
+    }
+    
+    // Starte Verarbeitung wenn Seite geladen ist
+    document.addEventListener('DOMContentLoaded', processPayment);
+  </script>
+</body>
+</html>

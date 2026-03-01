@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:1 Strategie-Analyse | Rebell mit Herz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary: #d32f2f; --secondary: #1a202c; --accent: #f87171; --bg-light: #fdfdfd; }
+        body { background: var(--bg-light); color: var(--secondary); font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; }
+        .hero { padding: 80px 20px 60px; text-align: center; background: linear-gradient(135deg, #fff 0%, #f9fafb 100%); }
+        .container { max-width: 700px; margin: 0 auto; }
+        .badge { display: inline-block; background: var(--secondary); color: white; padding: 8px 20px; border-radius: 50px; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; border: 2px solid var(--primary); }
+        h1 { font-size: 3.2rem; font-weight: 900; margin-bottom: 20px; color: var(--secondary); line-height: 1.1; letter-spacing: -1px; }
+        .subtext { font-size: 1.3rem; color: #4a5568; margin-bottom: 50px; font-weight: 500; }
+        
+        .box { background: white; border-radius: 20px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #edf2f7; }
+        .box h2 { font-size: 1.6rem; font-weight: 800; margin: 0 0 25px 0; color: var(--secondary); }
+        
+        .check-list { list-style: none; padding: 0; margin: 0; }
+        .check-list li { margin-bottom: 12px; font-size: 1.05rem; padding-left: 30px; position: relative; }
+        .check-list li::before { content: '✅'; position: absolute; left: 0; font-size: 1.1rem; }
+        .check-list.cross li::before { content: '❌'; }
+        
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 20px; }
+        .col { background: #f8f9fa; padding: 25px; border-radius: 12px; }
+        .col h3 { margin: 0 0 15px 0; font-size: 1.1rem; font-weight: 800; }
+        .col.good { background: #f0fdf4; border: 2px solid #86efac; }
+        .col.bad { background: #fef2f2; border: 2px solid #fca5a5; }
+        
+        .steps { margin-top: 20px; }
+        .step-item { background: #f8f9fa; padding: 20px; border-radius: 12px; margin-bottom: 15px; font-size: 1.1rem; font-weight: 600; }
+        
+        .trust-box { background: #fef3c7; border: 2px solid #fbbf24; padding: 25px; border-radius: 12px; text-align: center; font-size: 1.05rem; font-weight: 600; color: #92400e; }
+        
+        .final-cta { background: var(--secondary); color: white; text-align: center; padding: 50px 40px; border-radius: 20px; margin-top: 40px; box-shadow: 0 20px 50px rgba(211,47,47,0.25); }
+        .final-cta .price { font-size: 4rem; font-weight: 900; margin: 20px 0; }
+        .btn-huge {
+            display: block;
+            background: var(--primary);
+            color: white;
+            padding: 25px;
+            font-size: 1.6rem;
+            font-weight: 900;
+            border-radius: 15px;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-huge:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(211,47,47,0.4); }
+        .small-text { font-size: 0.9rem; opacity: 0.8; margin-top: 15px; }
+        .micro-trust { font-size: 0.9rem; opacity: 0.88; margin-top: 14px; line-height: 1.55; }
+        
+        .back-link { display: inline-block; margin-top: 30px; color: #a0aec0; text-decoration: none; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .two-col { grid-template-columns: 1fr; }
+            .final-cta .price { font-size: 3rem; }
+            .btn-huge { font-size: 1.3rem; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="container">
+        <span class="badge">1:1 Strategie-Analyse</span>
+        <h1>Du bist hier richtig,<br>wenn du Klarheit willst.</h1>
+        <p class="subtext">
+            In 60 Minuten sortieren wir deine Lage, identifizieren die größten Fehlerquellen und du gehst mit einem klaren Maßnahmen-Plan raus,
+            was du als Nächstes konkret tun (und lassen) musst.
+        </p>
+    </div>
+</section>
+
+<section style="padding: 50px 20px;">
+    <div class="container">
+        
+        <!-- BLOCK 2: Für wen geeignet -->
+        <div class="box">
+            <div class="two-col">
+                <div class="col good">
+                    <h3>✅ Für dich geeignet, wenn:</h3>
+                    <ul class="check-list">
+                        <li>du aktuell feststeckst</li>
+                        <li>du Klarheit brauchst</li>
+                        <li>du strukturierte nächste Schritte willst</li>
+                    </ul>
+                </div>
+                <div class="col bad">
+                    <h3>❌ Nicht geeignet, wenn:</h3>
+                    <ul class="check-list cross">
+                        <li>du nur allgemeine Infos suchst</li>
+                        <li>du keine Umsetzung willst</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- BLOCK 3: Ablauf -->
+        <div class="box">
+            <h2>So läuft die Analyse ab</h2>
+            <div class="steps">
+                <div class="step-item">1️⃣ Analyse jetzt sichern</div>
+                <div class="step-item">2️⃣ Termin buchen</div>
+                <div class="step-item">
+                    3️⃣ Analyse-Gespräch (60 Min) + klarer Maßnahmen-Plan<br>
+                    <span style="font-size:0.95rem; color:#4a5568; font-weight:600;">
+                        📩 Deine persönliche Strategie erhältst du spätestens innerhalb von 48 Stunden.
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- BLOCK 4: Vertrauen -->
+        <div class="trust-box">
+            ⭐ Bereits vielen Eltern Orientierung gegeben
+        </div>
+        
+        <!-- BLOCK 5: Final CTA -->
+        <div class="final-cta">
+            <a href="https://buy.stripe.com/8x2eVfeAQ3jr2jafLr8og0a" class="btn-huge">🔒 Analyse jetzt sichern – 297 €</a>
+            <p class="small-text">Sichere Zahlung · SSL-verschlüsselt<br>Begrenzte Slots pro Woche (first come, first served)</p>
+
+            <p class="micro-trust">
+                ✔ Einmalzahlung · ✔ Kein Abo · ✔ In klaren Schritten statt Chaos<br>
+                ✔ Persönlicher Maßnahmen-Plan innerhalb von max. 48 Stunden<br>
+                Hinweis: Keine Rechtsberatung. Struktur- und Formulierungshilfe.
+            </p>
+        </div>
+        
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Zurück zur Übersicht</a>
+        
+    </div>
+</section>
+
+<!-- Footer Links -->
+<div style="text-align: center; margin-top: 50px; padding: 30px 0; border-top: 1px solid #e2e8f0;">
+    <a href="impressum.html" style="color: #718096; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Impressum</a>
+    <a href="datenschutz.html" style="color: #718096; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Datenschutz</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elternschutz Kompass | Rebell mit Herz</title>
+
+  <!-- MailerLite Universal (für Embedded Form) -->
+  <script>
+    (function (w, d, e, u, f, l, n) {
+      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+      l = d.createElement(e); l.async = 1; l.src = u;
+      n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
+    })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+    ml('account', '2054110');
+  </script>
+  <!-- End MailerLite Universal -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=7">
+
+  <style>
+    .upsell-box {
+      background: white;
+      border: 3px solid #d32f2f;
+      border-radius: 16px;
+      padding: 45px;
+      box-shadow: 0 15px 45px rgba(211, 47, 47, 0.15);
+      text-align: center;
+      max-width: 780px;
+      margin: 50px auto;
+    }
+
+    .price-tag {
+      background: #fff9c4;
+      color: #d32f2f;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 900;
+      font-size: 1.4rem;
+      display: inline-block;
+      margin: 25px 0;
+    }
+
+    .benefit-list {
+      text-align: left;
+      margin: 35px auto;
+      max-width: 580px;
+    }
+
+    .benefit-list li {
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .benefit-list i {
+      color: #2ecc71;
+      margin-right: 14px;
+      font-size: 1.3rem;
+    }
+
+    /* === Video Styling === */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      margin: 22px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transition: all 0.28s ease;
+    }
+
+    .video-wrapper:hover {
+      transform: scale(1.015);
+      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 640px) {
+      .video-wrapper {
+        margin: 18px auto;
+      }
+
+      .upsell-box {
+        padding: 28px;
+      }
+    }
+
+    /* Embedded Form: Box optisch sauber */
+    .ml-embedded {
+      width: 100%;
+    }
+
+    /* === TRUST FOTO BLOCK === */
+    .trust-card {
+      display: flex;
+      justify-content: center;
+      margin: 18px 0 6px;
+    }
+
+    .trust-card-inner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      max-width: 720px;
+      width: 100%;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .trust-card-inner img {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      flex: 0 0 auto;
+    }
+
+    .trust-text strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #111;
+      margin-bottom: 2px;
+      font-weight: 800;
+    }
+
+    .trust-text span {
+      display: block;
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    .trust-mini {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .trust-pill {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      color: #111;
+    }
+
+    @media (max-width: 520px) {
+      .trust-card-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .trust-mini {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="container" style="padding: 70px 0 100px;">
+
+    <div style="text-align: center; margin-bottom: 40px;">
+
+      <!-- BADGE -->
+      <span style="
+            display:inline-block;
+            background:#e8f5e9;
+            color:#2e7d32;
+            font-weight:900;
+            font-size:0.9rem;
+            padding:7px 16px;
+            border-radius:999px;
+            letter-spacing:0.5px;
+        ">
+        ✔ SOFORT VERFÜGBAR
+      </span>
+
+      <h1 style="font-size: 2.5rem; margin: 20px 0 15px;">
+        Wenn dein Umgang plötzlich wackelt, zählt jedes Wort.
+      </h1>
+
+      <p class="subline">
+        Für Eltern in Verfahren mit Jugendamt, Gericht, Umgangsblockade oder Gutachten – mit klaren Vorlagen & sicheren
+        Formulierungen.
+      </p>
+
+      <!-- TRUST FOTO -->
+      <div class="trust-card">
+        <div class="trust-card-inner">
+          <img src="emilio.webp" alt="Emilio – Rebell mit Herz">
+
+          <div class="trust-text">
+            <strong>Emilio – Rebell mit Herz</strong>
+            <span>Aus realen Verfahren entwickelt. Damit du in Gesprächen & Schriftverkehr nicht abrutschst – sondern
+              ruhig, klar und wirksam bleibst.</span>
+
+            <div class="trust-mini" aria-label="Schwerpunkte">
+              <span class="trust-pill">Jugendamt</span>
+              <span class="trust-pill">Gericht</span>
+              <span class="trust-pill">Umgang</span>
+              <span class="trust-pill">Gutachten</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:18px;"></div>
+
+      <!-- VIDEO -->
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/JAo35tmgIy4?si=eLyCiicS_4KeaVCz" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <p class="hero-subtext" style="font-size: 1.3rem;">
+        Verstehen ist der erste Schritt
+      </p>
+
+    </div>
+
+    <div class="upsell-box">
+      <p style="font-size:13px; color:#6b7280; margin-bottom:8px; text-align:center;">
+        Sofort nach Kauf verfügbar • Direkt einsetzbare Vorlagen • Kein Abo
+      </p>
+
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">Dein komplettes Arsenal (29 €)</h2>
+
+      <div class="price-tag">
+        Nur 29 € <small style="font-size: 1rem; color: #777; text-decoration: line-through; margin-left: 12px;">statt
+          147 €</small>
+      </div>
+
+      <ul class="benefit-list">
+        <li><i class="fas fa-check-circle"></i> Sichere Vorlagen für Jugendamt & Gericht</li>
+        <li><i class="fas fa-check-circle"></i> Klare Struktur für kritische Gespräche</li>
+        <li><i class="fas fa-check-circle"></i> Sofort einsetzbar in deiner Situation</li>
+      </ul>
+
+      <!-- Button NICHT direkt zu Stripe -->
+      <a href="elternschutzpaket.html" class="btn btn-primary btn-large"
+        style="width: 100%; font-size: 1.5rem; padding: 22px; margin: 30px 0 20px;">
+        Zum Elternschutzpaket
+      </a>
+
+      <p style="font-size: 1rem; color: #555; margin-bottom: 15px;">
+        Einmalzahlung • Sofort-Download • Kein Abo
+      </p>
+
+      <div style="margin-top:28px; padding:16px; border:1px solid #e5e7eb; border-radius:10px; background:#fafafa;">
+        <p style="font-size:14px; font-weight:600; margin-bottom:6px;">
+          14-Tage Zufriedenheitsgarantie
+        </p>
+        <p style="font-size:13px; color:#4b5563; line-height:1.5;">
+          Du kannst den Elternschutz in Ruhe prüfen.
+          Wenn du innerhalb von 14 Tagen merkst, dass er für deine Situation nicht passt,
+          erhältst du dein Geld unkompliziert zurück.
+        </p>
+      </div>
+
+      <a href="strategie-einsatz.html" style="display:block;
+          text-align:center;
+          margin-top:14px;
+          padding:14px 18px;
+          border-radius:10px;
+          background:#ffffff;
+          color:#d32f2f;
+          font-weight:700;
+          font-size:1rem;
+          text-decoration:none;
+          border:2px solid #d32f2f;
+          box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+        ⚡ Persönliche Fall-Analyse (60 Min)
+      </a>
+
+      <div style="text-align:center;
+            font-size:0.8rem;
+            color:#666;
+            margin-top:6px;
+            margin-bottom:28px;">
+        Für komplexe Fälle mit klarer Strategie.
+      </div>
+
+      <section style="padding: 60px 20px; background: #f8f8f8;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+
+          <h2 style="font-size: 1.6rem; margin-bottom: 30px; font-weight: 800; color: #111;">
+            Was andere Eltern berichten
+          </h2>
+          <p style="font-size:13px;color:#6b7280;margin:-10px 0 20px 0;">
+            ✔ Verifizierte Käufer • echte Rückmeldungen
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 25px;">
+
+            <div
+              style="background:white;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:left;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+                <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#e5e7eb,#d1d5db);
+display:flex;align-items:center;justify-content:center;font-weight:700;color:#111;font-size:13px;">
+                  MA
+                </div>
+                <div style="color:#f5b301;font-size:14px;">★★★★★ <span
+                    style="color:#6b7280;font-size:12px;">Verifiziert</span></div>
+              </div>
+
+              <p style="margin:0 0 10px;line-height:1.5;">
+                „Ich habe gemerkt, wie viele Aussagen ich vorher unbewusst falsch formuliert habe.
+                Danach war ich deutlich strukturierter – und ruhiger.“
+              </p>
+              <span style="font-size:0.9rem;color:#666;">– Markus A., Vater, 41</span>
+            </div>
+
+            <div
+              style="background:white;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:left;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+                <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#e5e7eb,#d1d5db);
+display:flex;align-items:center;justify-content:center;font-weight:700;color:#111;font-size:13px;">
+                  SM
+                </div>
+                <div style="color:#f5b301;font-size:14px;">★★★★★ <span
+                    style="color:#6b7280;font-size:12px;">Verifiziert</span></div>
+              </div>
+
+              <p style="margin:0 0 10px;line-height:1.5;">
+                „Zum ersten Mal hatte ich das Gefühl, nicht emotional zu reagieren,
+                sondern strategisch zu handeln.“
+              </p>
+              <span style="font-size:0.9rem;color:#666;">– Silvia M., Mutter, 38</span>
+            </div>
+
+            <div
+              style="background:white;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:left;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+                <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#e5e7eb,#d1d5db);
+display:flex;align-items:center;justify-content:center;font-weight:700;color:#111;font-size:13px;">
+                  SN
+                </div>
+                <div style="color:#f5b301;font-size:14px;">★★★★★ <span
+                    style="color:#6b7280;font-size:12px;">Verifiziert</span></div>
+              </div>
+
+              <p style="margin:0 0 10px;line-height:1.5;">
+                „Die Klarheit hat mir Sicherheit gegeben.
+                Ich wusste genau, was ich sagen – und was ich lassen sollte.“
+              </p>
+              <span style="font-size:0.9rem;color:#666;">– Sascha aus NRW</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FREE OPTIN BLOCK (Button statt direktes Formular) -->
+      <div style="margin-top:50px; text-align:center;">
+
+        <p style="font-size:0.9rem; color:#666; margin-bottom:10px;">
+          Noch unsicher?
+        </p>
+
+        <div style="max-width:420px; margin:0 auto 6px; font-size:1.25rem; font-weight:800; color:#1a1a1a;">
+          So dokumentierst du richtig – kostenlose Vorlage
+        </div>
+
+        <div style="max-width:420px; margin:0 auto 16px; font-size:0.9rem; color:#666;">
+          Struktur, die später wirklich wirkt.
+        </div>
+
+        <!-- Button -->
+        <button type="button" id="free-template-btn" onclick="toggleFreeTemplateForm()"
+          style="
+            width:100%;
+            max-width:420px;
+            font-size:1.05rem;
+            font-weight:800;
+            padding:14px 18px;
+            border-radius:10px;
+            border:2px solid #0f3d2e;
+            background:#0f3d2e;
+            color:#ffffff;
+            cursor:pointer;
+            box-shadow:0 6px 18px rgba(0,0,0,0.10);
+          ">
+          Kostenlose Vorlage holen
+        </button>
+
+        <!-- Optin Box (versteckt bis Klick) -->
+        <div id="free-template-form-wrap" style="display:none;
+          max-width:420px;
+          margin:14px auto 6px;
+          padding:16px;
+          border:1px solid #e5e7eb;
+          border-radius:12px;
+          background:#ffffff;
+          box-shadow:0 6px 18px rgba(0,0,0,0.06);
+          text-align:left;">
+
+          <div class="ml-embedded" data-form="3h2dEy"></div>
+        </div>
+
+        <div style="text-align:center; font-size:0.8rem; color:#666; margin-top:10px;">
+          Ohne Kosten • Sofortiger Zugriff
+        </div>
+
+      </div>
+      <!-- /FREE OPTIN BLOCK -->
+
+    </div><!-- /upsell-box -->
+
+  </section>
+
+  <footer>
+    <div class="container text-center">
+      <a href="impressum.html" style="color: #666; margin: 0 15px;">Impressum</a>
+      <a href="datenschutz.html" style="color: #666; margin: 0 15px;">Datenschutz</a>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER START -->
+  <style>
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      z-index: 9999;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      gap: 14px;
+    }
+
+    #cookie-banner button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+
+    #cookie-banner .accept-btn {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+
+    #cookie-banner .decline-btn {
+      background-color: #999;
+      color: #fff;
+    }
+
+    @media (max-width: 640px) {
+      #cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #cookie-banner button {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  </style>
+
+  <div id="cookie-banner">
+    <div>
+      Wir nutzen Cookies für Statistik. Bitte lies unsere
+      <a href="datenschutz.html" style="color:#0ff;">Datenschutzerklärung</a>.
+    </div>
+    <div>
+      <button class="accept-btn" onclick="acceptCookies()">Akzeptieren</button>
+      <button class="decline-btn" onclick="rejectCookies()">Ablehnen</button>
+    </div>
+  </div>
+
+  <script>
+    function loadAnalytics() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-9PBQDYMH77";
+      document.head.appendChild(s);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-9PBQDYMH77');
+    }
+
+    function acceptCookies() {
+      localStorage.setItem('cookies-accepted', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+      loadAnalytics();
+    }
+
+    function rejectCookies() {
+      localStorage.setItem('cookies-accepted', 'false');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    window.addEventListener('load', function () {
+      if (localStorage.getItem('cookies-accepted') === 'true') {
+        loadAnalytics();
+      } else if (!localStorage.getItem('cookies-accepted')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      }
+    });
+
+    // Free Optin: Button -> Formular einblenden
+    function toggleFreeTemplateForm() {
+      var wrap = document.getElementById('free-template-form-wrap');
+      if (!wrap) return;
+
+      var isHidden = (wrap.style.display === 'none' || wrap.style.display === '');
+      wrap.style.display = isHidden ? 'block' : 'none';
+
+      if (isHidden) {
+        setTimeout(function () {
+          wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
+      }
+    }
+  </script>
+  <!-- COOKIE BANNER END -->
+
+</body>
+
+</html>

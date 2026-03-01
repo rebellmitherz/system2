@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datenschutz – Rebell mit Herz</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .legal-section {
+      margin-bottom: 30px;
+    }
+    .legal-section h2 {
+      font-size: 1.1rem;
+      color: var(--brand-blue);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .legal-content {
+      line-height: 1.6;
+      border-left: 2px solid rgba(255,255,255,0.05);
+      padding-left: 15px;
+    }
+    .address-block {
+      font-style: normal;
+      color: #fff;
+      background: rgba(255,255,255,0.03);
+      padding: 15px;
+      border-radius: 8px;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <span class="kicker">Vertrauen & Sicherheit</span>
+      <h1>Datenschutz</h1>
+    </header>
+
+    <section class="card animate-fade">
+      <div class="legal-section">
+        <h2>1. Datenschutz auf einen Blick</h2>
+        <div class="legal-content">
+          <p class="muted">
+            Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+          </p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>2. Datenerfassung</h2>
+        <div class="legal-content">
+          <p class="muted">
+            <strong>Hosting:</strong> Diese Website wird über GitHub Pages gehostet. GitHub kann Server-Log-Files erfassen (IP-Adresse, Datum, Uhrzeit des Zugriffs).
+          </p>
+          <p class="muted" style="margin-top: 10px;">
+            <strong>Externe Links:</strong> Wir verlinken auf Ko-fi. Bei Nutzung dieser Links verlassen Sie unseren Verantwortungsbereich. Ko-fi erhebt eigene Daten zur Abwicklung von Zahlungen und Interaktionen.
+          </p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>3. Verantwortliche Stelle</h2>
+        <div class="legal-content">
+          <address class="address-block">
+            <strong>Emilio Allegro</strong><br>
+            Kaiserstrasse 6a<br>
+            66787 Wadgassen<br>
+            <span style="color: var(--brand-blue);">E-Mail: rebellmitherz@gmail.com</span>
+          </address>
+        </div>
+      </div>
+
+      <button class="btn btn-ghost btn-large" style="margin-top: 10px;" onclick="history.back()">
+        ZURÜCK ZUR AUSWAHL
+      </button>
+    </section>
+
+    <footer class="footer">
+      <nav class="footer-nav">
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+      <p class="fine">© <span id="year"></span> Rebell mit Herz</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
