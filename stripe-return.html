@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahlung wird verarbeitet… | Rebell mit Herz</title>
+  <meta name="description" content="Deine Zahlung wird verarbeitet. Du wirst direkt zur passenden Download-Seite weitergeleitet.">
+  <style>
+    :root{
+      --bg:#08111f;
+      --bg2:#0c1627;
+      --card:rgba(17,24,39,0.94);
+      --text:#f3f6fb;
+      --muted:#aeb8c9;
+      --line:rgba(255,255,255,0.08);
+      --red:#d32f2f;
+      --red2:#ef4444;
+      --green:#18a957;
+      --green-soft:rgba(24,169,87,0.12);
+      --red-soft:rgba(211,47,47,0.12);
+      --shadow:0 24px 60px rgba(0,0,0,0.38);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      font-family:Inter,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(211,47,47,0.12), transparent 24%),
+        radial-gradient(circle at top left, rgba(255,255,255,0.04), transparent 18%),
+        linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+    }
+
+    .card{
+      width:100%;
+      max-width:680px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:34px 24px 28px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0 auto auto 0;
+      width:100%;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      opacity:.7;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:8px 14px;
+      border-radius:999px;
+      margin-bottom:18px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid var(--line);
+      color:#e8eef8;
+      font-size:.82rem;
+      font-weight:900;
+      letter-spacing:.05em;
+    }
+
+    .spinner{
+      width:62px;
+      height:62px;
+      margin:0 auto 20px;
+      border:5px solid rgba(255,255,255,0.12);
+      border-top:5px solid var(--red);
+      border-radius:50%;
+      animation:spin 1s linear infinite;
+    }
+
+    @keyframes spin{
+      0%{transform:rotate(0deg)}
+      100%{transform:rotate(360deg)}
+    }
+
+    h1{
+      margin:0 0 12px;
+      font-size:clamp(1.8rem, 4vw, 2.4rem);
+      line-height:1.08;
+      letter-spacing:-0.03em;
+      color:#fff;
+      font-weight:900;
+    }
+
+    p{
+      margin:0 auto;
+      max-width:52ch;
+      color:#d3dbea;
+      line-height:1.65;
+      font-size:1rem;
+    }
+
+    .status-box{
+      margin-top:20px;
+      padding:16px 18px;
+      border-radius:16px;
+      background:var(--green-soft);
+      border:1px solid rgba(24,169,87,0.24);
+      color:#dcfce7;
+      font-size:.94rem;
+      font-weight:700;
+    }
+
+    .small-note{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:.88rem;
+      line-height:1.55;
+    }
+
+    .error{
+      display:none;
+      margin-top:22px;
+      padding:18px;
+      background:var(--red-soft);
+      border:1px solid rgba(211,47,47,0.34);
+      border-radius:16px;
+      text-align:left;
+    }
+
+    .error strong{
+      display:block;
+      margin-bottom:8px;
+      color:#fff;
+      font-size:1rem;
+    }
+
+    .error p{
+      margin:0 0 14px;
+      max-width:none;
+      color:#ffd9d9;
+      font-size:.95rem;
+    }
+
+    .error-links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .error-links a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:900;
+      font-size:.95rem;
+      transition:transform .16s ease, background .16s ease, box-shadow .16s ease;
+    }
+
+    .error-links a.primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--red),var(--red2));
+      border:1px solid rgba(255,255,255,0.12);
+      box-shadow:0 12px 24px rgba(211,47,47,0.18);
+    }
+
+    .error-links a.secondary{
+      color:#fff;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+
+    .error-links a:hover{
+      transform:translateY(-1px);
+    }
+
+    @media (max-width: 640px){
+      .card{
+        padding:24px 18px 20px;
+        border-radius:18px;
+      }
+
+      .error-links{
+        flex-direction:column;
+      }
+
+      .error-links a{
+        width:100%;
+      }
+
+      .spinner{
+        width:56px;
+        height:56px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="badge">ZAHLUNG WIRD VERARBEITET</div>
+    <div class="spinner" id="spinner"></div>
+
+    <h1>Dein Zugriff wird gerade freigeschaltet</h1>
+    <p id="status-text">
+      Du wirst direkt zur passenden Download-Seite weitergeleitet. Bitte schließe dieses Fenster nicht.
+    </p>
+
+    <div class="status-box" id="status-box">
+      Zahlung erkannt. Weiterleitung wird vorbereitet…
+    </div>
+
+    <div class="small-note" id="small-note">
+      Falls die Weiterleitung nicht automatisch startet, warte einen kurzen Moment.
+    </div>
+
+    <div id="error-box" class="error">
+      <strong>Produkt nicht erkannt</strong>
+      <p>
+        Die Rückgabe von Stripe enthält kein eindeutiges Produkt. Geh bitte zurück zur passenden Produktseite und starte den Checkout erneut.
+      </p>
+
+      <div class="error-links">
+        <a class="primary" href="elternschutzpaket.html">Zum Elternschutzpaket</a>
+        <a class="secondary" href="jugendamt-vorlage.html">Zur 9,95-€-Vorlage</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function normalizeProduct(value) {
+      if (!value) return "";
+
+      const v = value.toLowerCase().trim();
+
+      if ([
+        "elternschutzpaket",
+        "paket",
+        "kompass",
+        "elternschutz-kompass",
+        "29",
+        "29eur",
+        "29euro",
+        "hauptprodukt"
+      ].includes(v)) {
+        return "paket";
+      }
+
+      if ([
+        "vorlage",
+        "jugendamt-vorlage",
+        "995",
+        "9.95",
+        "9,95",
+        "jugendamt",
+        "lowticket",
+        "low-ticket"
+      ].includes(v)) {
+        return "vorlage";
+      }
+
+      return "";
+    }
+
+    function setPaidAccess(product) {
+      const now = Date.now();
+      const validForMs = 12 * 60 * 60 * 1000;
+
+      if (product === "paket") {
+        localStorage.setItem("rmh_paid_elternschutzpaket", "1");
+        localStorage.setItem("rmh_paid_elternschutzpaket_expiry", String(now + validForMs));
+        return "danke.html?paid=1";
+      }
+
+      if (product === "vorlage") {
+        localStorage.setItem("rmh_paid_vorlage", "1");
+        localStorage.setItem("rmh_paid_vorlage_expiry", String(now + validForMs));
+        return "download-vorlage.html?paid=1";
+      }
+
+      return "";
+    }
+
+    function showError() {
+      const spinner = document.getElementById("spinner");
+      const statusText = document.getElementById("status-text");
+      const statusBox = document.getElementById("status-box");
+      const smallNote = document.getElementById("small-note");
+      const errorBox = document.getElementById("error-box");
+
+      if (spinner) spinner.style.display = "none";
+      if (statusText) statusText.style.display = "none";
+      if (statusBox) statusBox.style.display = "none";
+      if (smallNote) smallNote.style.display = "none";
+      if (errorBox) errorBox.style.display = "block";
+    }
+
+    function redirectByProduct() {
+      const params = new URLSearchParams(window.location.search);
+      const rawProduct = params.get("product");
+      const product = normalizeProduct(rawProduct);
+
+      if (!product) {
+        showError();
+        return;
+      }
+
+      const target = setPaidAccess(product);
+
+      if (!target) {
+        showError();
+        return;
+      }
+
+      setTimeout(() => {
+        window.location.href = target;
+      }, 900);
+    }
+
+    document.addEventListener("DOMContentLoaded", redirectByProduct);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebell mit Herz | Vorlagen für Jugendamt, Umgang und Familiengericht</title>
+  <meta name="description" content="8 PDFs + 1 Audio für Eltern bei Jugendamt, Umgang, Familiengericht, Gutachten und Protokollproblemen. Einstieg über 9,95 € oder direkt das Elternschutzpaket für 29 €.">
+  <meta name="theme-color" content="#08111f">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=22">
+
+  <style>
+    .home-hero-grid{display:grid;grid-template-columns:1.08fr 0.92fr;gap:22px;align-items:stretch}
+    .home-hero-copy,.home-hero-side,.home-side-card,.home-video-card,.home-ladder-card,.home-proof-card,.home-faq-card,.home-free-card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:24px;box-shadow:var(--shadow-soft)}
+    .home-hero-copy{padding:28px}
+    .home-hero-side{padding:22px;display:flex;flex-direction:column;gap:16px}
+    .home-topline{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+    .home-badge{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#e8eef8;font-size:.82rem;font-weight:900;letter-spacing:.04em}
+    .home-badge-red{background:rgba(211,47,47,.14);border-color:rgba(211,47,47,.36);color:#ffd8d8}
+    .home-title{margin:0 0 14px;font-size:clamp(2.15rem,5vw,4.25rem);line-height:1.02;letter-spacing:-.04em;font-weight:900;color:#fff;max-width:12.5ch}
+    .home-title span{text-shadow:0 0 18px rgba(211,47,47,.22)}
+    .home-subtitle{margin:0 0 18px;color:var(--muted);font-size:1.05rem;line-height:1.7;max-width:58ch}
+    .home-price-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0 20px}
+    .home-price-tile{padding:16px 14px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-align:center}
+    .home-price-tile strong{display:block;color:#fff;font-size:1.5rem;line-height:1;margin-bottom:6px;font-weight:900}
+    .home-price-tile span{display:block;color:var(--muted);font-size:.9rem;line-height:1.45;font-weight:700}
+    .home-price-tile.highlight{background:linear-gradient(180deg,rgba(211,47,47,.12),rgba(255,255,255,.03));border-color:rgba(211,47,47,.28)}
+    .home-cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .home-cta-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:16px 20px;border-radius:16px;font-weight:900;font-size:1rem;color:#fff;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);transition:transform .18s ease,background .18s ease;text-decoration:none}
+    .home-cta-secondary:hover{transform:translateY(-1px);background:rgba(255,255,255,.08)}
+    .home-mini-note{margin-top:12px;color:var(--muted-2);font-size:.92rem;line-height:1.55}
+    .home-side-card{padding:18px}
+    .home-side-card h3{margin:0 0 12px;color:#fff;font-size:1.05rem;font-weight:900}
+    .home-author{display:flex;gap:14px;align-items:center}
+    .home-author img{width:76px;height:76px;border-radius:18px;object-fit:cover;border:1px solid rgba(255,255,255,.12)}
+    .home-author p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.6}
+    .home-checks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .home-checks li{position:relative;padding-left:24px;color:#e7edf8;line-height:1.55;font-size:.95rem}
+    .home-checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:900}
+    .home-videos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .home-video-card{padding:18px}
+    .home-video-card h3{margin:0 0 8px;font-size:1.14rem;color:#fff;font-weight:900;line-height:1.2}
+    .home-video-card p{margin:0 0 14px;color:var(--muted);line-height:1.6;font-size:.95rem}
+    .video-embed-clean{position:relative;width:100%;padding-bottom:56.25%;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#000}
+    .video-embed-clean iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .home-ladder-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .home-ladder-card{padding:22px;display:flex;flex-direction:column;min-height:100%}
+    .home-ladder-card.highlight{background:linear-gradient(180deg,rgba(211,47,47,.10),rgba(255,255,255,.03)),rgba(17,24,39,.95);border-color:rgba(211,47,47,.22);box-shadow:var(--shadow)}
+    .home-ladder-tag{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;min-height:30px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#e8eef9;font-size:.74rem;font-weight:900;letter-spacing:.06em;margin-bottom:12px}
+    .home-ladder-card h3{margin:0 0 8px;color:#fff;font-size:1.18rem;font-weight:900;line-height:1.18}
+    .home-ladder-card p{margin:0 0 14px;color:var(--muted);line-height:1.6;font-size:.96rem}
+    .home-ladder-price{font-size:2.2rem;line-height:1;font-weight:900;color:#fff;letter-spacing:-.04em;margin:2px 0 14px}
+    .home-ladder-list{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:10px;flex:1}
+    .home-ladder-list li{position:relative;padding-left:24px;color:#e7edf8;line-height:1.55}
+    .home-ladder-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:900}
+    .home-ladder-btn,.home-ladder-btn-dark{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:56px;padding:16px 18px;border-radius:14px;font-weight:900;font-size:1rem;text-decoration:none;transition:transform .18s ease,opacity .18s ease,background .18s ease,box-shadow .18s ease}
+    .home-ladder-btn{color:#fff;background:linear-gradient(135deg,var(--red),var(--red-2));border:1px solid rgba(255,255,255,.12);box-shadow:0 16px 34px rgba(211,47,47,.24)}
+    .home-ladder-btn:hover{opacity:.98;transform:translateY(-2px);box-shadow:0 20px 40px rgba(211,47,47,.30)}
+    .home-ladder-btn-dark{
+      color:#fff;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      cursor:pointer;
+      appearance:none;
+      -webkit-appearance:none;
+      font-family:inherit;
+    }
+    .home-ladder-btn-dark:hover{transform:translateY(-1px);background:rgba(255,255,255,.08)}
+    .home-proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .home-proof-card{padding:22px}
+    .home-proof-card h3{margin:0 0 8px;color:#fff;font-size:1.06rem;font-weight:900}
+    .home-proof-card p{margin:0;color:var(--muted);line-height:1.6;font-size:.95rem}
+    .home-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .home-faq-card{padding:20px}
+    .home-faq-card strong{display:block;margin-bottom:8px;color:#fff;font-size:1rem;font-weight:900}
+    .home-faq-card p{margin:0;color:var(--muted);line-height:1.6;font-size:.95rem}
+    .home-free-card{padding:24px}
+    .home-free-card h3{margin:0 0 10px;color:#fff;font-size:1.35rem;font-weight:900}
+    .home-free-card p{margin:0 0 16px;color:var(--muted);line-height:1.6}
+    .home-free-note{margin-top:14px;color:var(--muted-2);font-size:.9rem;line-height:1.55}
+    .ml-form-live{display:none}
+    .ml-form-live.is-visible{display:block}
+    @media (max-width:980px){.home-hero-grid,.home-videos-grid,.home-ladder-grid,.home-proof-grid,.home-faq-grid,.home-price-strip{grid-template-columns:1fr}.home-title{max-width:none}}
+    @media (max-width:640px){.home-hero-copy,.home-hero-side,.home-video-card,.home-ladder-card,.home-proof-card,.home-faq-card,.home-side-card,.home-free-card{padding:18px;border-radius:20px}.home-cta-row{flex-direction:column;align-items:stretch}.home-cta-secondary,.sales-cta-main{width:100%}.home-title{font-size:2.05rem}.home-subtitle{font-size:1rem}}
+
+    .consent-banner{position:fixed;left:18px;right:18px;bottom:18px;z-index:9999;max-width:1180px;margin:0 auto;padding:18px;border-radius:22px;background:rgba(8,17,31,.96);border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 60px rgba(0,0,0,.35);backdrop-filter:blur(14px)}
+    .consent-banner[hidden]{display:none!important}
+    .consent-inner{display:flex;gap:18px;align-items:flex-start;justify-content:space-between}
+    .consent-copy strong{display:block;margin:0 0 8px;color:#fff;font-size:1rem;font-weight:900}
+    .consent-copy p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.6;max-width:72ch}
+    .consent-copy a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+    .consent-actions{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+    .consent-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border-radius:14px;font-weight:900;font-size:.95rem;border:1px solid rgba(255,255,255,.12);cursor:pointer;transition:transform .18s ease,opacity .18s ease,background .18s ease;color:#fff;background:rgba(255,255,255,.05)}
+    .consent-btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.08)}
+    .consent-btn.primary{background:linear-gradient(135deg,var(--red),var(--red-2));box-shadow:0 16px 34px rgba(211,47,47,.24)}
+    .consent-btn.primary:hover{box-shadow:0 20px 40px rgba(211,47,47,.30)}
+    .consent-placeholder{display:grid;place-items:center;min-height:220px;padding:22px;border-radius:18px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));text-align:center}
+    .consent-placeholder strong{display:block;margin-bottom:8px;color:#fff;font-size:1.02rem}
+    .consent-placeholder p{margin:0 0 14px;color:var(--muted);line-height:1.6;font-size:.95rem;max-width:42ch}
+    .consent-placeholder .consent-btn{min-height:46px}
+    @media (max-width:840px){.consent-inner{flex-direction:column}.consent-actions{width:100%}.consent-btn{flex:1}.consent-banner{left:12px;right:12px;bottom:12px}}
+  </style>
+</head>
+<body>
+  <section class="sales-hero sales-hero-pro">
+    <div class="container sales-shell">
+      <div class="home-hero-grid">
+        <div class="home-hero-copy">
+          <div class="home-topline">
+            <span class="home-badge home-badge-red">REBELLMITHERZ</span>
+            <span class="home-badge">8 PDFs + 1 Audio</span>
+            <span class="home-badge">Kein Abo</span>
+          </div>
+
+          <h1 class="home-title">
+            Klare Vorlagen statt Chaos bei <span>Jugendamt, Umgang und Familiengericht</span>
+          </h1>
+
+          <p class="home-subtitle">
+            Du bekommst direkt nutzbare Vorlagen und Strukturhilfen für typische Konflikte.
+            Einstieg über die einzelne Vorlage für 9,95 € oder direkt das Elternschutzpaket für 29 €.
+          </p>
+
+          <div class="home-price-strip">
+            <div class="home-price-tile">
+              <strong>9,95 €</strong>
+              <span>Einzelvorlage für schnellen Einstieg</span>
+            </div>
+            <div class="home-price-tile highlight">
+              <strong>29 €</strong>
+              <span>Komplettpaket mit 8 PDFs + 1 Audio</span>
+            </div>
+          </div>
+
+          <div class="home-cta-row">
+            <a href="jugendamt-vorlage.html" class="sales-cta-main">Mit 9,95 € starten</a>
+            <a href="#paket-kaufen" class="home-cta-secondary">Direkt Paket holen – 29 €</a>
+          </div>
+
+          <div class="home-mini-note">
+            Kostenloser Einstieg ist weiter unten verfügbar. Für kalten Traffic bleiben die bezahlten Einstiege hier bewusst vorn.
+          </div>
+        </div>
+
+        <div class="home-hero-side">
+          <div class="home-side-card">
+            <h3>Wer dahinter steht</h3>
+            <div class="home-author">
+              <img src="emilio.webp" alt="Emilio von Rebell mit Herz">
+              <p>
+                Aus echter Erfahrung entstanden. Ohne Gelaber. Direkt nutzbare Struktur für Eltern, die gerade nicht noch mehr Chaos brauchen.
+              </p>
+            </div>
+          </div>
+
+          <div class="home-side-card">
+            <h3>Wofür das gedacht ist</h3>
+            <ul class="home-checks">
+              <li>wenn du strukturierter schreiben willst</li>
+              <li>wenn du nicht impulsiv reagieren willst</li>
+              <li>wenn du Klarheit statt Bauchgefühl brauchst</li>
+              <li>wenn du direkt nutzbare Unterlagen willst</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section sales-section-alt">
+    <div class="container sales-shell">
+      <div class="section-head">
+        <span class="section-kicker">ERKLÄRVIDEO</span>
+        <h2>Sieh dir zuerst kurz an, worum es geht</h2>
+        <p>
+          Ein kurzes Erklärvideo und ein persönliches Video direkt auf der Seite.
+        </p>
+      </div>
+
+      <div class="home-videos-grid">
+        <div class="home-video-card">
+          <h3>Was im Familiengericht wirklich zählt</h3>
+          <p>Das kurze Erklärvideo direkt hier auf der Seite.</p>
+          <div class="video-embed-clean consent-media" data-type="youtube" data-src="https://www.youtube.com/embed/JAo35tmgIy4?si=Lzj4xXvwHeb2OSCP" data-title="Erklärvideo">
+            <div class="consent-placeholder">
+              <div>
+                <strong>Video erst nach Zustimmung laden</strong>
+                <p>Dieses YouTube-Video wird erst nach deiner Einwilligung zu externen Inhalten geladen.</p>
+                <button type="button" class="consent-btn primary" data-action="accept-external">Externe Inhalte laden</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-video-card">
+          <h3>Warum ich den Elterschutzkompass gebaut habe</h3>
+          <p>Dieses Video zeigt, warum das Produkt entstanden ist und wofür es gedacht ist.</p>
+          <div class="video-embed-clean consent-media" data-type="youtube" data-src="https://www.youtube.com/embed/cb0P8wi3SY0?si=jviIw6lIYw7l_He-" data-title="Warum ich den Elterschutzkompass gebaut habe">
+            <div class="consent-placeholder">
+              <div>
+                <strong>Video erst nach Zustimmung laden</strong>
+                <p>Dieses YouTube-Video wird erst nach deiner Einwilligung zu externen Inhalten geladen.</p>
+                <button type="button" class="consent-btn primary" data-action="accept-external">Externe Inhalte laden</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section anchor-offset" id="einstiege">
+    <div class="container sales-shell">
+      <div class="section-head">
+        <span class="section-kicker">DEIN EINSTIEG</span>
+        <h2>Wähle den Schritt, der zu deiner Lage passt</h2>
+        <p>Du kannst klein starten oder direkt das komplette Paket nehmen.</p>
+      </div>
+
+      <div class="home-ladder-grid">
+        <article class="home-ladder-card">
+          <span class="home-ladder-tag">EINZELVORLAGE</span>
+          <h3>Jugendamt-Vorlage</h3>
+          <p>Der schnelle Einstieg für Eltern, die sofort eine klare Vorlage brauchen.</p>
+          <div class="home-ladder-price">9,95 €</div>
+          <ul class="home-ladder-list">
+            <li>konkreter Einstieg</li>
+            <li>klare Grundstruktur statt Bauchgefühl</li>
+            <li>direkt nach Kauf downloadbar</li>
+          </ul>
+          <a href="jugendamt-vorlage.html" class="home-ladder-btn-dark">Zur 9,95-€-Vorlage</a>
+        </article>
+
+        <article class="home-ladder-card highlight">
+          <span class="home-ladder-tag">PAKET</span>
+          <h3>Elternschutzpaket</h3>
+          <p>Die umfassendere Lösung für Eltern, die mehrere typische Baustellen direkt abdecken wollen.</p>
+          <div class="home-ladder-price">29 €</div>
+          <ul class="home-ladder-list">
+            <li>8 PDF-Vorlagen insgesamt</li>
+            <li>plus 1 Audio-Erklärung</li>
+            <li>für Jugendamt, Umgang, Gericht und mehr</li>
+          </ul>
+          <a href="elternschutzpaket.html" class="home-ladder-btn">Zum Elternschutzpaket</a>
+        </article>
+
+        <article class="home-ladder-card">
+          <span class="home-ladder-tag">KOSTENLOS</span>
+          <h3>Kostenlose Vorlage</h3>
+          <p>Für alle, die sich zuerst einen Überblick verschaffen wollen.</p>
+          <div class="home-ladder-price">0 €</div>
+          <ul class="home-ladder-list">
+            <li>kostenloser Überblick</li>
+            <li>einfacher Einstieg</li>
+            <li>per E-Mail freischalten</li>
+          </ul>
+          <button type="button" class="home-ladder-btn-dark" id="openFreeFormBtn">Gratis freischalten</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section anchor-offset" id="kostenlose-vorlage">
+    <div class="container sales-shell">
+      <div class="section-head">
+        <span class="section-kicker">KOSTENLOSER EINSTIEG</span>
+        <h2>Hol dir die kostenlose Vorlage</h2>
+        <p>Trag dich kurz ein und du wirst direkt zur freigeschalteten Download-Seite weitergeleitet.</p>
+      </div>
+
+      <div class="home-free-card">
+        <h3>Kostenlose Vorlage freischalten</h3>
+        <p>Du bekommst den kostenlosen Einstieg und wirst danach direkt auf die Download-Seite weitergeleitet.</p>
+
+        <div id="ml-consent-box" class="consent-placeholder">
+          <div>
+            <strong>Kostenlose Vorlage freischalten</strong>
+            <p>Klicke auf den Button, dann wird das Formular direkt geladen.</p>
+            <button type="button" class="consent-btn primary" id="loadFreeFormBtn">Formular laden</button>
+          </div>
+        </div>
+
+        <div id="ml-form-holder" class="ml-form-live">
+          <div class="ml-embedded" data-form="3h2dEy"></div>
+        </div>
+
+        <div class="home-free-note">
+          Wichtig: Die Einwilligung zur Datenverarbeitung muss im MailerLite-Formular selbst als Pflichtfeld aktiviert sein.
+          <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section">
+    <div class="container sales-shell">
+      <div class="section-head">
+        <span class="section-kicker">DAS PROBLEM</span>
+        <h2>Viele Eltern schwächen ihre Lage durch unklare Schriftlichkeit, schlechtes Timing und emotionale Reaktionen</h2>
+        <p>
+          Wer unstrukturiert schreibt, zu spät reagiert oder sich in langen Erklärungen verliert, macht richtige Punkte oft unnötig schwach.
+          Genau dafür sind diese Vorlagen gemacht.
+        </p>
+      </div>
+
+      <div class="problem-grid-pro">
+        <div class="problem-card-pro">
+          <div class="problem-icon">01</div>
+          <h3>Zu emotional</h3>
+          <p>Emotionale Nachrichten wirken schnell defensiv oder unprofessionell.</p>
+        </div>
+
+        <div class="problem-card-pro">
+          <div class="problem-icon">02</div>
+          <h3>Zu spät</h3>
+          <p>Wer wartet, verliert oft Druck, Dokumentation und Anschlussfähigkeit.</p>
+        </div>
+
+        <div class="problem-card-pro">
+          <div class="problem-icon">03</div>
+          <h3>Zu unklar</h3>
+          <p>Unstrukturierte Kommunikation macht selbst richtige Punkte unnötig schwach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section sales-section-alt anchor-offset" id="paket-inhalt">
+    <div class="container sales-shell">
+      <div class="section-head">
+        <span class="section-kicker">DAS PAKET</span>
+        <h2>Das Elternschutzpaket gibt dir sofort nutzbare Struktur statt Improvisation</h2>
+        <p>8 PDFs und 1 Audio-Erklärung als direkte Arbeitsgrundlage.</p>
+      </div>
+
+      <div class="deliver-grid">
+        <div class="deliver-card"><strong>Akteneinsicht</strong><span>Wenn du endlich sehen willst, was wirklich in der Akte steht.</span></div>
+        <div class="deliver-card"><strong>Arbeitsvorlage Durchsetzung</strong><span>Damit du deinen Fall sauber vorbereitest statt hektisch zu reagieren.</span></div>
+        <div class="deliver-card"><strong>Durchsetzung</strong><span>Wenn Beschlüsse, Absprachen oder Umgang faktisch blockiert werden.</span></div>
+        <div class="deliver-card"><strong>Gutachten</strong><span>Für strukturierte Reaktion statt emotionalem Gegendruck ohne Richtung.</span></div>
+        <div class="deliver-card"><strong>Protokollberichtigung</strong><span>Wenn etwas falsch, verkürzt oder verzerrt festgehalten wurde.</span></div>
+        <div class="deliver-card"><strong>Umgangsblockade-Leitfaden</strong><span>Für klare Dokumentation und nächste Schritte ohne Leerlauf.</span></div>
+        <div class="deliver-card"><strong>Elterschutzdarstellung</strong><span>Zusätzlicher Baustein für eine sauberere Gesamtdarstellung.</span></div>
+        <div class="deliver-card deliver-card-highlight"><strong>Audio-Erklärung</strong><span>Zusätzliche Einordnung als Audio-Datei für schnelleres Verständnis.</span></div>
+      </div>
+
+      <div class="sales-cta-wrap sales-cta-wrap-tight">
+        <a href="https://buy.stripe.com/4gMbJ39gw5rzcXOar78og08" target="_blank" rel="noopener" class="sales-cta-main">
+          Paket direkt kaufen – 29 €
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section">
+    <div class="container sales-shell">
+      <div class="section-head">
+        <span class="section-kicker">WARUM DIESE PRODUKTE</span>
+        <h2>Du brauchst nicht mehr Druck. Du brauchst mehr Klarheit.</h2>
+        <p>Gute Unterlagen ersetzen kein Verfahren. Aber sie helfen dir, strukturierter, ruhiger und klarer aufzutreten.</p>
+      </div>
+
+      <div class="home-proof-grid">
+        <div class="home-proof-card">
+          <h3>Klarer formulieren</h3>
+          <p>Weniger Chaos im Kopf, mehr saubere Aussagen im Schreiben.</p>
+        </div>
+        <div class="home-proof-card">
+          <h3>Besser vorbereiten</h3>
+          <p>Du reagierst nicht nur, sondern arbeitest strukturierter und nachvollziehbarer.</p>
+        </div>
+        <div class="home-proof-card">
+          <h3>Sofort nutzen</h3>
+          <p>Die Vorlagen sind direkt einsetzbar und ohne Wartezeit verfügbar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section sales-price-block anchor-offset" id="paket-kaufen">
+    <div class="container sales-shell">
+      <div class="price-card-pro">
+        <span class="section-kicker">ANGEBOT</span>
+        <h2>29 € für 8 PDFs + 1 Audio</h2>
+        <p>Du kaufst hier keine Magie. Du kaufst saubere Arbeitsgrundlagen für typische Konflikte rund um Jugendamt, Umgang und Familiengericht.</p>
+
+        <div class="price-row">
+          <div class="price-old">Einmalzahlung</div>
+          <div class="price-new">29 €</div>
+        </div>
+
+        <div class="price-bullets">
+          <span>8 PDF-Vorlagen</span>
+          <span>1 Audio-Erklärung</span>
+          <span>sofort verfügbar</span>
+          <span>kein Abo</span>
+        </div>
+
+        <a href="https://buy.stripe.com/4gMbJ39gw5rzcXOar78og08" target="_blank" rel="noopener" class="sales-cta-main sales-cta-main-big">
+          Jetzt kaufen und direkt herunterladen
+        </a>
+
+        <div class="sales-legal-note">
+          Hinweis: Keine Rechtsberatung. Das Paket dient als Struktur- und Formulierungshilfe.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section">
+    <div class="container sales-shell">
+      <div class="section-head">
+        <span class="section-kicker">FAQ</span>
+        <h2>Die wichtigsten Fragen direkt geklärt</h2>
+      </div>
+
+      <div class="home-faq-grid">
+        <div class="home-faq-card">
+          <strong>Ist das eine Rechtsberatung?</strong>
+          <p>Nein. Du bekommst keine individuelle Rechtsberatung, sondern Struktur- und Formulierungshilfen.</p>
+        </div>
+
+        <div class="home-faq-card">
+          <strong>Was ist im Paket drin?</strong>
+          <p>8 PDF-Dateien plus 1 Audio-Erklärung für mehrere typische Konfliktfelder.</p>
+        </div>
+
+        <div class="home-faq-card">
+          <strong>Wann bekomme ich Zugriff?</strong>
+          <p>Direkt nach der Zahlung. Ohne Abo und ohne Wartezeit.</p>
+        </div>
+
+        <div class="home-faq-card">
+          <strong>Für wen ist der kostenlose Einstieg gedacht?</strong>
+          <p>Für alle, die sich zuerst orientieren möchten, bevor sie eine Vorlage oder das Paket nutzen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sales-footer">
+    <div class="container">
+      <a href="index.html">Startseite</a>
+      <a href="vorlagen.html">Vorlagen</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <div class="sticky-cta-inner">
+      <div class="sticky-cta-copy">
+        <strong>Elternschutzpaket – 29 €</strong>
+        <span>8 PDFs · 1 Audio · sofort downloadbar · kein Abo</span>
+      </div>
+      <div class="sticky-cta-actions">
+        <a href="jugendamt-vorlage.html" class="sticky-cta-btn secondary">9,95 € Einstieg</a>
+        <a href="https://buy.stripe.com/4gMbJ39gw5rzcXOar78og08" target="_blank" rel="noopener" class="sticky-cta-btn primary">Jetzt kaufen</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="consent-banner" id="consentBanner" hidden>
+    <div class="consent-inner">
+      <div class="consent-copy">
+        <strong>Datenschutz-Einstellungen</strong>
+        <p>Diese Seite nutzt externe Inhalte von YouTube und MailerLite. Diese werden erst geladen, wenn du zustimmst. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a> und im <a href="impressum.html">Impressum</a>.</p>
+      </div>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn" id="consentDecline">Nur notwendige</button>
+        <button type="button" class="consent-btn primary" id="consentAccept">Alle akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const CONSENT_KEY = 'rebell_consent_v1';
+      const banner = document.getElementById('consentBanner');
+      const acceptBtn = document.getElementById('consentAccept');
+      const declineBtn = document.getElementById('consentDecline');
+      const freeSection = document.getElementById('kostenlose-vorlage');
+      const openFreeFormBtn = document.getElementById('openFreeFormBtn');
+      const loadFreeFormBtn = document.getElementById('loadFreeFormBtn');
+
+      function getConsent(){
+        try { return localStorage.getItem(CONSENT_KEY); } catch(e) { return null; }
+      }
+
+      function setConsent(value){
+        try { localStorage.setItem(CONSENT_KEY, value); } catch(e) {}
+      }
+
+      function hideBanner(){
+        if (banner) banner.hidden = true;
+      }
+
+      function showBanner(){
+        if (banner) banner.hidden = false;
+      }
+
+      function showMailerLiteForm(){
+        const formHolder = document.getElementById('ml-form-holder');
+        const consentBox = document.getElementById('ml-consent-box');
+        if (formHolder) formHolder.classList.add('is-visible');
+        if (consentBox) consentBox.style.display = 'none';
+      }
+
+      function scrollToFreeSection(){
+        if (freeSection) {
+          freeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      function loadMailerLite(){
+        showMailerLiteForm();
+
+        if (window.__mlLoaded) return;
+        window.__mlLoaded = true;
+
+        window.ml = window.ml || function(){ (window.ml.q = window.ml.q || []).push(arguments); };
+
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://assets.mailerlite.com/js/universal.js';
+        script.onload = function(){
+          if (typeof window.ml === 'function') {
+            window.ml('account', '2054110');
+          }
+        };
+        document.head.appendChild(script);
+      }
+
+      function loadYouTubeEmbeds(){
+        document.querySelectorAll('.consent-media[data-src]').forEach(function(box){
+          if (box.dataset.loaded === 'true') return;
+          const iframe = document.createElement('iframe');
+          iframe.src = box.dataset.src;
+          iframe.title = box.dataset.title || 'YouTube Video';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+          iframe.allowFullscreen = true;
+          box.innerHTML = '';
+          box.appendChild(iframe);
+          box.dataset.loaded = 'true';
+        });
+      }
+
+      function enableExternalContent(){
+        loadMailerLite();
+        loadYouTubeEmbeds();
+        hideBanner();
+      }
+
+      function acceptAll(){
+        setConsent('accepted');
+        enableExternalContent();
+      }
+
+      function declineExternal(){
+        setConsent('declined');
+        hideBanner();
+      }
+
+      function openFreeFormDirectly(){
+        scrollToFreeSection();
+        acceptAll();
+      }
+
+      if (acceptBtn) acceptBtn.addEventListener('click', acceptAll);
+      if (declineBtn) declineBtn.addEventListener('click', declineExternal);
+      if (openFreeFormBtn) openFreeFormBtn.addEventListener('click', openFreeFormDirectly);
+      if (loadFreeFormBtn) loadFreeFormBtn.addEventListener('click', openFreeFormDirectly);
+
+      document.addEventListener('click', function(e){
+        const trigger = e.target.closest('[data-action="accept-external"]');
+        if (!trigger) return;
+        acceptAll();
+      });
+
+      const consent = getConsent();
+      if (consent === 'accepted') {
+        enableExternalContent();
+      } else {
+        showBanner();
+      }
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

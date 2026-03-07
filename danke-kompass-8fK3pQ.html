@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download – Elternschutz-Kompass</title>
+
+<style>
+:root{
+  --bg:#0b1224;
+  --card:rgba(18,26,46,0.95);
+  --text:rgba(255,255,255,0.92);
+  --muted:rgba(255,255,255,0.70);
+  --line:rgba(255,255,255,0.10);
+  --red:#d32f2f;
+  --redSoft:rgba(211,47,47,0.14);
+  --shadow:0 18px 55px rgba(0,0,0,0.45);
+  --r:16px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.wrap{
+  max-width:860px;
+  margin:60px auto;
+  padding:0 14px;
+}
+.card{
+  background:var(--card);
+  border-radius:var(--r);
+  border:2px solid rgba(211,47,47,0.85);
+  box-shadow:var(--shadow);
+  padding:34px 20px;
+}
+.badge{
+  display:inline-block;
+  background:var(--redSoft);
+  border:1px solid rgba(211,47,47,0.62);
+  color:#ffd7d7;
+  font-weight:900;
+  padding:7px 14px;
+  border-radius:999px;
+  font-size:0.85rem;
+  letter-spacing:0.4px;
+}
+h1{
+  margin:14px 0 8px;
+  font-size:2rem;
+  color:#fff;
+}
+p{
+  margin:0 0 14px;
+  color:var(--muted);
+  line-height:1.6;
+}
+.hr{
+  height:1px;
+  background:var(--line);
+  margin:18px 0;
+}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.item{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,0.04);
+  border-radius:14px;
+  padding:14px;
+}
+.item strong{
+  display:block;
+  color:#fff;
+  margin-bottom:6px;
+}
+.item span{
+  display:block;
+  color:var(--muted);
+  font-size:0.92rem;
+  line-height:1.45;
+  margin-bottom:10px;
+}
+.dl{
+  display:inline-block;
+  text-decoration:none;
+  font-weight:900;
+  color:#fff;
+  background:linear-gradient(135deg, var(--red), #ff3b3b);
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.10);
+}
+.dl:hover{opacity:0.96}
+.small{
+  font-size:0.85rem;
+  color:rgba(255,255,255,0.55);
+  margin-top:12px;
+}
+.back{
+  display:inline-block;
+  margin-top:18px;
+  color:#ffd7d7;
+  text-decoration:none;
+  font-weight:800;
+  border:1px solid rgba(211,47,47,0.62);
+  background:rgba(255,255,255,0.04);
+  padding:12px 14px;
+  border-radius:12px;
+}
+.back:hover{opacity:0.96}
+.notice{
+  display:none;
+  margin-top:14px;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.10);
+  background:rgba(255,255,255,0.04);
+  color:rgba(255,255,255,0.75);
+}
+.lock{
+  display:none;
+  margin-top:14px;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid rgba(211,47,47,0.40);
+  background:rgba(211,47,47,0.10);
+  color:rgba(255,255,255,0.86);
+}
+@media (max-width:720px){
+  .grid{grid-template-columns:1fr;}
+  h1{font-size:1.7rem;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+  <div class="card">
+    <span class="badge">✔ Kauf bestätigt</span>
+    <h1>Download: Elternschutz-Kompass</h1>
+    <p>
+      Hier sind deine Dateien. Speichere sie dir direkt ab (Handy/PC), damit du sie jederzeit griffbereit hast.
+    </p>
+
+    <!-- LIGHT GATE (Token) -->
+    <div id="lockBox" class="lock">
+      <strong>Kein Zugriff.</strong><br>
+      Dieser Download-Link ist nur über die Erfolgsseite nach Kauf erreichbar.
+      Bitte nutze den Link direkt aus Stripe nach der Zahlung.
+    </div>
+
+    <div class="hr"></div>
+
+    <!-- DOWNLOADS -->
+    <div id="downloadArea" style="display:none;">
+      <div class="grid">
+
+        <!-- PDF-LINKS: Hier deine PDFs eintragen -->
+        <div class="item">
+          <strong>Vorlage 01 – Anschreiben Jugendamt</strong>
+          <span>Kurzes, sauberes Anschreiben + Struktur (🔲 ausfüllen).</span>
+          <a class="dl" href="pdf/kompass-01.pdf" download>PDF herunterladen</a>
+        </div>
+
+        <div class="item">
+          <strong>Vorlage 02 – Gesprächsleitfaden</strong>
+          <span>Wie du im Gespräch ruhig bleibst und nicht abdriftest.</span>
+          <a class="dl" href="pdf/kompass-02.pdf" download>PDF herunterladen</a>
+        </div>
+
+        <div class="item">
+          <strong>Vorlage 03 – Dokumentationsblatt</strong>
+          <span>Sauber dokumentieren: Datum, Ereignis, Belege, Wirkung.</span>
+          <a class="dl" href="pdf/kompass-03.pdf" download>PDF herunterladen</a>
+        </div>
+
+        <div class="item">
+          <strong>Vorlage 04 – Kurze Stellungnahme</strong>
+          <span>Wenn du reagieren musst, ohne dich zu verheddern.</span>
+          <a class="dl" href="pdf/kompass-04.pdf" download>PDF herunterladen</a>
+        </div>
+
+        <!-- Du kannst beliebig viele Blöcke kopieren -->
+
+      </div>
+
+      <div class="notice" id="shareNote">
+        Tipp: Bitte teile den Link nicht öffentlich. (Wenn er rumgeht, ist er weg.)
+      </div>
+
+      <a class="back" href="index.html">← Zurück zur Startseite</a>
+    </div>
+
+    <div class="small">
+      Hinweis: Digitale Inhalte. Bitte sichere dir die Dateien direkt lokal.
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // === Mini-"Sicherheit": Token-Check (nur Hürde, kein echter Schutz) ===
+  // Setze deinen erwarteten Key hier (muss mit success_url ?key=... übereinstimmen)
+  const EXPECTED_KEY = "K8pQ-27";
+
+  const params = new URLSearchParams(window.location.search);
+  const key = params.get("key");
+
+  const downloadArea = document.getElementById("downloadArea");
+  const lockBox = document.getElementById("lockBox");
+  const shareNote = document.getElementById("shareNote");
+
+  if (key && key === EXPECTED_KEY) {
+    downloadArea.style.display = "block";
+    shareNote.style.display = "block";
+  } else {
+    lockBox.style.display = "block";
+    downloadArea.style.display = "none";
+  }
+</script>
+
+</body>
+</html>

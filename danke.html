@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein Elternschutzpaket ist bereit | Rebell mit Herz</title>
+  <meta name="description" content="Dein Elternschutzpaket ist freigeschaltet. Lade jetzt alle PDFs und die Audio-Datei direkt herunter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=22">
+
+  <style>
+    .thankyou-body{background:radial-gradient(circle at 10% 0%, rgba(24,169,87,.08), transparent 24%),radial-gradient(circle at 100% 20%, rgba(211,47,47,.08), transparent 22%),linear-gradient(180deg,#08111f 0%, #0c1627 100%);min-height:100vh;color:var(--text);font-family:Inter,Arial,sans-serif}
+    .thankyou-wrap{max-width:1120px;margin:0 auto;padding:34px 18px 56px}
+    .success-card{background:linear-gradient(180deg, rgba(24,169,87,.08), rgba(255,255,255,.03)),rgba(17,24,39,.95);border:1px solid rgba(24,169,87,.22);border-radius:26px;box-shadow:var(--shadow);padding:32px 24px;margin-bottom:24px;text-align:center}
+    .success-badge{display:inline-flex;align-items:center;justify-content:center;background:rgba(24,169,87,.14);color:#dcfce7;border:1px solid rgba(24,169,87,.34);border-radius:999px;padding:8px 16px;font-weight:900;font-size:.84rem;margin-bottom:16px;letter-spacing:.05em}
+    .success-card h1{margin:0 0 12px;font-size:clamp(2rem,4vw,3.2rem);line-height:1.06;color:#fff;font-weight:900;letter-spacing:-.03em}
+    .success-card p{max-width:760px;margin:0 auto 18px;color:var(--muted);line-height:1.65;font-size:1rem}
+    .main-download-btn{display:inline-flex;align-items:center;justify-content:center;width:min(100%,620px);min-height:64px;padding:18px 22px;border-radius:16px;text-decoration:none;font-weight:900;font-size:1.08rem;color:#fff;background:linear-gradient(135deg,#18a957,#22c55e);border:1px solid rgba(255,255,255,.12);box-shadow:0 16px 34px rgba(24,169,87,.24);margin-bottom:12px;transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease}
+    .main-download-btn:hover{opacity:.98;transform:translateY(-2px);box-shadow:0 20px 40px rgba(24,169,87,.28)}
+    .download-note{color:var(--muted-2);font-size:.92rem}
+    .mini-proof{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+    .mini-proof span{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#e8eef8;font-size:.84rem;font-weight:800}
+    .content-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:start}
+    .panel{background:rgba(17,24,39,.92);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-soft);padding:24px}
+    .panel h2{margin:0 0 14px;color:#fff;font-size:1.38rem;line-height:1.14;font-weight:900;letter-spacing:-.02em}
+    .panel p{color:var(--muted);margin:0 0 16px;line-height:1.6}
+    .downloads-list{display:grid;gap:12px}
+    .download-item{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transition:transform .16s ease,border-color .16s ease,background .16s ease}
+    .download-item:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.055)}
+    .download-item strong{display:block;color:#fff;margin-bottom:4px;font-size:.98rem}
+    .download-item span{color:#cbd5e1;font-size:.9rem;line-height:1.5}
+    .download-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 16px;border-radius:12px;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--red),var(--red-2));border:1px solid rgba(255,255,255,.12);font-weight:900;white-space:nowrap;transition:transform .16s ease,opacity .16s ease,box-shadow .16s ease;box-shadow:0 10px 24px rgba(211,47,47,.18)}
+    .download-link:hover{opacity:.98;transform:translateY(-1px);box-shadow:0 14px 28px rgba(211,47,47,.24)}
+    .next-panel{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03)),rgba(17,24,39,.93)}
+    .next-list{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:12px}
+    .next-list li{position:relative;padding-left:26px;color:#e7edf8;line-height:1.55}
+    .next-list li::before{content:"✓";position:absolute;left:0;top:0;color:#18a957;font-weight:900}
+    .next-btn{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:56px;padding:16px 18px;border-radius:14px;text-decoration:none;font-weight:900;font-size:1rem;color:#fff;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);transition:transform .16s ease,background .16s ease}
+    .next-btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.08)}
+    .upsell-panel{margin-top:18px;background:linear-gradient(180deg, rgba(211,47,47,.08), rgba(255,255,255,.03)),rgba(17,24,39,.94);border:1px solid rgba(211,47,47,.16)}
+    .upsell-panel h3{margin:0 0 10px;color:#fff;font-size:1.12rem;line-height:1.15;font-weight:900}
+    .upsell-panel p{margin:0 0 14px;color:var(--muted);line-height:1.6}
+    .upsell-btn{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:54px;padding:15px 18px;border-radius:14px;text-decoration:none;font-weight:900;font-size:1rem;color:#fff;background:linear-gradient(135deg,var(--red),var(--red-2));border:1px solid rgba(255,255,255,.12);box-shadow:0 12px 26px rgba(211,47,47,.18);transition:transform .16s ease,box-shadow .16s ease}
+    .upsell-btn:hover{transform:translateY(-1px);box-shadow:0 16px 32px rgba(211,47,47,.24)}
+    .faq-box{margin-top:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
+    .faq-box strong{display:block;color:#fff;margin-bottom:8px;font-size:1rem}
+    .faq-box p{margin:0;color:var(--muted);line-height:1.6}
+    .footer-links{margin-top:28px;text-align:center;color:var(--muted);font-size:.92rem}
+    .footer-links a{color:var(--muted);text-decoration:none;margin:0 10px}
+    .footer-links a:hover{color:#fff}
+    .locked{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+    .locked-box{max-width:620px;width:100%;background:#fff;color:#111827;border-radius:18px;padding:34px 28px;text-align:center;box-shadow:0 18px 55px rgba(0,0,0,.18);border:3px solid var(--red)}
+    .locked-box h2{margin:0 0 12px;color:var(--red);font-size:1.9rem;line-height:1.12}
+    .locked-box p{line-height:1.6;color:#4b5563;margin:0 0 20px}
+    .locked-box a{display:inline-flex;align-items:center;justify-content:center;min-height:50px;background:var(--red);color:#fff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:800}
+    @media (max-width:920px){.content-grid{grid-template-columns:1fr}}
+    @media (max-width:640px){.thankyou-wrap{padding:22px 12px 40px}.success-card,.panel{padding:18px;border-radius:20px}.download-item{flex-direction:column;align-items:flex-start}.download-link{width:100%}.main-download-btn{font-size:1rem;min-height:58px}}
+  </style>
+</head>
+<body class="thankyou-body">
+
+  <div id="locked" class="locked" style="display:none;">
+    <div class="locked-box">
+      <h2>Zugriff nicht freigeschaltet</h2>
+      <p>
+        Diese Seite ist nur nach erfolgreicher Zahlung erreichbar.
+        Bitte nutze den Rückweg aus dem Stripe-Checkout.
+      </p>
+      <a href="elternschutzpaket.html">Zur Zahlungsseite</a>
+    </div>
+  </div>
+
+  <main id="content" style="display:none;">
+    <div class="thankyou-wrap">
+
+      <section class="success-card">
+        <div class="success-badge">✓ ZAHLUNG ERFOLGREICH</div>
+        <h1>Dein Elternschutzpaket ist jetzt freigeschaltet</h1>
+        <p>
+          Der Gesamtdownload startet automatisch einmal. Falls das nicht passiert, klick einfach auf den grünen Button.
+          Darunter kannst du zusätzlich jede Datei einzeln herunterladen — inklusive der Audio-Erklärung.
+        </p>
+
+        <a id="main-download"
+           class="main-download-btn"
+           href="PDFS/elterschutzpaket-komplett.pdf"
+           download>
+          📦 Komplettpaket jetzt herunterladen
+        </a>
+
+        <div class="download-note">
+          Einmalzahlung · direkter Zugriff · 8 PDFs + 1 Audio · kein Abo
+        </div>
+
+        <div class="mini-proof">
+          <span>Akteneinsicht</span>
+          <span>Durchsetzung</span>
+          <span>Gutachten</span>
+          <span>Audio-Erklärung</span>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel">
+          <h2>Alle Dateien auf einen Blick</h2>
+          <p>
+            Hier kannst du jede Datei zusätzlich einzeln herunterladen. Am besten sicherst du dir zuerst das Komplettpaket und danach nur noch die Dateien, die du sofort brauchst.
+          </p>
+
+          <div class="downloads-list">
+            <div class="download-item">
+              <div><strong>Komplettpaket</strong><span>Alle Inhalte als Gesamtdatei gebündelt.</span></div>
+              <a class="download-link" href="PDFS/elterschutzpaket-komplett.pdf" download>Download</a>
+            </div>
+
+            <div class="download-item">
+              <div><strong>Akteneinsicht</strong><span>Vorlage für strukturierte Anforderung und klare Dokumentation.</span></div>
+              <a class="download-link" href="PDFS/akteneinsicht.pdf" download>Download</a>
+            </div>
+
+            <div class="download-item">
+              <div><strong>Arbeitsvorlage Durchsetzung</strong><span>Zur Vorbereitung und klaren Strukturierung deines Falls.</span></div>
+              <a class="download-link" href="PDFS/arbeitsvorlage-durchsetzung.pdf" download>Download</a>
+            </div>
+
+            <div class="download-item">
+              <div><strong>Durchsetzung</strong><span>Wenn Absprachen oder Beschlüsse faktisch blockiert werden.</span></div>
+              <a class="download-link" href="PDFS/durchsetzung.pdf" download>Download</a>
+            </div>
+
+            <div class="download-item">
+              <div><strong>Gutachten</strong><span>Struktur für Einordnung und Reaktion statt planloser Wut.</span></div>
+              <a class="download-link" href="PDFS/gutachten.pdf" download>Download</a>
+            </div>
+
+            <div class="download-item">
+              <div><strong>Protokollberichtigung</strong><span>Wenn Aussagen falsch, verkürzt oder verzerrt erfasst wurden.</span></div>
+              <a class="download-link" href="PDFS/protokollberichtigung.pdf" download>Download</a>
+            </div>
+
+            <div class="download-item">
+              <div><strong>Umgangsblockade-Leitfaden</strong><span>Für saubere Dokumentation und klare nächste Schritte.</span></div>
+              <a class="download-link" href="PDFS/umgangsblockade-leitfaden.pdf" download>Download</a>
+            </div>
+
+            <div class="download-item">
+              <div><strong>Elterschutzdarstellung</strong><span>Zusätzlicher PDF-Baustein im Paket.</span></div>
+              <a class="download-link" href="PDFS/Elterschutzdarstellung.pdf" download>Download</a>
+            </div>
+
+            <div class="download-item">
+              <div><strong>Audio-Erklärung</strong><span>Zusätzliche Einordnung als Audio-Datei.</span></div>
+              <a class="download-link" href="https://drive.google.com/uc?export=download&id=12Jtbv_-nA8mfPLrhsmtGCvacwAxRgV6j" target="_blank" rel="noopener">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel next-panel">
+            <h2>Was jetzt sinnvoll ist</h2>
+            <p>
+              Das Paket bringt dir am meisten, wenn du jetzt nicht alles gleichzeitig machst, sondern gezielt vorgehst.
+            </p>
+
+            <ul class="next-list">
+              <li>zuerst alle Dateien lokal sichern</li>
+              <li>dann nur die relevanten Vorlagen für deinen Fall markieren</li>
+              <li>auch die Audio-Datei anhören, damit du die Logik schneller verstehst</li>
+              <li>ruhig, knapp und schriftlich sauber bleiben</li>
+            </ul>
+
+            <a href="index.html" class="next-btn">Zur Startseite</a>
+          </div>
+
+          <div class="panel upsell-panel">
+            <h3>Du willst zusätzlich erstmal kurz auf deine Lage schauen?</h3>
+            <p>
+              Dann nutze den kostenlosen Nebenweg. Der ist sinnvoll, wenn du dein weiteres Vorgehen erstmal kurz ordnen willst.
+            </p>
+            <a href="fallanalyse.html" class="upsell-btn">Zur kostenlosen Fallanalyse</a>
+          </div>
+
+          <div class="faq-box">
+            <strong>Wichtig</strong>
+            <p>
+              Diese Inhalte sind Struktur- und Formulierungshilfen. Sie ersetzen keine individuelle Rechtsberatung.
+            </p>
+          </div>
+
+          <div class="faq-box">
+            <strong>Download startet nicht?</strong>
+            <p>
+              Dann klick einfach oben auf den grünen Button oder auf einen der roten Einzel-Downloads.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer-links">
+        <a href="index.html">Startseite</a> |
+        <a href="impressum.html">Impressum</a> |
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const STORAGE_KEY = 'rmh_paid_elternschutzpaket';
+    const STORAGE_EXPIRY_KEY = 'rmh_paid_elternschutzpaket_expiry';
+    const VALID_HOURS = 12;
+
+    function hasValidAccess() {
+      const params = new URLSearchParams(window.location.search);
+
+      if (params.get('paid') === '1') {
+        const expiry = Date.now() + (VALID_HOURS * 60 * 60 * 1000);
+        localStorage.setItem(STORAGE_KEY, '1');
+        localStorage.setItem(STORAGE_EXPIRY_KEY, String(expiry));
+
+        const cleanUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+        return true;
+      }
+
+      const stored = localStorage.getItem(STORAGE_KEY);
+      const expiryRaw = localStorage.getItem(STORAGE_EXPIRY_KEY);
+      const expiry = expiryRaw ? parseInt(expiryRaw, 10) : 0;
+
+      return stored === '1' && Date.now() < expiry;
+    }
+
+    function showLocked() {
+      document.getElementById('locked').style.display = 'flex';
+      document.getElementById('content').style.display = 'none';
+    }
+
+    function showContent() {
+      document.getElementById('locked').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    }
+
+    function autoDownloadOnce() {
+      if (sessionStorage.getItem('rmh_paket_autodownload_done') === '1') return;
+      sessionStorage.setItem('rmh_paket_autodownload_done', '1');
+
+      const btn = document.getElementById('main-download');
+      if (!btn) return;
+
+      setTimeout(() => {
+        btn.click();
+      }, 900);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!hasValidAccess()) {
+        showLocked();
+        return;
+      }
+
+      showContent();
+      autoDownloadOnce();
+    });
+  </script>
+
+</body>
+</html>

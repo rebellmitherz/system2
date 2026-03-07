@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jugendamt-Vorlage | Rebell mit Herz</title>
+  <meta name="description" content="Sachliche Antwort-Vorlage für Jugendamt. Für Eltern, die klarer, ruhiger und strukturierter auftreten wollen. Direkt nach Zahlung verfügbar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=22">
+
+  <style>
+    .single-hero{padding:64px 0 34px;}
+    .single-topline{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+    .single-pill{display:inline-flex;align-items:center;justify-content:center;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);color:#edf3fb;font-size:0.84rem;font-weight:800;}
+    .single-pill-red{background:rgba(211,47,47,0.14);border-color:rgba(211,47,47,0.42);color:#ffd7d7;}
+    .single-title{max-width:960px;margin:0 auto 16px;text-align:center;font-size:clamp(2.1rem, 4.7vw, 4rem);line-height:1.05;letter-spacing:-0.03em;font-weight:900;}
+    .single-subtitle{max-width:780px;margin:0 auto 28px;text-align:center;color:var(--muted);font-size:1.05rem;}
+    .single-proofbar{display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;max-width:860px;margin:0 auto 28px;}
+    .single-proof{padding:14px 16px;text-align:center;border-radius:14px;background:rgba(255,255,255,0.04);border:1px solid var(--line);box-shadow:var(--shadow-soft);font-weight:700;color:#e8eef9;}
+    .single-price-card{max-width:780px;margin:0 auto;text-align:center;background:linear-gradient(180deg, rgba(211,47,47,0.10), rgba(255,255,255,0.03)),rgba(255,255,255,0.04);border:1px solid rgba(211,47,47,0.20);border-radius:24px;padding:30px 22px;box-shadow:var(--shadow);}
+    .single-price-label{display:inline-block;margin-bottom:10px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);color:#e4ebf8;font-size:0.78rem;font-weight:900;letter-spacing:0.08em;}
+    .single-price-card h2{font-size:clamp(1.7rem, 3vw, 2.7rem);line-height:1.14;margin-bottom:10px;font-weight:900;}
+    .single-price-card p{max-width:620px;margin:0 auto 16px;color:var(--muted);}
+    .single-price{font-size:3rem;line-height:1;font-weight:900;color:#fff;letter-spacing:-0.04em;margin-bottom:16px;}
+    .single-bullets{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 20px;}
+    .single-bullets span{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#e8eef8;font-size:0.9rem;font-weight:700;}
+    .single-buy{display:inline-flex;align-items:center;justify-content:center;width:min(100%, 540px);min-height:60px;padding:18px 24px;border-radius:16px;text-decoration:none;font-weight:900;font-size:1.14rem;color:#fff;background:linear-gradient(135deg,var(--red),var(--red-2));border:1px solid rgba(255,255,255,0.12);box-shadow:0 16px 34px rgba(211,47,47,0.24);transition:transform .18s ease, opacity .18s ease, box-shadow .18s ease;}
+    .single-buy:hover{transform:translateY(-2px);opacity:0.98;box-shadow:0 20px 40px rgba(211,47,47,0.30);}
+    .single-note{margin-top:12px;color:var(--muted-2);font-size:0.92rem;}
+    .single-section{padding:34px 0;}
+    .single-section-alt{padding:38px 0;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-top:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04);}
+    .single-head{max-width:820px;margin:0 auto 26px;text-align:center;}
+    .single-kicker{display:inline-block;margin-bottom:12px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);font-size:0.78rem;font-weight:900;letter-spacing:0.1em;color:#dbe4f3;}
+    .single-head h2{font-size:clamp(1.7rem, 3vw, 2.7rem);line-height:1.14;margin-bottom:12px;font-weight:900;letter-spacing:-0.02em;}
+    .single-head p{color:var(--muted);font-size:1rem;}
+    .pain-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:18px;}
+    .pain-card{background:rgba(255,255,255,0.045);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow-soft);}
+    .pain-no{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(211,47,47,0.12);border:1px solid rgba(211,47,47,0.30);color:#ffd9d9;font-weight:900;margin-bottom:16px;}
+    .pain-card h3{margin-bottom:8px;color:#fff;font-size:1.16rem;}
+    .pain-card p{color:var(--muted);}
+    .what-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:22px;align-items:stretch;}
+    .what-card{background:rgba(255,255,255,0.045);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow-soft);}
+    .what-card-highlight{background:linear-gradient(180deg, rgba(211,47,47,0.10), rgba(255,255,255,0.03)),rgba(255,255,255,0.04);border-color:rgba(211,47,47,0.26);}
+    .what-card h3{margin-bottom:10px;color:#fff;font-size:1.3rem;}
+    .what-card p{color:var(--muted);margin-bottom:14px;}
+    .what-list{list-style:none;padding:0;margin:0;}
+    .what-list li{position:relative;padding-left:26px;margin-bottom:12px;color:#e7edf8;}
+    .what-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:900;}
+    .what-list li:last-child{margin-bottom:0;}
+    .fit-grid-single{display:grid;grid-template-columns:repeat(2, 1fr);gap:18px;}
+    .fit-box-single{background:rgba(255,255,255,0.045);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow-soft);}
+    .fit-box-single h3{margin-bottom:12px;color:#fff;font-size:1.08rem;}
+    .fit-box-single ul{list-style:none;padding:0;margin:0;}
+    .fit-box-single li{position:relative;padding-left:24px;margin-bottom:12px;color:#e7edf8;}
+    .fit-box-single li::before{content:"•";position:absolute;left:0;top:0;color:#ffd7d7;font-weight:900;}
+    .compare-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:18px;max-width:920px;margin:0 auto;}
+    .compare-card{background:rgba(255,255,255,0.045);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow-soft);}
+    .compare-card h3{margin-bottom:12px;color:#fff;font-size:1.12rem;}
+    .compare-card ul{list-style:none;padding:0;margin:0;}
+    .compare-card li{position:relative;padding-left:24px;margin-bottom:12px;color:#e7edf8;}
+    .compare-card li::before{position:absolute;left:0;top:0;font-weight:900;}
+    .compare-card.bad li::before{content:"✕";color:#ff9c9c;}
+    .compare-card.good{border-color:rgba(24,169,87,0.22);background:linear-gradient(180deg, rgba(24,169,87,0.08), rgba(255,255,255,0.03));}
+    .compare-card.good li::before{content:"✓";color:var(--green);}
+    .upsell-box{max-width:900px;margin:0 auto;background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03)),rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:24px;padding:28px 22px;box-shadow:var(--shadow);text-align:center;}
+    .upsell-box h2{font-size:clamp(1.7rem, 3vw, 2.5rem);line-height:1.14;margin-bottom:12px;font-weight:900;}
+    .upsell-box p{max-width:680px;margin:0 auto 18px;color:var(--muted);}
+    .upsell-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+    .upsell-btn-secondary{display:inline-flex;align-items:center;justify-content:center;min-width:220px;min-height:56px;padding:16px 18px;border-radius:14px;text-decoration:none;font-weight:900;font-size:1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);color:#fff;}
+    .faq-grid-single{display:grid;gap:14px;max-width:860px;margin:0 auto;}
+    .faq-item-single{background:rgba(255,255,255,0.045);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow-soft);}
+    .faq-item-single strong{display:block;margin-bottom:8px;color:#fff;font-size:1rem;}
+    .faq-item-single p{color:var(--muted);margin:0;}
+    .single-footer{border-top:1px solid rgba(255,255,255,0.06);padding:22px 0 34px;}
+    .single-footer .container{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;}
+    .single-footer a{color:var(--muted);text-decoration:none;font-size:0.95rem;}
+    .single-footer a:hover{color:#fff;}
+
+    @media (max-width: 980px){
+      .single-proofbar,.pain-grid,.what-grid,.fit-grid-single,.compare-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width: 640px){
+      .single-hero{padding:42px 0 20px;}
+      .single-title{font-size:2.05rem;}
+      .single-subtitle{font-size:1rem;}
+      .single-price{font-size:2.5rem;}
+      .single-buy{font-size:1.05rem;min-height:56px;}
+      .upsell-buttons{flex-direction:column;align-items:stretch;}
+      .upsell-btn-secondary{width:100%;}
+    }
+  </style>
+</head>
+<body class="sales-body has-sticky-cta">
+
+  <section class="single-hero">
+    <div class="container">
+
+      <div class="single-topline">
+        <span class="single-pill single-pill-red">LOW-TICKET · 9,95 €</span>
+        <span class="single-pill">Direkt nach Zahlung verfügbar</span>
+        <span class="single-pill">Kein Abo</span>
+      </div>
+
+      <h1 class="single-title">
+        Die Jugendamt-Vorlage für Eltern, die <span style="color:#fff;">nicht emotional zurückschreiben</span>, sondern klarer auftreten wollen
+      </h1>
+
+      <p class="single-subtitle">
+        Ein kleiner, direkter Einstieg für Eltern, die auf eine Nachricht oder Situation mit dem Jugendamt nicht planlos reagieren wollen.
+        Statt aus dem Bauch heraus zu schreiben, bekommst du eine sofort nutzbare Struktur als Ausgangsbasis.
+      </p>
+
+      <div class="single-proofbar">
+        <div class="single-proof">✓ direkter Download</div>
+        <div class="single-proof">✓ klare Struktur statt Chaos</div>
+        <div class="single-proof">✓ idealer erster Kauf-Schritt</div>
+      </div>
+
+      <div class="single-price-card anchor-offset" id="vorlage-kaufen">
+        <span class="single-price-label">SCHNELLER EINSTIEG</span>
+        <h2>Für 9,95 € kaufst du dir keine Magie. Du kaufst dir einen klareren Startpunkt.</h2>
+        <p>
+          Viele Eltern schwächen sich schon in der ersten oder zweiten Nachricht selbst.
+          Nicht weil sie kein Anliegen haben, sondern weil Ton, Länge und Aufbau danebenliegen.
+          Diese Vorlage reduziert genau diese Reibung.
+        </p>
+
+        <div class="single-price">9,95 €</div>
+
+        <div class="single-bullets">
+          <span>Einmalzahlung</span>
+          <span>kein Abo</span>
+          <span>direkt nutzbar</span>
+        </div>
+
+        <a href="https://buy.stripe.com/6oUcN78cs3jr8Hy8iZ8og0b"
+           target="_blank"
+           rel="noopener"
+           class="single-buy">
+          Vorlage jetzt kaufen – 9,95 €
+        </a>
+
+        <div class="single-note">
+          Nach erfolgreicher Zahlung kommst du direkt zur Download-Seite.
+        </div>
+
+        <div class="mini-guarantee-row">
+          <span>kleine Hürde</span>
+          <span>schnell einsetzbar</span>
+          <span>sauberer Einstieg</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="single-section">
+    <div class="container">
+      <div class="single-head">
+        <span class="single-kicker">DAS PROBLEM</span>
+        <h2>Die meisten schreiben nicht zu wenig. Sie schreiben im falschen Modus.</h2>
+        <p>
+          Genau dort kippt oft der erste Eindruck: zu viel Emotion, zu viel Erklärung, zu wenig Struktur.
+        </p>
+      </div>
+
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-no">01</div>
+          <h3>Zu emotional</h3>
+          <p>Frust, Rechtfertigung und Druck wirken oft schwächer als viele Eltern denken.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-no">02</div>
+          <h3>Zu lang</h3>
+          <p>Textwände machen selten stärker. Meist machen sie unklarer und anstrengender.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-no">03</div>
+          <h3>Zu unstrukturiert</h3>
+          <p>Wenn keine klare Linie erkennbar ist, verliert selbst ein berechtigtes Anliegen an Wirkung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="single-section-alt anchor-offset" id="vorlage-inhalt">
+    <div class="container">
+      <div class="single-head">
+        <span class="single-kicker">DAS BEKOMMST DU</span>
+        <h2>Eine direkt nutzbare Vorlage statt wieder bei null anzufangen</h2>
+      </div>
+
+      <div class="what-grid">
+        <div class="what-card what-card-highlight">
+          <h3>Was die Vorlage für dich macht</h3>
+          <p>
+            Diese PDF ist bewusst als schneller und günstiger Einstieg gebaut.
+            Sie soll nicht alles lösen. Sie soll dich sauberer starten lassen.
+          </p>
+          <ul class="what-list">
+            <li>sachlicherer Aufbau für eine Antwort an das Jugendamt</li>
+            <li>ruhigerer Sprachstil statt spontaner Eskalation</li>
+            <li>bessere Grundordnung für dein Schreiben</li>
+            <li>schneller nutzbar ohne selbst alles aufzubauen</li>
+            <li>ideal, wenn du erst klein und konkret starten willst</li>
+          </ul>
+        </div>
+
+        <div class="what-card">
+          <h3>Was du hier bewusst nicht kaufst</h3>
+          <p>Direkt gesagt, damit die Erwartung sauber bleibt:</p>
+          <ul class="what-list">
+            <li>keine individuelle Rechtsberatung</li>
+            <li>keine Wunderlösung für den ganzen Fall</li>
+            <li>kein Komplettpaket für mehrere Baustellen</li>
+            <li>sondern einen klaren ersten Umsetzungsschritt</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="single-section">
+    <div class="container">
+      <div class="single-head">
+        <span class="single-kicker">FÜR WEN DAS PASST</span>
+        <h2>Diese Vorlage ist stark, wenn du einen kleinen, schnellen Einstieg brauchst</h2>
+      </div>
+
+      <div class="fit-grid-single">
+        <div class="fit-box-single">
+          <h3>Passt zu dir, wenn…</h3>
+          <ul>
+            <li>du dem Jugendamt ruhiger und klarer schreiben willst</li>
+            <li>du bei solchen Nachrichten nicht improvisieren willst</li>
+            <li>du für kleines Geld einen konkreten Start suchst</li>
+            <li>du erst testen willst, wie viel bessere Struktur bringt</li>
+          </ul>
+        </div>
+
+        <div class="fit-box-single">
+          <h3>Weniger passend, wenn…</h3>
+          <ul>
+            <li>du schon Vorlagen für mehrere Konfliktfelder brauchst</li>
+            <li>du ein komplettes Paket statt einer Einzelvorlage suchst</li>
+            <li>du individuelle Fallprüfung erwartest</li>
+            <li>du eigentlich sofort die größere Lösung brauchst</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="single-section-alt">
+    <div class="container">
+      <div class="single-head">
+        <span class="single-kicker">DER UNTERSCHIED</span>
+        <h2>Spontan aus dem Bauch schreiben oder mit Struktur starten</h2>
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-card bad">
+          <h3>Spontan geschrieben</h3>
+          <ul>
+            <li>zu lang oder zu chaotisch</li>
+            <li>zu viel Rechtfertigung</li>
+            <li>Emotion im falschen Moment</li>
+            <li>keine klare Linie</li>
+          </ul>
+        </div>
+
+        <div class="compare-card good">
+          <h3>Mit Vorlage aufgebaut</h3>
+          <ul>
+            <li>klarerer Startpunkt</li>
+            <li>ruhigerer Ton</li>
+            <li>bessere Grundstruktur</li>
+            <li>schneller fertig ohne Kopfchaos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="single-section">
+    <div class="container">
+      <div class="upsell-box">
+        <h2>Wenn du mehr brauchst als nur eine Jugendamt-Antwort</h2>
+        <p>
+          Dann ist diese Vorlage dein günstiger Einstieg, aber nicht das Ende.
+          Wenn du zusätzlich Struktur für Umgang, Akteneinsicht, Durchsetzung, Gutachten
+          oder Protokollberichtigung brauchst, ist das Elternschutzpaket die stärkere Lösung.
+        </p>
+
+        <div class="upsell-buttons">
+          <a href="https://buy.stripe.com/6oUcN78cs3jr8Hy8iZ8og0b"
+             target="_blank"
+             rel="noopener"
+             class="single-buy"
+             style="width:auto; min-width:240px;">
+            Vorlage jetzt kaufen
+          </a>
+
+          <a href="elternschutzpaket.html" class="upsell-btn-secondary">
+            Zum Elternschutzpaket
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="single-section">
+    <div class="container">
+      <div class="single-head">
+        <span class="single-kicker">FAQ</span>
+        <h2>Die üblichen Fragen direkt geklärt</h2>
+      </div>
+
+      <div class="faq-grid-single">
+        <div class="faq-item-single">
+          <strong>Bekomme ich die Datei direkt nach Zahlung?</strong>
+          <p>Ja. Nach erfolgreicher Zahlung landest du direkt auf der Download-Seite.</p>
+        </div>
+
+        <div class="faq-item-single">
+          <strong>Ist das Rechtsberatung?</strong>
+          <p>Nein. Es ist eine Struktur- und Formulierungshilfe für deine Kommunikation.</p>
+        </div>
+
+        <div class="faq-item-single">
+          <strong>Ist das ein Abo?</strong>
+          <p>Nein. Einmal zahlen, direkt herunterladen.</p>
+        </div>
+
+        <div class="faq-item-single">
+          <strong>Wann ist eher das Elternschutzpaket sinnvoll?</strong>
+          <p>Wenn du nicht nur eine einzelne Antwort-Vorlage brauchst, sondern mehrere typische Baustellen gleichzeitig abdecken willst.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="single-footer">
+    <div class="container">
+      <a href="index.html">Startseite</a>
+      <a href="elternschutzpaket.html">Elternschutzpaket</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <div class="sticky-cta-inner">
+      <div class="sticky-cta-copy">
+        <strong>Jugendamt-Vorlage – 9,95 €</strong>
+        <span>sachliche Antwort-Vorlage · direkter Download · kein Abo</span>
+      </div>
+      <div class="sticky-cta-actions">
+        <a href="#vorlage-inhalt" class="sticky-cta-btn secondary">Inhalt</a>
+        <a href="https://buy.stripe.com/6oUcN78cs3jr8Hy8iZ8og0b" target="_blank" rel="noopener" class="sticky-cta-btn primary">Jetzt kaufen</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

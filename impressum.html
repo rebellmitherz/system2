@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | Rebell mit Herz</title>
+  <meta name="description" content="Impressum von Rebell mit Herz. Angaben gemäß § 5 TMG und redaktionelle Verantwortung.">
+  <meta name="theme-color" content="#08111f">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=22">
+
+  <style>
+    .legal-body{
+      background:
+        radial-gradient(circle at top right, rgba(211,47,47,0.10), transparent 24%),
+        radial-gradient(circle at top left, rgba(255,255,255,0.04), transparent 18%),
+        linear-gradient(180deg,#08111f 0%, #0d1728 100%);
+      color:var(--text);
+      min-height:100vh;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    .legal-topbar{
+      border-bottom:1px solid rgba(255,255,255,0.06);
+      background:rgba(8,17,31,0.72);
+      backdrop-filter:blur(10px);
+    }
+
+    .legal-topbar .container{
+      padding:16px 0;
+    }
+
+    .legal-back{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--muted);
+      font-size:0.94rem;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .legal-back:hover{
+      color:#fff;
+    }
+
+    .legal-wrap{
+      padding:34px 0 56px;
+    }
+
+    .legal-hero{
+      max-width:860px;
+      margin:0 auto 24px;
+      text-align:center;
+    }
+
+    .legal-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#e8eef8;
+      font-size:0.82rem;
+      font-weight:900;
+      letter-spacing:0.05em;
+      margin-bottom:16px;
+    }
+
+    .legal-title{
+      margin:0 0 12px;
+      font-size:clamp(2rem, 4.8vw, 3.5rem);
+      line-height:1.05;
+      letter-spacing:-0.04em;
+      font-weight:900;
+      color:#fff;
+    }
+
+    .legal-subtitle{
+      margin:0 auto;
+      max-width:720px;
+      color:var(--muted);
+      font-size:1rem;
+      line-height:1.7;
+    }
+
+    .legal-card{
+      max-width:860px;
+      margin:0 auto;
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .legal-block{
+      padding:18px 0;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .legal-block:first-child{
+      padding-top:0;
+    }
+
+    .legal-block:last-of-type{
+      border-bottom:none;
+      padding-bottom:0;
+    }
+
+    .legal-block h2{
+      margin:0 0 10px;
+      font-size:0.92rem;
+      color:#ffd8d8;
+      text-transform:uppercase;
+      letter-spacing:0.10em;
+      font-weight:900;
+    }
+
+    .legal-text{
+      color:#edf2f9;
+      line-height:1.75;
+      font-size:1rem;
+    }
+
+    .legal-text a{
+      color:#fff;
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,0.18);
+    }
+
+    .legal-text a:hover{
+      border-color:rgba(255,255,255,0.38);
+    }
+
+    .legal-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:24px;
+    }
+
+    .legal-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:14px 20px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      font-size:0.98rem;
+      transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .legal-btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--red),var(--red-2));
+      border:1px solid rgba(255,255,255,0.12);
+      box-shadow:0 14px 28px rgba(211,47,47,0.20);
+    }
+
+    .legal-btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 18px 34px rgba(211,47,47,0.26);
+    }
+
+    .legal-btn-secondary{
+      color:#fff;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+
+    .legal-btn-secondary:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,0.08);
+    }
+
+    .disclaimer{
+      margin-top:24px;
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      color:var(--muted);
+      line-height:1.7;
+      font-size:0.95rem;
+    }
+
+    .disclaimer strong{
+      display:block;
+      margin-bottom:8px;
+      color:#fff;
+      font-size:1rem;
+    }
+
+    .legal-footer{
+      border-top:1px solid rgba(255,255,255,0.06);
+      margin-top:34px;
+      padding-top:22px;
+    }
+
+    .legal-footer .container{
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      flex-wrap:wrap;
+    }
+
+    .legal-footer a,
+    .legal-footer span{
+      color:var(--muted);
+      font-size:0.95rem;
+      text-decoration:none;
+    }
+
+    .legal-footer a:hover{
+      color:#fff;
+    }
+
+    @media (max-width: 640px){
+      .legal-wrap{
+        padding:24px 0 40px;
+      }
+
+      .legal-card{
+        padding:18px;
+        border-radius:20px;
+      }
+
+      .legal-title{
+        font-size:2rem;
+      }
+
+      .legal-subtitle{
+        font-size:0.98rem;
+      }
+
+      .legal-actions{
+        flex-direction:column;
+      }
+
+      .legal-btn{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body class="legal-body">
+
+  <div class="legal-topbar">
+    <div class="container">
+      <a href="index.html" class="legal-back">← Zurück zur Startseite</a>
+    </div>
+  </div>
+
+  <main class="container legal-wrap">
+
+    <section class="legal-hero">
+      <div class="legal-badge">TRANSPARENZ</div>
+      <h1 class="legal-title">Impressum</h1>
+      <p class="legal-subtitle">
+        Die rechtlich erforderlichen Angaben zu Rebell mit Herz auf einen Blick.
+      </p>
+    </section>
+
+    <section class="legal-card">
+      <div class="legal-block">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <div class="legal-text">
+          Emilio Allegro<br>
+          Kaiserstrasse 6a<br>
+          66787 Wadgassen
+        </div>
+      </div>
+
+      <div class="legal-block">
+        <h2>Kontakt</h2>
+        <div class="legal-text">
+          E-Mail:
+          <a href="mailto:rebellmitherz@gmail.com">rebellmitherz@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="legal-block">
+        <h2>Redaktionell verantwortlich</h2>
+        <div class="legal-text">
+          Emilio Allegro<br>
+          Kaiserstrasse 6a<br>
+          66787 Wadgassen
+        </div>
+      </div>
+
+      <div class="legal-actions">
+        <a href="index.html" class="legal-btn legal-btn-primary">Zur Startseite</a>
+        <a href="datenschutz.html" class="legal-btn legal-btn-secondary">Zum Datenschutz</a>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Haftungsausschluss</strong>
+        Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+        Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+      </div>
+    </section>
+
+    <footer class="legal-footer">
+      <div class="container">
+        <a href="index.html">Startseite</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <span>© <span data-current-year></span> Rebell mit Herz</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

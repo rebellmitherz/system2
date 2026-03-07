@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vorlagen & Downloads | Rebell mit Herz</title>
+  <meta name="description" content="Übersicht über Vorlagen und Einstiege von Rebell mit Herz. Gratis-Einstieg, 9,95-€-Vorlage und Elternschutzpaket für 29 €.">
+  <meta name="theme-color" content="#08111f">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PBQDYMH77"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9PBQDYMH77');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=22">
+
+  <style>
+    .hub-body{
+      background:
+        radial-gradient(circle at top right, rgba(211,47,47,0.12), transparent 26%),
+        radial-gradient(circle at top left, rgba(255,255,255,0.04), transparent 18%),
+        linear-gradient(180deg, #08111f 0%, #0d1728 100%);
+      color:var(--text);
+      min-height:100vh;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    .hub-topbar{
+      border-bottom:1px solid rgba(255,255,255,0.06);
+      background:rgba(8,17,31,0.72);
+      backdrop-filter:blur(10px);
+    }
+
+    .hub-topbar .container{
+      padding:16px 0;
+    }
+
+    .hub-back{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--muted);
+      font-size:0.94rem;
+      font-weight:700;
+    }
+
+    .hub-back:hover{
+      color:#fff;
+    }
+
+    .hub-wrap{
+      padding:34px 0 56px;
+    }
+
+    .hub-hero{
+      text-align:center;
+      max-width:920px;
+      margin:0 auto 30px;
+    }
+
+    .hub-badges{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .hub-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#e7edf8;
+      font-size:0.82rem;
+      font-weight:900;
+      letter-spacing:0.04em;
+    }
+
+    .hub-badge-red{
+      background:rgba(211,47,47,0.14);
+      border-color:rgba(211,47,47,0.38);
+      color:#ffd8d8;
+    }
+
+    .hub-title{
+      margin:0 0 14px;
+      font-size:clamp(2.1rem, 4.8vw, 4rem);
+      line-height:1.04;
+      letter-spacing:-0.04em;
+      font-weight:900;
+      color:#fff;
+    }
+
+    .hub-subtitle{
+      margin:0 auto;
+      max-width:760px;
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.7;
+    }
+
+    .hub-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .hub-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:22px;
+      padding:24px;
+      box-shadow:var(--shadow-soft);
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+    }
+
+    .hub-card.highlight{
+      background:
+        linear-gradient(180deg, rgba(211,47,47,0.10), rgba(255,255,255,0.03)),
+        rgba(17,24,39,0.95);
+      border-color:rgba(211,47,47,0.22);
+      box-shadow:var(--shadow);
+    }
+
+    .hub-tag{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      align-self:flex-start;
+      min-height:30px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#e8eef9;
+      font-size:0.74rem;
+      font-weight:900;
+      letter-spacing:0.06em;
+      margin-bottom:12px;
+    }
+
+    .hub-card h2{
+      margin:0 0 10px;
+      font-size:1.35rem;
+      line-height:1.14;
+      color:#fff;
+      font-weight:900;
+      letter-spacing:-0.02em;
+    }
+
+    .hub-card p{
+      margin:0 0 16px;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:0.97rem;
+    }
+
+    .hub-price{
+      font-size:2.4rem;
+      line-height:1;
+      font-weight:900;
+      color:#fff;
+      letter-spacing:-0.05em;
+      margin:4px 0 16px;
+    }
+
+    .hub-price small{
+      font-size:0.95rem;
+      color:var(--muted);
+      font-weight:700;
+      letter-spacing:0;
+      margin-left:6px;
+    }
+
+    .hub-points{
+      list-style:none;
+      padding:0;
+      margin:0 0 18px;
+      display:grid;
+      gap:10px;
+      flex:1;
+    }
+
+    .hub-points li{
+      position:relative;
+      padding-left:24px;
+      color:#e7edf8;
+      line-height:1.55;
+    }
+
+    .hub-points li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--green);
+      font-weight:900;
+    }
+
+    .hub-btn,
+    .hub-btn-dark{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:56px;
+      padding:16px 18px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      font-size:1rem;
+      transition:transform .18s ease, opacity .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .hub-btn{
+      color:#fff;
+      background:linear-gradient(135deg,var(--red),var(--red-2));
+      border:1px solid rgba(255,255,255,0.12);
+      box-shadow:0 16px 34px rgba(211,47,47,0.24);
+    }
+
+    .hub-btn:hover{
+      opacity:.98;
+      transform:translateY(-2px);
+      box-shadow:0 20px 40px rgba(211,47,47,0.30);
+    }
+
+    .hub-btn-dark{
+      color:#fff;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+
+    .hub-btn-dark:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,0.08);
+    }
+
+    .hub-note{
+      margin-top:10px;
+      color:var(--muted-2);
+      font-size:0.88rem;
+      line-height:1.55;
+      text-align:center;
+    }
+
+    .hub-section{
+      padding-top:34px;
+    }
+
+    .hub-box{
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hub-box-head{
+      max-width:780px;
+      margin:0 auto 20px;
+      text-align:center;
+    }
+
+    .hub-box-head h2{
+      margin:0 0 10px;
+      font-size:clamp(1.7rem, 3vw, 2.5rem);
+      line-height:1.14;
+      letter-spacing:-0.03em;
+      color:#fff;
+      font-weight:900;
+    }
+
+    .hub-box-head p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .hub-compare{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+
+    .hub-compare-card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:20px;
+    }
+
+    .hub-compare-card h3{
+      margin:0 0 10px;
+      color:#fff;
+      font-size:1.08rem;
+      font-weight:900;
+    }
+
+    .hub-compare-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:0.95rem;
+    }
+
+    .hub-footer{
+      border-top:1px solid rgba(255,255,255,0.06);
+      margin-top:34px;
+      padding-top:22px;
+    }
+
+    .hub-footer .container{
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      flex-wrap:wrap;
+    }
+
+    .hub-footer a{
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .hub-footer a:hover{
+      color:#fff;
+    }
+
+    @media (max-width: 980px){
+      .hub-grid,
+      .hub-compare{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .hub-wrap{
+        padding:24px 0 40px;
+      }
+
+      .hub-card,
+      .hub-box,
+      .hub-compare-card{
+        padding:18px;
+        border-radius:20px;
+      }
+
+      .hub-title{
+        font-size:2.05rem;
+      }
+
+      .hub-subtitle{
+        font-size:1rem;
+      }
+    }
+  </style>
+</head>
+<body class="hub-body">
+
+  <div class="hub-topbar">
+    <div class="container">
+      <a href="index.html" class="hub-back">← Zurück zur Startseite</a>
+    </div>
+  </div>
+
+  <main class="container hub-wrap">
+
+    <section class="hub-hero">
+      <div class="hub-badges">
+        <span class="hub-badge hub-badge-red">VORLAGEN & EINSTIEGE</span>
+        <span class="hub-badge">Gratis · 9,95 € · 29 €</span>
+        <span class="hub-badge">Direkt nutzbar</span>
+      </div>
+
+      <h1 class="hub-title">Wähle den Einstieg, der gerade zu deiner Lage passt</h1>
+      <p class="hub-subtitle">
+        Nicht jeder braucht sofort das volle Paket. Manche brauchen zuerst Orientierung.
+        Andere wollen direkt eine konkrete Einzelvorlage. Und manche brauchen sofort mehrere
+        Vorlagen auf einmal. Genau dafür ist diese Seite da.
+      </p>
+    </section>
+
+    <section class="hub-grid">
+      <article class="hub-card">
+        <span class="hub-tag">GRATIS</span>
+        <h2>Kostenloser Einstieg</h2>
+        <p>
+          Für Eltern, die erstmal kurz sortieren wollen, was gerade überhaupt sinnvoll ist,
+          bevor sie Geld ausgeben oder planlos reagieren.
+        </p>
+        <div class="hub-price">0 € <small>erster Schritt</small></div>
+        <ul class="hub-points">
+          <li>leichter Einstieg ohne Kauf</li>
+          <li>ideal für kalten Erstkontakt</li>
+          <li>gibt schnelle Orientierung</li>
+        </ul>
+        <a href="fallanalyse.html" class="hub-btn-dark">Gratis starten</a>
+        <div class="hub-note">Sinnvoll, wenn du erstmal Klarheit willst.</div>
+      </article>
+
+      <article class="hub-card">
+        <span class="hub-tag">LOW TICKET</span>
+        <h2>Jugendamt-Vorlage</h2>
+        <p>
+          Für Eltern, die einen kleinen, konkreten Umsetzungsschritt wollen und nicht wieder
+          spontan, emotional oder zu chaotisch schreiben möchten.
+        </p>
+        <div class="hub-price">9,95 € <small>direkter Nutzen</small></div>
+        <ul class="hub-points">
+          <li>sachlichere Grundstruktur</li>
+          <li>kleine Hürde, schneller Einstieg</li>
+          <li>direkt nach Kauf downloadbar</li>
+        </ul>
+        <a href="jugendamt-vorlage.html" class="hub-btn-dark">Zur 9,95-€-Vorlage</a>
+        <div class="hub-note">Stark als erster bezahlter Schritt.</div>
+      </article>
+
+      <article class="hub-card highlight">
+        <span class="hub-tag">HAUPTPRODUKT</span>
+        <h2>Elternschutzpaket</h2>
+        <p>
+          Für Eltern, die nicht nur einen Einstieg brauchen, sondern mehrere typische Baustellen
+          mit sofort nutzbaren PDFs sauber abdecken wollen.
+        </p>
+        <div class="hub-price">29 € <small>7 PDFs</small></div>
+        <ul class="hub-points">
+          <li>Akteneinsicht, Durchsetzung, Gutachten und mehr</li>
+          <li>für mehrere Konfliktfelder geeignet</li>
+          <li>direkt nach Kauf verfügbar</li>
+        </ul>
+        <a href="elternschutzpaket.html" class="hub-btn">Zum Elternschutzpaket</a>
+        <div class="hub-note">Die stärkste Lösung für strukturierteres Vorgehen.</div>
+      </article>
+    </section>
+
+    <section class="hub-section">
+      <div class="hub-box">
+        <div class="hub-box-head">
+          <h2>Was ist hier gerade der richtige Schritt?</h2>
+          <p>
+            Direkt gesagt: Der richtige Einstieg hängt nicht von deinem Ego ab, sondern davon,
+            wie konkret dein Problem gerade ist.
+          </p>
+        </div>
+
+        <div class="hub-compare">
+          <div class="hub-compare-card">
+            <h3>0 € ist richtig, wenn…</h3>
+            <p>du erstmal nur Orientierung brauchst und deinen nächsten Schritt nicht falsch setzen willst.</p>
+          </div>
+          <div class="hub-compare-card">
+            <h3>9,95 € ist richtig, wenn…</h3>
+            <p>du jetzt direkt eine konkrete Vorlage willst, aber noch nicht das ganze Paket brauchst.</p>
+          </div>
+          <div class="hub-compare-card">
+            <h3>29 € ist richtig, wenn…</h3>
+            <p>du weißt, dass dein Fall mehr als nur eine einzelne Baustelle hat und du direkt mehr Struktur brauchst.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="hub-footer">
+      <div class="container">
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

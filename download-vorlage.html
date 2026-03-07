@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download – Jugendamt-Vorlage | Rebell mit Herz</title>
+  <meta name="description" content="Deine Jugendamt-Vorlage ist freigeschaltet. Lade sie jetzt direkt herunter. Wenn du mehr Struktur für Jugendamt, Umgang und Gericht brauchst, geh weiter ins Elternschutzpaket mit 8 PDFs und 1 Audio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=22">
+  <style>
+    .download-body{
+      background:
+        radial-gradient(circle at 10% 0%, rgba(24,169,87,0.08), transparent 24%),
+        radial-gradient(circle at 100% 20%, rgba(211,47,47,0.08), transparent 22%),
+        linear-gradient(180deg,#08111f 0%, #0c1627 100%);
+      min-height:100vh;
+      color:var(--text);
+      font-family:Inter,Arial,sans-serif;
+    }
+
+    .download-wrap{
+      max-width:1080px;
+      margin:0 auto;
+      padding:34px 18px 56px;
+    }
+
+    .success-card{
+      background:
+        linear-gradient(180deg, rgba(24,169,87,0.08), rgba(255,255,255,0.03)),
+        rgba(17,24,39,0.95);
+      border:1px solid rgba(24,169,87,0.22);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      padding:32px 24px;
+      margin-bottom:24px;
+      text-align:center;
+    }
+
+    .success-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(24,169,87,0.14);
+      color:#dcfce7;
+      border:1px solid rgba(24,169,87,0.34);
+      border-radius:999px;
+      padding:8px 16px;
+      font-weight:900;
+      font-size:0.84rem;
+      margin-bottom:16px;
+      letter-spacing:.05em;
+    }
+
+    .success-card h1{
+      margin:0 0 12px;
+      font-size:clamp(2rem, 4vw, 3.15rem);
+      line-height:1.06;
+      color:#fff;
+      font-weight:900;
+      letter-spacing:-0.03em;
+    }
+
+    .success-card p{
+      max-width:760px;
+      margin:0 auto 18px;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:1rem;
+    }
+
+    .download-main-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:min(100%, 620px);
+      min-height:64px;
+      padding:18px 22px;
+      border-radius:16px;
+      text-decoration:none;
+      font-weight:900;
+      font-size:1.08rem;
+      color:#fff;
+      background:linear-gradient(135deg,#18a957,#22c55e);
+      border:1px solid rgba(255,255,255,0.12);
+      box-shadow:0 16px 34px rgba(24,169,87,0.24);
+      margin-bottom:12px;
+      transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    }
+
+    .download-main-btn:hover{
+      opacity:.98;
+      transform:translateY(-2px);
+      box-shadow:0 20px 40px rgba(24,169,87,0.28);
+    }
+
+    .download-note{
+      color:var(--muted-2);
+      font-size:.92rem;
+    }
+
+    .mini-proof{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-top:16px;
+    }
+
+    .mini-proof span{
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#e8eef8;
+      font-size:.84rem;
+      font-weight:800;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1.02fr 0.98fr;
+      gap:22px;
+      margin-top:24px;
+      align-items:start;
+    }
+
+    .panel{
+      background:rgba(17,24,39,0.92);
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:var(--shadow-soft);
+      padding:24px;
+    }
+
+    .panel h2{
+      margin:0 0 12px;
+      color:#fff;
+      font-size:1.4rem;
+      line-height:1.14;
+      font-weight:900;
+      letter-spacing:-0.02em;
+    }
+
+    .panel p{
+      color:var(--muted);
+      margin:0 0 16px;
+      line-height:1.6;
+    }
+
+    .list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:12px;
+    }
+
+    .list li{
+      position:relative;
+      padding-left:26px;
+      color:#e7edf8;
+      line-height:1.55;
+    }
+
+    .list li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color:#18a957;
+      font-weight:900;
+    }
+
+    .value-box{
+      margin-top:18px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .value-box strong{
+      display:block;
+      margin-bottom:8px;
+      color:#fff;
+      font-size:1rem;
+    }
+
+    .value-box p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .upsell-panel{
+      background:
+        linear-gradient(180deg, rgba(211,47,47,0.10), rgba(255,255,255,0.03)),
+        rgba(17,24,39,0.94);
+      border:1px solid rgba(211,47,47,0.22);
+    }
+
+    .upsell-panel h2{
+      margin-bottom:10px;
+    }
+
+    .price-tag{
+      font-size:2.4rem;
+      line-height:1;
+      font-weight:900;
+      color:#fff;
+      margin:10px 0 16px;
+      letter-spacing:-0.04em;
+    }
+
+    .upsell-points{
+      list-style:none;
+      padding:0;
+      margin:0 0 16px;
+      display:grid;
+      gap:12px;
+    }
+
+    .upsell-points li{
+      position:relative;
+      padding-left:26px;
+      color:#e7edf8;
+      line-height:1.55;
+    }
+
+    .upsell-points li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color:#fff;
+      font-weight:900;
+    }
+
+    .cta-red{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:58px;
+      padding:16px 18px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      font-size:1rem;
+      color:#fff;
+      background:linear-gradient(135deg,var(--red),var(--red-2));
+      border:1px solid rgba(255,255,255,0.12);
+      box-shadow:0 16px 34px rgba(211,47,47,0.24);
+      transition:transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+    }
+
+    .cta-red:hover{
+      opacity:.98;
+      transform:translateY(-2px);
+      box-shadow:0 20px 40px rgba(211,47,47,0.30);
+    }
+
+    .small-note{
+      margin-top:10px;
+      color:var(--muted-2);
+      font-size:.88rem;
+      text-align:center;
+      line-height:1.5;
+    }
+
+    .secondary-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:54px;
+      padding:15px 18px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      font-size:1rem;
+      color:#fff;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.10);
+      margin-top:12px;
+      transition:transform .16s ease, background .16s ease;
+    }
+
+    .secondary-link:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,0.08);
+    }
+
+    .faq-box{
+      margin-top:18px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .faq-box strong{
+      display:block;
+      color:#fff;
+      margin-bottom:8px;
+      font-size:1rem;
+    }
+
+    .faq-box p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .locked{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+
+    .locked-box{
+      max-width:620px;
+      width:100%;
+      background:#fff;
+      color:#111827;
+      border-radius:18px;
+      padding:34px 28px;
+      text-align:center;
+      box-shadow:0 18px 55px rgba(0,0,0,0.18);
+      border:3px solid var(--red);
+    }
+
+    .locked-box h2{
+      margin:0 0 12px;
+      color:var(--red);
+      font-size:1.9rem;
+      line-height:1.12;
+    }
+
+    .locked-box p{
+      line-height:1.6;
+      color:#4b5563;
+      margin:0 0 20px;
+    }
+
+    .locked-box a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      background:var(--red);
+      color:#fff;
+      text-decoration:none;
+      padding:12px 22px;
+      border-radius:10px;
+      font-weight:800;
+    }
+
+    .footer-links{
+      margin-top:28px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .footer-links a{
+      color:var(--muted);
+      text-decoration:none;
+      margin:0 10px;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    @media (max-width: 900px){
+      .two-col{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .download-wrap{
+        padding:22px 12px 40px;
+      }
+
+      .success-card,
+      .panel{
+        padding:18px;
+        border-radius:20px;
+      }
+
+      .download-main-btn{
+        font-size:1rem;
+        min-height:58px;
+      }
+    }
+  </style>
+</head>
+<body class="download-body">
+
+  <div id="locked" class="locked" style="display:none;">
+    <div class="locked-box">
+      <h2>Zugriff nicht freigeschaltet</h2>
+      <p>Diese Seite ist nur nach erfolgreicher Zahlung erreichbar.</p>
+      <a href="jugendamt-vorlage.html">Zur Zahlungsseite</a>
+    </div>
+  </div>
+
+  <main id="content" style="display:none;">
+    <div class="download-wrap">
+
+      <section class="success-card">
+        <div class="success-badge">✓ ZAHLUNG ERFOLGREICH</div>
+        <h1>Deine Jugendamt-Vorlage ist jetzt freigeschaltet</h1>
+        <p>
+          Der Download startet automatisch einmal. Falls das nicht passiert, klick einfach auf den grünen Button.
+          Danach ist die eigentliche Frage: reicht dir ein Einzelbaustein oder brauchst du die stärkere Komplettlösung?
+        </p>
+
+        <a id="single-download"
+           class="download-main-btn"
+           href="download-8473/jugendamt-antwort-vorlage-rebell-mit-herz.pdf"
+           download>
+          📥 Vorlage jetzt herunterladen
+        </a>
+
+
+        <div style="margin-top:18px;">
+          <a class="download-main-btn"
+             href="https://drive.google.com/uc?export=download&id=1D1GV5yhz_2XIeakytur_TZxnwJ47iPxk"
+             target="_blank"
+             rel="noopener">
+            🎧 Audio-Erklärung jetzt herunterladen
+          </a>
+        </div>
+        <div class="download-note">
+          Einmalzahlung · direkter Zugriff · kein Abo
+        </div>
+
+        <div class="mini-proof">
+          <span>klarer Einstieg</span>
+          <span>direkt einsetzbar</span>
+          <span>sachlicherer Aufbau</span>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="panel">
+          <h2>Was du gerade gekauft hast</h2>
+          <p>
+            Diese Vorlage ist der schnelle, günstige Einstieg für Eltern, die dem Jugendamt nicht wieder
+            aus dem Bauch heraus schreiben wollen, sondern ruhiger, klarer und strukturierter auftreten möchten.
+          </p>
+
+          <ul class="list">
+            <li>sachlicherer Aufbau statt spontaner Textwände</li>
+            <li>bessere Grundordnung für deine Aussage</li>
+            <li>weniger Reibung durch klarere Struktur</li>
+            <li>schnell nutzbar ohne bei null anzufangen</li>
+          </ul>
+
+          <div class="value-box">
+            <strong>Wichtig</strong>
+            <p>
+              Diese Vorlage ist bewusst als kleiner erster Schritt gebaut. Sie soll dir einen sauberen Startpunkt geben,
+              nicht deinen kompletten Fall auf einmal lösen.
+            </p>
+          </div>
+
+          <div class="faq-box">
+            <strong>Download startet nicht?</strong>
+            <p>
+              Dann klick einfach oben auf den grünen Button. Die Datei liegt im Ordner <em>download-8473</em> und wird direkt von dort geladen.
+            </p>
+          </div>
+        </div>
+
+        <div class="panel upsell-panel">
+          <h2>Wenn dein Fall mehr als nur Jugendamt-Kommunikation betrifft</h2>
+          <p>
+            Dann reicht eine Einzelvorlage oft nicht lange. Das Elternschutzpaket ist der logische nächste Schritt,
+            wenn du zusätzlich Struktur für Akteneinsicht, Durchsetzung, Gutachten, Protokollberichtigung,
+            Umgangsblockade und weitere Bausteine brauchst.
+          </p>
+
+          <div class="price-tag">29 €</div>
+
+          <ul class="upsell-points">
+            <li>8 PDF-Vorlagen insgesamt</li>
+            <li>plus 1 Audio-Erklärung</li>
+            <li>mehrere typische Baustellen abgedeckt</li>
+            <li>direkter Download nach Kauf</li>
+            <li>stärker als nur eine Einzelvorlage</li>
+          </ul>
+
+          <a href="elternschutzpaket.html" class="cta-red">
+            Direkt zum Elternschutzpaket
+          </a>
+
+          <a href="index.html" class="secondary-link">
+            Zur Startseite
+          </a>
+
+          <div class="small-note">
+            Sinnvoll, wenn du merkst, dass dein Fall nicht nur aus einer einzelnen Jugendamt-Antwort besteht.
+          </div>
+        </div>
+      </section>
+
+      <div class="footer-links">
+        <a href="index.html">Startseite</a> |
+        <a href="impressum.html">Impressum</a> |
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const STORAGE_KEY = 'rmh_paid_vorlage';
+    const STORAGE_EXPIRY_KEY = 'rmh_paid_vorlage_expiry';
+    const VALID_HOURS = 12;
+
+    function hasValidAccess() {
+      const params = new URLSearchParams(window.location.search);
+
+      if (params.get('paid') === '1') {
+        const expiry = Date.now() + (VALID_HOURS * 60 * 60 * 1000);
+        localStorage.setItem(STORAGE_KEY, '1');
+        localStorage.setItem(STORAGE_EXPIRY_KEY, String(expiry));
+
+        const cleanUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+        return true;
+      }
+
+      const stored = localStorage.getItem(STORAGE_KEY);
+      const expiryRaw = localStorage.getItem(STORAGE_EXPIRY_KEY);
+      const expiry = expiryRaw ? parseInt(expiryRaw, 10) : 0;
+
+      return stored === '1' && Date.now() < expiry;
+    }
+
+    function autoDownloadOnce() {
+      if (sessionStorage.getItem('rmh_vorlage_autodownload_done') === '1') return;
+      sessionStorage.setItem('rmh_vorlage_autodownload_done', '1');
+
+      const btn = document.getElementById('single-download');
+      if (!btn) return;
+
+      setTimeout(() => {
+        btn.click();
+      }, 900);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!hasValidAccess()) {
+        document.getElementById('locked').style.display = 'flex';
+        document.getElementById('content').style.display = 'none';
+        return;
+      }
+
+      document.getElementById('locked').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+      autoDownloadOnce();
+    });
+  </script>
+
+</body>
+</html>
