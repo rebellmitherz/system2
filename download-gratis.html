@@ -1,173 +1,135 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gratis Download</title>
-  <style>
-    :root{
-      --bg:#f7f7f5;
-      --card:#ffffff;
-      --text:#1f1f1f;
-      --muted:#707070;
-      --accent:#f0ab47;
-      --accent-hover:#e39b34;
-      --line:#ebe6dd;
-      --shadow:0 12px 30px rgba(0,0,0,.07);
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-      line-height:1.5;
-    }
-    .wrap{
-      max-width:980px;
-      margin:0 auto;
-      padding:42px 18px 60px;
-    }
-    .hero{
-      text-align:center;
-      margin-bottom:30px;
-    }
-    .hero h1{
-      margin:0 0 12px;
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(2rem,5vw,3.5rem);
-      line-height:1.05;
-    }
-    .hero p{
-      margin:0 auto;
-      max-width:760px;
-      color:var(--muted);
-      font-size:1.08rem;
-    }
-    .grid{
-      display:grid;
-      gap:18px;
-    }
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:24px;
-    }
-    .card h2{
-      margin:0 0 10px;
-      font-size:1.45rem;
-      font-family:Georgia,"Times New Roman",serif;
-    }
-    .muted{
-      color:var(--muted);
-    }
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:18px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:52px;
-      padding:14px 18px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:800;
-      transition:.2s ease;
-    }
-    .btn.primary{
-      background:var(--accent);
-      color:#1f1f1f;
-    }
-    .btn.primary:hover{
-      background:var(--accent-hover);
-    }
-    .btn.secondary{
-      border:1px solid #d7d0c3;
-      color:#1f1f1f;
-      background:#fff;
-    }
-    .btn.secondary:hover{
-      background:#faf7f2;
-    }
-    audio{
-      width:100%;
-      margin-top:16px;
-    }
-    .upsell{
-      border:2px solid #f1d39a;
-      background:#fffaf0;
-    }
-    footer{
-      margin-top:24px;
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-    footer a{
-      color:#5f5f5f;
-      text-decoration:none;
-      font-size:.96rem;
-    }
-    footer a:hover{
-      text-decoration:underline;
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gratis Download</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#f6f6f4;
+margin:0;
+padding:40px;
+text-align:center;
+}
+
+.container{
+max-width:760px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:36px;
+border-radius:14px;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+margin-bottom:20px;
+}
+
+h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+p{
+color:#555;
+}
+
+button{
+background:#f0ab47;
+border:none;
+padding:16px 24px;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#e39b34;
+}
+
+audio{
+width:100%;
+margin-top:20px;
+}
+
+footer{
+margin-top:40px;
+font-size:14px;
+}
+
+footer a{
+margin:0 10px;
+text-decoration:none;
+color:#444;
+}
+
+</style>
+
 </head>
+
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <h1>Dein Gratis-Zugang ist bereit</h1>
-      <p>
-        Hier findest du dein kostenloses Einstiegsdokument und die Audio-Einordnung.
-        Lade beides direkt herunter und sichere dir im nächsten Schritt auf Wunsch das komplette Elternschutzpaket.
-      </p>
-    </section>
 
-    <section class="grid">
-      <article class="card">
-        <h2>Gratis PDF</h2>
-        <p class="muted">Dein kostenloser Einstieg mit klarer Struktur für die ersten Schritte.</p>
-        <div class="actions">
-          <a class="btn primary" href="gratis/elternschutzpaket-gratis.pdf" download>PDF herunterladen</a>
-        </div>
-      </article>
+<div class="container">
 
-      <article class="card">
-        <h2>Gratis Audio</h2>
-        <p class="muted">Kurze Einordnung, damit du schneller verstehst, worauf es wirklich ankommt.</p>
-        <audio controls preload="metadata">
-          <source src="gratis/gratis.mp3" type="audio/mpeg">
-          Dein Browser unterstützt kein Audio.
-        </audio>
-        <div class="actions">
-          <a class="btn secondary" href="gratis/gratis.mp3" download>Audio herunterladen</a>
-        </div>
-      </article>
+<h1>Dein Gratis-Zugang ist bereit</h1>
 
-      <article class="card upsell">
-        <h2>Wenn du tiefer gehen willst</h2>
-        <p class="muted">
-          Das komplette Elternschutzpaket bündelt die wichtigsten Vorlagen, Orientierung und weitere Inhalte,
-          damit du nicht nur reagierst, sondern strukturierter vorgehst.
-        </p>
-        <div class="actions">
-          <a class="btn primary" href="https://buy.stripe.com/6oUfZj9gwcU1f5W6aR8og0d" target="_blank" rel="noopener">Zum Elternschutzpaket</a>
-        </div>
-      </article>
-    </section>
+<p>Lade hier dein Dokument herunter und höre dir die kurze Audio-Erklärung an.</p>
 
-    <footer>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </footer>
-  </main>
+<div class="card">
+
+<h2>Gratis Dokument</h2>
+
+<a href="gratis/elternschutzpaket-gratis.pdf" download>
+<button>PDF herunterladen</button>
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Audio Erklärung</h2>
+
+<audio controls>
+<source src="gratis/Strategie_schlaegt_Wahrheit_gratis.mp3" type="audio/mpeg">
+</audio>
+
+<br><br>
+
+<a href="gratis/Strategie_schlaegt_Wahrheit_gratis.mp3" download>
+<button>Audio herunterladen</button>
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Wenn du tiefer gehen willst</h2>
+
+<p>
+Das komplette Elternschutzpaket enthält weitere Vorlagen,
+Strategien und Orientierung für Jugendamt und Gericht.
+</p>
+
+<a href="https://buy.stripe.com/6oUfZj9gwcU1f5W6aR8og0d" target="_blank">
+<button>Zum Elternschutzpaket</button>
+</a>
+
+</div>
+
+<footer>
+
+<a href="impressum.html">Impressum</a>
+
+<a href="datenschutz.html">Datenschutz</a>
+
+</footer>
+
+</div>
+
 </body>
 </html>
