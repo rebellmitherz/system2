@@ -45,7 +45,10 @@
       color:var(--muted);
       font-size:1.08rem;
     }
-    .grid{display:grid;gap:18px;}
+    .grid{
+      display:grid;
+      gap:18px;
+    }
     .card{
       background:var(--card);
       border:1px solid var(--line);
@@ -58,7 +61,9 @@
       font-size:1.45rem;
       font-family:Georgia,"Times New Roman",serif;
     }
-    .muted{color:var(--muted);}
+    .muted{
+      color:var(--muted);
+    }
     .actions{
       display:flex;
       flex-wrap:wrap;
@@ -80,11 +85,16 @@
       background:var(--accent);
       color:#1f1f1f;
     }
-    .btn.primary:hover{background:var(--accent-hover);}
+    .btn.primary:hover{
+      background:var(--accent-hover);
+    }
     .btn.secondary{
       border:1px solid #d7d0c3;
       color:#1f1f1f;
       background:#fff;
+    }
+    .btn.secondary:hover{
+      background:#faf7f2;
     }
     audio{
       width:100%;
@@ -106,6 +116,9 @@
       text-decoration:none;
       font-size:.96rem;
     }
+    footer a:hover{
+      text-decoration:underline;
+    }
   </style>
 </head>
 <body>
@@ -113,37 +126,41 @@
     <section class="hero">
       <h1>Dein Gratis-Zugang ist bereit</h1>
       <p>
-        Hier findest du dein kostenloses Einstiegsprodukt mit PDF und Audio.
-        Lade alles direkt herunter und speichere es auf deinem Gerät.
+        Hier findest du dein kostenloses Einstiegsdokument und die Audio-Einordnung.
+        Lade beides direkt herunter und sichere dir im nächsten Schritt auf Wunsch das komplette Elternschutzpaket.
       </p>
     </section>
 
     <section class="grid">
       <article class="card">
         <h2>Gratis PDF</h2>
-        <p class="muted">Elternschutzpaket – Gratis Einstieg</p>
+        <p class="muted">Dein kostenloser Einstieg mit klarer Struktur für die ersten Schritte.</p>
         <div class="actions">
-          <a class="btn primary" href="pdf/elternschutzpaket-gratis.pdf" download>PDF herunterladen</a>
+          <a class="btn primary" href="gratis/elternschutzpaket-gratis.pdf" download>PDF herunterladen</a>
         </div>
       </article>
 
       <article class="card">
         <h2>Gratis Audio</h2>
-        <p class="muted">Strategie schlägt Wahrheit – gratis</p>
-        <audio controls preload="none">
-          <source src="https://drive.google.com/uc?export=download&id=1yAHUZ6O3OUKxnTW7FSDKdOxqw81aInXM" type="audio/mpeg">
+        <p class="muted">Kurze Einordnung, damit du schneller verstehst, worauf es wirklich ankommt.</p>
+        <audio controls preload="metadata">
+          <source src="gratis/gratis.mp3" type="audio/mpeg">
           Dein Browser unterstützt kein Audio.
         </audio>
         <div class="actions">
-          <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=1yAHUZ6O3OUKxnTW7FSDKdOxqw81aInXM">Audio herunterladen</a>
+          <a class="btn secondary" href="gratis/gratis.mp3" download>Audio herunterladen</a>
         </div>
       </article>
 
       <article class="card upsell">
-        <h2>Wenn du mehr willst</h2>
+        <h2>Wenn du tiefer gehen willst</h2>
         <p class="muted">
-          Das Elternschutzpaket bündelt Audio, Grafik und alle wichtigen Vorlagen in einem Paket.
+          Das komplette Elternschutzpaket bündelt die wichtigsten Vorlagen, Orientierung und weitere Inhalte,
+          damit du nicht nur reagierst, sondern strukturierter vorgehst.
         </p>
+        <div class="actions">
+          <a class="btn primary" href="https://buy.stripe.com/6oUfZj9gwcU1f5W6aR8og0d" target="_blank" rel="noopener">Zum Elternschutzpaket</a>
+        </div>
       </article>
     </section>
 
