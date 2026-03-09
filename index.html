@@ -16,13 +16,16 @@
       --shadow:0 12px 32px rgba(0,0,0,.08);
       --radius:20px;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
       background:var(--bg);
       color:var(--text);
     }
+
     .wrap{
       min-height:100vh;
       display:flex;
@@ -30,11 +33,13 @@
       justify-content:center;
       padding:28px 18px;
     }
+
     .container{
       width:100%;
       max-width:760px;
       text-align:center;
     }
+
     h1{
       font-family:Georgia,"Times New Roman",serif;
       font-size:clamp(2.4rem,5vw,4.2rem);
@@ -42,6 +47,7 @@
       margin:0 0 18px;
       letter-spacing:-0.02em;
     }
+
     .sub{
       max-width:720px;
       margin:0 auto 28px;
@@ -49,7 +55,11 @@
       line-height:1.65;
       color:var(--muted);
     }
-    .sub strong{color:var(--text);}
+
+    .sub strong{
+      color:var(--text);
+    }
+
     .card{
       background:var(--card);
       border:1px solid var(--line);
@@ -59,17 +69,20 @@
       max-width:700px;
       margin:0 auto;
     }
+
     .card h2{
       font-family:Georgia,"Times New Roman",serif;
       font-size:clamp(1.8rem,3vw,2.5rem);
       margin:0 0 14px;
     }
+
     .card p{
       margin:0 0 20px;
       color:var(--muted);
       font-size:1.08rem;
       line-height:1.6;
     }
+
     .features{
       text-align:left;
       max-width:520px;
@@ -79,17 +92,20 @@
       color:#4e4e4e;
       font-size:1.08rem;
     }
+
     .feature{
       display:flex;
       align-items:center;
       gap:12px;
     }
+
     .icon{
       width:28px;
       text-align:center;
       flex:0 0 28px;
       font-size:1.15rem;
     }
+
     .btn{
       display:inline-flex;
       align-items:center;
@@ -106,10 +122,12 @@
       transition:.2s ease;
       box-shadow:0 10px 22px rgba(240,171,71,.28);
     }
+
     .btn:hover{
       background:var(--accent-hover);
       transform:translateY(-1px);
     }
+
     .note{
       margin-top:18px;
       color:#8a8a8a;
@@ -121,26 +139,31 @@
       margin:24px auto 0;
       padding:0 2px;
     }
+
     .tools-head{
       margin:0 0 18px;
     }
+
     .tools-head h3{
       margin:0 0 8px;
       font-family:Georgia,"Times New Roman",serif;
       font-size:clamp(1.35rem,2.5vw,1.75rem);
       line-height:1.2;
     }
+
     .tools-head p{
       margin:0;
       color:var(--muted);
       font-size:1rem;
       line-height:1.6;
     }
+
     .tools-grid{
       display:grid;
       grid-template-columns:1fr;
       gap:14px;
     }
+
     .tool-card{
       background:rgba(255,255,255,.82);
       border:1px solid var(--line);
@@ -149,18 +172,21 @@
       text-align:left;
       box-shadow:0 8px 22px rgba(0,0,0,.04);
     }
+
     .tool-card h4{
       margin:0 0 10px;
       font-size:1.08rem;
       line-height:1.35;
       color:var(--text);
     }
+
     .tool-card p{
       margin:0 0 16px;
       color:var(--muted);
       font-size:.98rem;
       line-height:1.6;
     }
+
     .tool-btn{
       display:inline-flex;
       align-items:center;
@@ -176,10 +202,40 @@
       font-size:.98rem;
       transition:.2s ease;
     }
+
     .tool-btn:hover{
       background:#f4eee3;
       border-color:#d7ccb8;
       transform:translateY(-1px);
+    }
+
+    .return-cta{
+      max-width:700px;
+      margin:22px auto 0;
+      padding:22px 20px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fcfbf8;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+    }
+
+    .return-cta h3{
+      margin:0 0 8px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.2rem,2.2vw,1.5rem);
+      line-height:1.25;
+    }
+
+    .return-cta p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:1rem;
+      line-height:1.6;
+    }
+
+    .return-cta .btn{
+      max-width:420px;
+      margin:0 auto;
     }
 
     footer{
@@ -189,14 +245,18 @@
       gap:18px;
       flex-wrap:wrap;
     }
+
     footer a{
       color:#5f5f5f;
       text-decoration:none;
       font-size:.96rem;
     }
-    footer a:hover{ text-decoration:underline; }
 
-    @media (min-width: 700px){
+    footer a:hover{
+      text-decoration:underline;
+    }
+
+    @media (min-width:700px){
       .tools-grid{
         grid-template-columns:1fr 1fr;
       }
@@ -249,6 +309,14 @@
             <a class="tool-btn" href="https://gespraechs-trainer-pro.lovable.app/" target="_blank" rel="noopener">Tool öffnen</a>
           </article>
         </div>
+      </section>
+
+      <section class="return-cta">
+        <h3>Du willst deine Situation direkt einordnen?</h3>
+        <p>Dann starte hier mit der kostenlosen Analyse und erhalte sofort eine erste klare Richtung.</p>
+        <a class="btn" href="https://elternratgeber-klarheit.lovable.app" target="_blank" rel="noopener">
+          KOSTENLOSE ANALYSE STARTEN
+        </a>
       </section>
 
       <footer>
