@@ -115,6 +115,73 @@
       color:#8a8a8a;
       font-size:.98rem;
     }
+
+    .tools{
+      max-width:700px;
+      margin:24px auto 0;
+      padding:0 2px;
+    }
+    .tools-head{
+      margin:0 0 18px;
+    }
+    .tools-head h3{
+      margin:0 0 8px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.35rem,2.5vw,1.75rem);
+      line-height:1.2;
+    }
+    .tools-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:1rem;
+      line-height:1.6;
+    }
+    .tools-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .tool-card{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px 18px;
+      text-align:left;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+    }
+    .tool-card h4{
+      margin:0 0 10px;
+      font-size:1.08rem;
+      line-height:1.35;
+      color:var(--text);
+    }
+    .tool-card p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:.98rem;
+      line-height:1.6;
+    }
+    .tool-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:12px 18px;
+      border-radius:12px;
+      border:1px solid #dfd7c8;
+      background:#fbf8f2;
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+      font-size:.98rem;
+      transition:.2s ease;
+    }
+    .tool-btn:hover{
+      background:#f4eee3;
+      border-color:#d7ccb8;
+      transform:translateY(-1px);
+    }
+
     footer{
       margin-top:22px;
       display:flex;
@@ -128,6 +195,12 @@
       font-size:.96rem;
     }
     footer a:hover{ text-decoration:underline; }
+
+    @media (min-width: 700px){
+      .tools-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,11 +224,32 @@
         </div>
 
         <a class="btn" href="https://elternratgeber-klarheit.lovable.app" target="_blank" rel="noopener">
-          Kostenlose Analyse starten
+          KOSTENLOSE ANALYSE STARTEN
         </a>
 
         <div class="note">Keine Anmeldung · Kein unnötiger Umweg · Direkt starten</div>
       </div>
+
+      <section class="tools">
+        <div class="tools-head">
+          <h3>Kostenlose Tools für Eltern</h3>
+          <p>Nutze diese kostenlosen Tools, um Schreiben besser zu verstehen und Gespräche sicherer vorzubereiten.</p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card">
+            <h4>Jugendamt-Schreiben verstehen</h4>
+            <p>Verstehe in 60 Sekunden, was ein Schreiben vom Jugendamt oder Gericht wahrscheinlich bedeutet.</p>
+            <a class="tool-btn" href="https://klar-verstehen.lovable.app/" target="_blank" rel="noopener">Tool öffnen</a>
+          </article>
+
+          <article class="tool-card">
+            <h4>Jugendamt-Gespräch vorbereiten</h4>
+            <p>Trainiere typische Fragen aus Jugendamt-Gesprächen und erkenne, wie deine Antworten wirken können.</p>
+            <a class="tool-btn" href="https://gespraechs-trainer-pro.lovable.app/" target="_blank" rel="noopener">Tool öffnen</a>
+          </article>
+        </div>
+      </section>
 
       <footer>
         <a href="impressum.html">Impressum</a>
