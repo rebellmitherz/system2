@@ -4,23 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Rebell mit Herz – Fallcheck für Jugendamt, Gericht und Gutachten</title>
-  <meta name="description" content="Wenn Jugendamt, Gericht, Gutachten oder Umgangsprobleme Druck machen, brauchst du Klarheit. Analysiere deine Situation und finde den nächsten sinnvollen Schritt." />
+  <meta name="description" content="Wenn Jugendamt, Gericht oder Gutachten Druck machen, brauchst du Klarheit. Analysiere deine Situation und finde den nächsten sinnvollen Schritt." />
   <meta name="theme-color" content="#f6f3ed" />
   <style>
     :root{
       --bg:#f6f3ed;
       --card:#ffffff;
       --text:#1f1f1f;
-      --muted:#666;
+      --muted:#666666;
       --line:#e7dfd2;
       --accent:#d18d53;
       --accent-hover:#bf7a40;
       --accent-soft:#fbefe2;
-      --dark:#23201d;
-      --shadow:0 16px 42px rgba(0,0,0,.08);
-      --shadow-soft:0 8px 24px rgba(0,0,0,.05);
-      --max:1160px;
-      --radius:26px;
+      --shadow:0 14px 36px rgba(0,0,0,.07);
+      --shadow-soft:0 8px 22px rgba(0,0,0,.045);
+      --max:1120px;
+      --radius:24px;
     }
 
     *{box-sizing:border-box}
@@ -36,243 +35,260 @@
 
     a{text-decoration:none;color:inherit}
     .wrap{width:min(var(--max),calc(100% - 28px));margin:0 auto}
-    .topbar{padding:18px 0 10px}
+
+    .topbar{padding:16px 0 10px}
     .brand{
-      display:flex;align-items:center;gap:12px;
-      font-weight:800;letter-spacing:-.02em;color:#232323
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:-.02em;
+      color:#242424;
     }
     .brand-mark{
-      width:18px;height:18px;border-radius:6px;
+      width:18px;
+      height:18px;
+      border-radius:6px;
       background:linear-gradient(135deg,#ffb07c 0%,#ff6b8e 45%,#7a74ff 100%);
       box-shadow:0 6px 16px rgba(122,116,255,.28);
     }
 
-    .hero{padding:18px 0 18px}
+    .hero{padding:12px 0 16px}
     .hero-card{
-      position:relative;
-      overflow:hidden;
       background:
-        radial-gradient(circle at top right, rgba(209,141,83,.14), transparent 26%),
-        radial-gradient(circle at left top, rgba(122,116,255,.08), transparent 22%),
+        radial-gradient(circle at top right, rgba(209,141,83,.12), transparent 28%),
         linear-gradient(180deg,#fff,#fcfaf6);
       border:1px solid var(--line);
-      border-radius:34px;
+      border-radius:30px;
       box-shadow:var(--shadow);
-      padding:28px;
+      padding:26px;
     }
 
     .eyebrow{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 14px;border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
       background:var(--accent-soft);
-      border:1px solid #edd3bb;
-      color:#8b5d33;
-      font-size:.92rem;
+      border:1px solid #ecd4be;
+      color:#885b34;
+      font-size:.9rem;
       font-weight:800;
     }
     .eyebrow-dot{
-      width:8px;height:8px;border-radius:999px;background:var(--accent)
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--accent);
     }
 
     h1,h2,h3{
       margin:0;
       font-family:Georgia,"Times New Roman",serif;
       letter-spacing:-.03em;
-      color:#242424;
+      color:#232323;
     }
 
     h1{
-      margin-top:18px;
-      font-size:clamp(2.6rem,7vw,5.15rem);
-      line-height:.93;
-      max-width:980px;
+      margin-top:16px;
+      font-size:clamp(2.25rem,6vw,4.8rem);
+      line-height:.95;
+      max-width:860px;
     }
 
     .hero-sub{
-      margin:18px 0 0;
-      max-width:800px;
+      margin:14px 0 0;
+      max-width:700px;
       color:var(--muted);
-      font-size:clamp(1.05rem,2vw,1.18rem);
-      line-height:1.68;
+      font-size:clamp(1rem,2vw,1.12rem);
+      line-height:1.62;
     }
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.12fr .88fr;
-      gap:18px;
-      margin-top:28px;
-      align-items:stretch;
-    }
-
-    .hero-main,.hero-side{
-      background:rgba(255,255,255,.75);
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:22px;
-      box-shadow:var(--shadow-soft);
-      backdrop-filter:blur(6px);
-    }
-
-    .trust-row{
-      display:flex;flex-wrap:wrap;gap:10px 12px;
-      margin-top:16px;
-    }
-
-    .trust-pill{
-      padding:9px 12px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:#fff;
-      color:#666;
-      font-size:.92rem;
-      font-weight:700;
-    }
-
-    .cta-group{
-      display:flex;flex-wrap:wrap;gap:12px;margin-top:8px
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:20px;
     }
 
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      min-height:60px;padding:16px 22px;border-radius:18px;
-      font-weight:900;font-size:1rem;transition:.2s ease;
-      border:1px solid transparent;cursor:pointer
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:58px;
+      padding:15px 22px;
+      border-radius:18px;
+      font-weight:900;
+      font-size:1rem;
+      border:1px solid transparent;
+      transition:.2s ease;
+      cursor:pointer;
     }
 
     .btn-primary{
       background:var(--accent);
       color:#fff;
-      box-shadow:0 12px 26px rgba(209,141,83,.3);
+      box-shadow:0 12px 24px rgba(209,141,83,.28);
     }
-    .btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+    .btn-primary:hover{
+      background:var(--accent-hover);
+      transform:translateY(-1px);
+    }
 
     .btn-secondary{
       background:#fff;
-      border-color:var(--line);
       color:#2f2f2f;
+      border-color:var(--line);
     }
-    .btn-secondary:hover{background:#faf7f2;transform:translateY(-1px)}
+    .btn-secondary:hover{
+      background:#faf7f2;
+      transform:translateY(-1px);
+    }
 
-    .hero-note{
+    .trust-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
       margin-top:14px;
-      color:#6f6f6f;
-      font-size:.95rem;
-      line-height:1.6;
     }
 
-    .mini-title{font-size:1.24rem;margin-bottom:10px}
-    .mini-list{display:grid;gap:12px;margin-top:14px}
-    .mini-item{
-      display:flex;gap:12px;align-items:flex-start;
-      color:#4f4f4f;line-height:1.55
+    .trust-pill{
+      padding:9px 12px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      color:#6e6e6e;
+      font-size:.9rem;
+      font-weight:700;
     }
-    .mini-icon{
-      width:36px;height:36px;flex:0 0 36px;
-      display:grid;place-items:center;
-      border-radius:12px;
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+
+    .quick-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .quick-icon{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
       background:var(--accent-soft);
-      border:1px solid #edd3bb;
-      color:#8b5d33;
-      font-weight:900;
+      border:1px solid #ecd4be;
+      color:#8a6038;
+      font-size:1.1rem;
+      font-weight:800;
+      margin-bottom:12px;
     }
 
-    .section{padding:18px 0}
-    .section-head{max-width:800px;margin-bottom:18px}
+    .quick-card h3{
+      font-size:1.2rem;
+      margin-bottom:8px;
+    }
+
+    .quick-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:.98rem;
+    }
+
+    .section{padding:16px 0}
+    .section-head{
+      max-width:760px;
+      margin-bottom:16px;
+    }
     .section-head h2{
-      font-size:clamp(1.8rem,4vw,3.1rem);
+      font-size:clamp(1.7rem,4vw,2.9rem);
       line-height:1.03;
     }
     .section-head p{
       margin:12px 0 0;
       color:var(--muted);
-      line-height:1.68;
-      font-size:1.03rem;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:24px;
-      box-shadow:var(--shadow-soft);
-      padding:22px;
-    }
-
-    .card h3{font-size:1.32rem;margin-top:12px}
-    .card p{margin:10px 0 0;color:var(--muted);line-height:1.62}
-
-    .problem-icon{
-      width:44px;height:44px;display:grid;place-items:center;
-      border-radius:14px;
-      background:var(--accent-soft);
-      border:1px solid #edd3bb;
-      color:#8b5d33;
-      font-size:1.12rem;
-      font-weight:900;
+      line-height:1.65;
+      font-size:1.02rem;
     }
 
     .steps{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:16px;
+      gap:14px;
     }
 
     .step{
       background:linear-gradient(180deg,#fff,#fcfaf6);
       border:1px solid var(--line);
-      border-radius:24px;
-      padding:22px;
+      border-radius:22px;
+      padding:20px;
       box-shadow:var(--shadow-soft);
     }
 
     .step-no{
-      width:38px;height:38px;border-radius:999px;
-      display:grid;place-items:center;
-      background:#fff;border:1px solid #e7d6c4;
-      color:#9f6d42;font-weight:900;margin-bottom:12px;
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid #e8d8c7;
+      color:#9d6a3e;
+      font-weight:900;
+      margin-bottom:12px;
     }
 
-    .step h3{font-size:1.24rem;margin-bottom:8px}
-    .step p{margin:0;color:var(--muted);line-height:1.62}
+    .step h3{
+      font-size:1.2rem;
+      margin-bottom:8px;
+    }
+    .step p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.58;
+    }
 
-    .secondary-box{
+    .cta-box{
       background:
-        radial-gradient(circle at right center, rgba(209,141,83,.12), transparent 26%),
+        radial-gradient(circle at right center, rgba(209,141,83,.12), transparent 24%),
         linear-gradient(180deg,#fff,#fbf7f0);
       border:1px solid var(--line);
-      border-radius:30px;
+      border-radius:28px;
       box-shadow:var(--shadow);
-      padding:26px;
+      padding:24px;
       display:grid;
-      grid-template-columns:1.12fr .88fr;
+      grid-template-columns:1.1fr .9fr;
       gap:20px;
       align-items:center;
     }
 
-    .secondary-box p{
+    .cta-box p{
       margin:12px 0 0;
       color:var(--muted);
-      line-height:1.7;
-      max-width:700px;
+      line-height:1.68;
+      max-width:680px;
     }
 
-    .secondary-actions{
+    .cta-actions{
       display:flex;
       flex-direction:column;
       gap:12px;
-      align-items:stretch;
     }
 
-    .footer{padding:24px 0 34px}
+    .footer{padding:22px 0 34px}
     .footer-card{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:24px;
+      border-radius:22px;
       box-shadow:var(--shadow-soft);
       padding:18px 20px;
       display:flex;
@@ -283,21 +299,43 @@
       font-size:.95rem;
     }
     .footer-links{
-      display:flex;flex-wrap:wrap;gap:18px
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
     }
-    .footer-links a:hover{color:#1f1f1f}
+    .footer-links a:hover{color:#232323}
 
     @media (max-width:980px){
-      .hero-grid,.grid-3,.steps,.secondary-box{grid-template-columns:1fr}
-      .hero-card,.hero-main,.hero-side,.card,.step,.secondary-box,.footer-card{padding:20px}
+      .quick-grid,.steps,.cta-box{grid-template-columns:1fr}
+      .hero-card,.quick-card,.step,.cta-box,.footer-card{padding:20px}
     }
 
     @media (max-width:640px){
       .wrap{width:min(var(--max),calc(100% - 18px))}
       .hero-card{padding:18px;border-radius:24px}
-      .hero-main,.hero-side,.card,.step,.secondary-box{border-radius:20px}
-      .cta-group{flex-direction:column}
+      .quick-card,.step,.cta-box,.footer-card{border-radius:18px}
+      h1{
+        font-size:clamp(2rem,12vw,3rem);
+        line-height:.96;
+      }
+      .hero-sub{
+        font-size:1rem;
+        line-height:1.55;
+      }
+      .hero-actions{
+        flex-direction:column;
+      }
       .btn{width:100%}
+      .trust-row{
+        gap:8px;
+      }
+      .trust-pill{
+        width:fit-content;
+        max-width:100%;
+      }
+      .section-head h2{
+        font-size:clamp(1.6rem,9vw,2.2rem);
+      }
     }
   </style>
 </head>
@@ -320,97 +358,43 @@
             Erste Klarheit für Eltern in Drucksituationen
           </div>
 
-          <h1>Wenn Jugendamt, Gericht oder Gutachten Druck machen, darfst du nicht blind reagieren.</h1>
+          <h1>Wenn Jugendamt oder Gericht Druck machen, brauchst du Klarheit.</h1>
 
           <p class="hero-sub">
-            Mit dem Fallcheck ordnest du deine Lage in wenigen Minuten ein.
+            Der Fallcheck ordnet deine Lage ein und zeigt dir den nächsten sinnvollen Schritt.
             Ob Schreiben, Beschluss, Gutachten, Akteneinsicht oder Protokollfehler:
-            Du bekommst eine klare Ersteinschätzung, den nächsten sinnvollen Schritt
-            und die passende Empfehlung statt Chaos.
+            Du bekommst schneller Orientierung statt Chaos.
           </p>
 
-          <div class="hero-grid">
-            <div class="hero-main">
-              <div class="cta-group">
-                <a class="btn btn-primary" href="https://herzensweg-finder.lovable.app/analyse">
-                  Fall jetzt prüfen
-                </a>
-                <a class="btn btn-secondary" href="#so-funktioniert-es">
-                  So funktioniert’s
-                </a>
-              </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://herzensweg-finder.lovable.app/analyse">Fall jetzt prüfen</a>
+            <a class="btn btn-secondary" href="#so-funktioniert-es">So funktioniert’s</a>
+          </div>
 
-              <div class="trust-row">
-                <div class="trust-pill">klarer Einstieg statt Überforderung</div>
-                <div class="trust-pill">anonym nutzbar</div>
-                <div class="trust-pill">passende Empfehlung statt Rätselraten</div>
-              </div>
+          <div class="trust-row">
+            <div class="trust-pill">klarer Einstieg statt Überforderung</div>
+            <div class="trust-pill">anonym nutzbar</div>
+            <div class="trust-pill">passende Empfehlung statt Rätselraten</div>
+          </div>
 
-              <p class="hero-note">
-                Diese Seite ist kein juristisches Labyrinth und kein Produktfriedhof.
-                Sie bringt dich zuerst in Klarheit — und zeigt dir dann den nächsten sinnvollen Weg.
-              </p>
+          <div class="quick-grid">
+            <div class="quick-card">
+              <div class="quick-icon">✉</div>
+              <h3>Schreiben verstehen</h3>
+              <p>Wenn du Post vom Jugendamt oder Gericht bekommen hast und sauber reagieren willst.</p>
             </div>
 
-            <aside class="hero-side">
-              <h2 class="mini-title">Wofür der Fallcheck gedacht ist</h2>
-              <div class="mini-list">
-                <div class="mini-item">
-                  <div class="mini-icon">✉</div>
-                  <div><strong>Schreiben verstehen</strong><br>Wenn du Post vom Jugendamt oder Gericht bekommen hast.</div>
-                </div>
-                <div class="mini-item">
-                  <div class="mini-icon">⚖</div>
-                  <div><strong>Beschluss durchsetzen</strong><br>Wenn trotz Regelung nichts passiert oder Absprachen nicht eingehalten werden.</div>
-                </div>
-                <div class="mini-item">
-                  <div class="mini-icon">🔎</div>
-                  <div><strong>Gutachten, Akte oder Protokoll prüfen</strong><br>Wenn du früh erkennen willst, ob du aktiv werden musst.</div>
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="quick-card">
+              <div class="quick-icon">⚖</div>
+              <h3>Beschluss durchsetzen</h3>
+              <p>Wenn trotz Regelung nichts passiert oder Absprachen weiter nicht eingehalten werden.</p>
+            </div>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Die meisten Eltern verlieren nicht zuerst vor Gericht. Sie verlieren Zeit, Klarheit und Kontrolle.</h2>
-          <p>
-            Mal ist es nur ein Schreiben. Mal ist es längst mehr: Umgang wird blockiert,
-            ein Beschluss wird ignoriert, ein Gutachten steht im Raum oder in der Akte steckt mehr als gedacht.
-            Der schnellste sinnvolle Schritt ist nicht hektische Reaktion — sondern saubere Einordnung.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card">
-            <div class="problem-icon">✉</div>
-            <h3>Schreiben & Fristen</h3>
-            <p>
-              Du willst verstehen, was ein Schreiben bedeutet, worauf du achten musst
-              und wie du sauber reagierst, bevor Fehler dich später einholen.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="problem-icon">⚖</div>
-            <h3>Beschlüsse & Umgang</h3>
-            <p>
-              Es gibt schon Regelungen oder Absprachen, aber praktisch wird weiter geblockt,
-              verschoben oder ignoriert.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="problem-icon">🧠</div>
-            <h3>Gutachten, Akten & Protokolle</h3>
-            <p>
-              Du willst früh erkennen, ob ein Gutachten problematisch wird,
-              Akteneinsicht nötig ist oder Aussagen falsch protokolliert wurden.
-            </p>
+            <div class="quick-card">
+              <div class="quick-icon">🔎</div>
+              <h3>Gutachten, Akte oder Protokoll</h3>
+              <p>Wenn du früh erkennen willst, ob du aktiv werden musst und wo der Hebel liegt.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -421,8 +405,8 @@
         <div class="section-head">
           <h2>So funktioniert der Fallcheck</h2>
           <p>
-            Kein unnötiges Gelaber. Kein blindes Klicken. Du gehst kurz durch die Analyse,
-            schilderst deine Lage und bekommst daraus eine klare erste Richtung.
+            Kein unnötiges Gelaber. Kein blindes Klicken.
+            Du gehst kurz durch die Analyse und bekommst daraus eine klare erste Richtung.
           </p>
         </div>
 
@@ -430,28 +414,19 @@
           <div class="step">
             <div class="step-no">1</div>
             <h3>Thema auswählen</h3>
-            <p>
-              Wähle, was gerade am dringendsten ist: Schreiben, Beschluss, Gespräch,
-              Gutachten, Akteneinsicht oder Protokollfehler.
-            </p>
+            <p>Wähle, was gerade am dringendsten ist: Schreiben, Beschluss, Gutachten, Akte oder Protokoll.</p>
           </div>
 
           <div class="step">
             <div class="step-no">2</div>
             <h3>Situation eingeben</h3>
-            <p>
-              Beschreibe kurz deine Lage. So erkennt die Analyse,
-              worum es tatsächlich geht und welcher Schritt jetzt am meisten Sinn macht.
-            </p>
+            <p>Beschreibe kurz deine Lage. So erkennt die Analyse, worum es tatsächlich geht.</p>
           </div>
 
           <div class="step">
             <div class="step-no">3</div>
             <h3>Nächsten Schritt sehen</h3>
-            <p>
-              Du bekommst eine Einordnung, Hinweise, den nächsten sinnvollen Schritt
-              und direkt die passende Empfehlung für deinen Fall.
-            </p>
+            <p>Du bekommst eine Einordnung, Hinweise und direkt die passende Empfehlung für deinen Fall.</p>
           </div>
         </div>
       </div>
@@ -459,24 +434,20 @@
 
     <section class="section">
       <div class="wrap">
-        <div class="secondary-box">
+        <div class="cta-box">
           <div>
             <h2>Wenn deine Lage größer ist als nur ein einzelnes Problem</h2>
             <p>
-              Manche Fälle sind nicht nur ein Brief oder eine Frage,
-              sondern eine ganze Lage mit mehreren Baustellen.
-              Genau dann ist das <strong>Elternschutzpaket</strong> die logische Zweitempfehlung —
+              Manche Fälle sind nicht nur ein Schreiben oder eine kurze Rückfrage,
+              sondern eine ganze Lage mit mehreren Baustellen. Genau dann ist das
+              <strong>Elternschutzpaket</strong> die logische Zweitempfehlung —
               für mehr Struktur, mehr Übersicht und weniger blinde Reaktion.
             </p>
           </div>
 
-          <div class="secondary-actions">
-            <a class="btn btn-primary" href="https://herzensweg-finder.lovable.app/analyse">
-              Analyse starten
-            </a>
-            <a class="btn btn-secondary" href="https://www.rebellsystem.de/elternschutzpaket-produkt.html">
-              Elternschutzpaket ansehen
-            </a>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://herzensweg-finder.lovable.app/analyse">Analyse starten</a>
+            <a class="btn btn-secondary" href="https://www.rebellsystem.de/elternschutzpaket-produkt.html">Elternschutzpaket ansehen</a>
           </div>
         </div>
       </div>
