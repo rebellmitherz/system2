@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Jugendamt-Antworten – Sichere Vorlage für Eltern | Rebell mit Herz</title>
+  <meta name="description" content="Sichere Vorlage für Eltern, um ruhig, sachlich und strukturiert an das Jugendamt zu antworten – sofort nutzbar, direkt anwendbar, klar formuliert." />
+  <style>
+    :root{
+      --bg:#f7f7f5;
+      --card:#ffffff;
+      --text:#1f1f1f;
+      --muted:#676767;
+      --line:#ece8df;
+      --accent:#f0ab47;
+      --accent-hover:#e39b34;
+      --soft:#fbf8f2;
+      --shadow:0 12px 32px rgba(0,0,0,.08);
+      --shadow-soft:0 8px 22px rgba(0,0,0,.05);
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+    .section{padding:28px 0}
+    .hero{padding:26px 0 18px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 14px;border-radius:999px;
+      border:1px solid #e9ddc6;background:#fffaf0;
+      color:#6b5632;font-weight:700;font-size:.92rem;
+    }
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.02em;margin:0}
+    h1{font-size:clamp(2.2rem,8vw,4.6rem);line-height:.96;margin-top:14px}
+    .sub{
+      max-width:760px;margin:16px 0 0;color:var(--muted);
+      font-size:clamp(1rem,4.3vw,1.22rem);line-height:1.6;
+    }
+
+    .hero-grid{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch;margin-top:20px;
+    }
+
+    .card{
+      background:var(--card);border:1px solid var(--line);
+      border-radius:24px;box-shadow:var(--shadow);padding:24px;
+    }
+
+    .price-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:#fdf4e2;border:1px solid #edd4a5;
+      color:#6d5427;padding:8px 12px;border-radius:999px;
+      font-size:.92rem;font-weight:800;margin-bottom:12px;
+    }
+
+    .price{
+      font-size:2.3rem;font-weight:900;line-height:1;margin:8px 0 6px;
+    }
+
+    .small-muted{color:#8a8a8a;font-size:.94rem;line-height:1.5}
+    .checks{display:grid;gap:12px;margin:18px 0 22px}
+    .check{display:flex;gap:12px;align-items:flex-start;color:#444;line-height:1.55}
+    .check span:first-child{font-size:1.02rem;flex:0 0 22px;text-align:center}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:100%;min-height:58px;padding:16px 18px;
+      border-radius:18px;text-decoration:none;font-weight:900;font-size:1.05rem;
+      border:none;cursor:pointer;transition:.2s ease;
+    }
+    .btn-primary{
+      background:var(--accent);box-shadow:0 10px 22px rgba(240,171,71,.28);
+    }
+    .btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+    .btn-secondary{
+      background:#fbf8f2;border:1px solid #ddd3c3;
+    }
+    .btn-secondary:hover{background:#f4eee3;transform:translateY(-1px)}
+
+    .hero-note{
+      margin-top:12px;color:#7c7c7c;font-size:.92rem;line-height:1.5;text-align:center;
+    }
+
+    .doc-preview{
+      background:linear-gradient(180deg,#fff,#fbfaf7);
+      border:1px solid var(--line);border-radius:24px;padding:22px;
+      box-shadow:var(--shadow-soft);height:100%;
+    }
+    .doc-window{
+      background:#fff;border:1px solid #e9e4da;border-radius:18px;padding:18px 16px;
+      box-shadow:0 8px 16px rgba(0,0,0,.04);
+    }
+    .doc-line{height:10px;background:#f1ede4;border-radius:999px;margin:10px 0}
+    .doc-line.w80{width:80%}.doc-line.w65{width:65%}.doc-line.w92{width:92%}.doc-line.w55{width:55%}
+    .doc-title{font-weight:800;font-size:1.05rem;margin-bottom:12px}
+    .doc-pill{
+      display:inline-flex;padding:6px 10px;border-radius:999px;
+      font-size:.82rem;font-weight:800;background:#fff6e8;border:1px solid #ecd6ab;color:#755826;
+      margin-bottom:12px;
+    }
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .info-card{
+      background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow-soft)
+    }
+    .info-card h3{font-size:1.22rem;margin-bottom:10px}
+    .info-card p{margin:0;color:var(--muted);line-height:1.58}
+    .icon-box{
+      width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+      background:#fff6e8;border:1px solid #ecd6ab;font-size:1.15rem;margin-bottom:12px;
+    }
+
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .list{
+      display:grid;gap:12px;margin-top:16px;
+    }
+    .list-item{
+      background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;
+      line-height:1.55;color:#454545;
+    }
+
+    .quote{
+      background:var(--soft);border:1px solid #e5dccd;border-radius:18px;padding:16px 18px;
+      color:#454545;line-height:1.6
+    }
+
+    .cta-box{
+      background:linear-gradient(180deg,#fff,#fbf8f1);
+      border:1px solid var(--line);border-radius:28px;
+      padding:26px;box-shadow:var(--shadow);text-align:center;
+    }
+    .cta-box h2{font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.06}
+    .cta-box p{max-width:760px;margin:12px auto 18px;color:var(--muted);line-height:1.62}
+    .cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:760px;margin:0 auto}
+
+    footer{
+      padding:20px 0 34px;color:#6f6f6f;font-size:.93rem;text-align:center
+    }
+
+    @media (max-width:900px){
+      .hero-grid,.grid-3,.split,.cta-actions{grid-template-columns:1fr}
+      .card,.doc-preview,.cta-box,.info-card{padding:20px}
+      .wrap{width:min(var(--max),calc(100% - 22px))}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Rebell mit Herz · Direkt nutzbares Produkt für Eltern</div>
+        <h1>Jugendamt-Antworten</h1>
+        <p class="sub">
+          Eine <strong>sichere Vorlage für Eltern</strong>, die auf Schreiben vom Jugendamt
+          <strong>ruhig, sachlich und strukturiert</strong> antworten wollen – ohne unnötige Emotionen,
+          ohne Chaos und ohne sich später selbst zu schaden.
+        </p>
+
+        <div class="hero-grid">
+          <div class="card">
+            <div class="price-badge">Sofort nutzbar · Direkt anwendbar · Klar formuliert</div>
+            <div class="price">9,95 €</div>
+            <p class="small-muted">
+              Digitale Vorlage inkl. Formulierungen, Beispielen und Mini-Leitfaden für Eltern
+              im Kontakt mit Jugendamt oder Gericht.
+            </p>
+
+            <div class="checks">
+              <div class="check"><span>✓</span><span>Ruhige, klare und strategische Antwortstruktur statt emotionalem Chaos</span></div>
+              <div class="check"><span>✓</span><span>Sofort einsetzbare Vorlage mit Platzhaltern, die du direkt anpassen kannst</span></div>
+              <div class="check"><span>✓</span><span>Zusätzliche Formulierungen, die Gespräche mit dem Jugendamt spürbar ruhiger machen</span></div>
+              <div class="check"><span>✓</span><span>Ideal, wenn du schriftlich sauber bleiben willst und Dokumentation wichtig ist</span></div>
+            </div>
+
+            <a class="btn btn-primary" href="https://buy.stripe.com/6oUcN78cs3jr8Hy8iZ8og0b" target="_blank" rel="noopener">
+              JETZT SICHERN
+            </a>
+            <div class="hero-note">Ersetze den Link oben nur noch mit deinem Stripe-Link oder Kauf-Link.</div>
+          </div>
+
+          <div class="doc-preview">
+            <div class="doc-pill">Auszug aus dem Elternschutz-Kompass</div>
+            <div class="doc-window">
+              <div class="doc-title">Antwort an das Jugendamt</div>
+              <div class="doc-line w80"></div>
+              <div class="doc-line w92"></div>
+              <div class="doc-line w65"></div>
+              <div class="doc-line w92"></div>
+              <div class="doc-line w55"></div>
+              <div class="doc-line w80"></div>
+              <div class="doc-line w65"></div>
+            </div>
+            <div class="hero-note" style="text-align:left;margin-top:14px;">
+              Für Eltern, die nicht impulsiv reagieren wollen, sondern schriftlich
+              <strong>ruhig, klar und dokumentierbar</strong> auftreten möchten.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid-3">
+        <div class="info-card">
+          <div class="icon-box">✉️</div>
+          <h3>Was du bekommst</h3>
+          <p>
+            Eine fertige Antwort-Vorlage für das Jugendamt mit klarer Struktur,
+            konkreten Fragen und professioneller Grundhaltung.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon-box">🧭</div>
+          <h3>Wofür es gedacht ist</h3>
+          <p>
+            Wenn du ein Schreiben bekommen hast und nicht weißt, wie du
+            ruhig, sachlich und strategisch antworten sollst.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon-box">🛡️</div>
+          <h3>Warum es hilft</h3>
+          <p>
+            Weil spontane und emotionale Antworten später oft gegen Eltern
+            ausgelegt werden. Diese Vorlage hält dich klar und sauber.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="card">
+          <h2>Das Problem ist selten nur das Schreiben</h2>
+          <p class="sub" style="margin:12px 0 0;max-width:none;">
+            Viele Eltern reagieren spontan, rechtfertigen sich zu lang oder schreiben emotional.
+            Genau das kann später in Akten, Gesprächen oder Verfahren gegen sie laufen.
+          </p>
+
+          <div class="list">
+            <div class="list-item">Zu lange oder ausschweifende Texte</div>
+            <div class="list-item">Emotionale oder vorwurfsvolle Formulierungen</div>
+            <div class="list-item">Rechtfertigungen statt klarer Struktur</div>
+            <div class="list-item">Zu wenig konkrete Fragen an das Jugendamt</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Diese Vorlage bringt dich zurück in Kontrolle</h2>
+          <p class="sub" style="margin:12px 0 0;max-width:none;">
+            Du bekommst eine Struktur, mit der du schriftlich ruhig bleibst, konkrete Informationen verlangst
+            und gleichzeitig kooperativ wirkst – ohne dich klein zu machen.
+          </p>
+
+          <div class="list">
+            <div class="list-item">Kurz und sachlich antworten</div>
+            <div class="list-item">Keine unnötigen Emotionen oder Vorwürfe</div>
+            <div class="list-item">Klare Fragen und konkrete Bitten um Klärung</div>
+            <div class="list-item">Saubere Dokumentation für spätere Verfahren</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="card">
+          <h2>Das ist enthalten</h2>
+          <div class="list">
+            <div class="list-item"><strong>Fertige Antwort-Vorlage</strong><br>Mit Betreff, Aufbau und Formulierungslogik.</div>
+            <div class="list-item"><strong>Konkrete Beispiel-Fragen</strong><br>Damit du Informationen, Unterlagen und nächste Schritte sauber anforderst.</div>
+            <div class="list-item"><strong>Mini-Leitfaden</strong><br>Wie du ruhig, klar und strategisch mit dem Jugendamt kommunizierst.</div>
+            <div class="list-item"><strong>10 Zusatz-Formulierungen</strong><br>Für Gespräche und schriftliche Kommunikation.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Beispiel für die Richtung</h2>
+          <div class="quote">
+            <strong>„Könnten Sie bitte konkretisieren, worauf sich diese Einschätzung stützt?“</strong><br><br>
+            <strong>„Welche konkreten Schritte schlagen Sie für die weitere Klärung vor?“</strong><br><br>
+            <strong>„Ich bitte darum, diese Punkte kurz schriftlich festzuhalten.“</strong>
+          </div>
+          <p class="small-muted" style="margin-top:14px;">
+            Genau solche Formulierungen helfen dir, ruhig zu bleiben und gleichzeitig klar aufzutreten.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap cta-box">
+        <h2>Wenn du nicht impulsiv reagieren willst,<br>sondern schriftlich sauber bleiben musst</h2>
+        <p>
+          Dann ist <strong>Jugendamt-Antworten</strong> der schnellste Einstieg.
+          Du bekommst eine direkt nutzbare Vorlage, klare Formulierungen und eine Struktur,
+          die dir sofort hilft.
+        </p>
+
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://buy.stripe.com/6oUcN78cs3jr8Hy8iZ8og0b" target="_blank" rel="noopener">
+            JETZT FÜR 9,95 € SICHERN
+          </a>
+          <a class="btn btn-secondary" href="https://elternratgeber-klarheit.lovable.app/" target="_blank" rel="noopener">
+            ERST ANALYSE STARTEN
+          </a>
+        </div>
+
+        <div class="hero-note">
+          Wenn du merkst, dass dein Problem größer ist als nur ein einzelnes Schreiben,
+          starte zuerst die Analyse oder sieh dir später den Elternschutz-Kompass an.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        © Rebell mit Herz · Empfohlener Dateiname:
+        <strong>jugendamt-antworten.html</strong>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

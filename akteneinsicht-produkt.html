@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Akteneinsicht PRO | Rebell mit Herz</title>
+  <meta name="description" content="Fordere vollständige Akteneinsicht beim Jugendamt oder Familiengericht. Mit strategischer PRO-Vorlage für Transparenz, Fehlererkennung, Gegendarstellung und nächste Schritte." />
+  <style>
+    :root{
+      --bg:#f7f7f5;
+      --card:#ffffff;
+      --text:#1f1f1f;
+      --muted:#676767;
+      --line:#ece8df;
+      --accent:#f0ab47;
+      --accent-hover:#e39b34;
+      --soft:#fbf8f2;
+      --shadow:0 12px 32px rgba(0,0,0,.08);
+      --shadow-soft:0 8px 22px rgba(0,0,0,.05);
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+    .section{padding:28px 0}
+    .hero{padding:26px 0 18px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 14px;border-radius:999px;
+      border:1px solid #e9ddc6;background:#fffaf0;
+      color:#6b5632;font-weight:700;font-size:.92rem;
+    }
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.02em;margin:0}
+    h1{font-size:clamp(2.2rem,8vw,4.5rem);line-height:.96;margin-top:14px}
+    .sub{
+      max-width:780px;margin:16px 0 0;color:var(--muted);
+      font-size:clamp(1rem,4.3vw,1.22rem);line-height:1.6;
+    }
+
+    .hero-grid{
+      display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:stretch;margin-top:20px;
+    }
+
+    .card{
+      background:var(--card);border:1px solid var(--line);
+      border-radius:24px;box-shadow:var(--shadow);padding:24px;
+    }
+
+    .price-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:#fdf4e2;border:1px solid #edd4a5;
+      color:#6d5427;padding:8px 12px;border-radius:999px;
+      font-size:.92rem;font-weight:800;margin-bottom:12px;
+    }
+
+    .price{
+      font-size:2.3rem;font-weight:900;line-height:1;margin:8px 0 6px;
+    }
+
+    .small-muted{color:#8a8a8a;font-size:.94rem;line-height:1.5}
+    .checks{display:grid;gap:12px;margin:18px 0 22px}
+    .check{display:flex;gap:12px;align-items:flex-start;color:#444;line-height:1.55}
+    .check span:first-child{font-size:1.02rem;flex:0 0 22px;text-align:center}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:100%;min-height:58px;padding:16px 18px;
+      border-radius:18px;text-decoration:none;font-weight:900;font-size:1.05rem;
+      border:none;cursor:pointer;transition:.2s ease;
+    }
+    .btn-primary{
+      background:var(--accent);box-shadow:0 10px 22px rgba(240,171,71,.28);
+    }
+    .btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+    .btn-secondary{
+      background:#fbf8f2;border:1px solid #ddd3c3;
+    }
+    .btn-secondary:hover{background:#f4eee3;transform:translateY(-1px)}
+
+    .hero-note{
+      margin-top:12px;color:#7c7c7c;font-size:.92rem;line-height:1.5;text-align:center;
+    }
+
+    .doc-preview{
+      background:linear-gradient(180deg,#fff,#fbfaf7);
+      border:1px solid var(--line);border-radius:24px;padding:22px;
+      box-shadow:var(--shadow-soft);height:100%;
+    }
+    .doc-window{
+      background:#fff;border:1px solid #e9e4da;border-radius:18px;padding:18px 16px;
+      box-shadow:0 8px 16px rgba(0,0,0,.04);
+    }
+    .doc-line{height:10px;background:#f1ede4;border-radius:999px;margin:10px 0}
+    .doc-line.w80{width:80%}.doc-line.w65{width:65%}.doc-line.w92{width:92%}.doc-line.w55{width:55%}.doc-line.w72{width:72%}
+    .doc-title{font-weight:800;font-size:1.05rem;margin-bottom:12px}
+    .doc-pill{
+      display:inline-flex;padding:6px 10px;border-radius:999px;
+      font-size:.82rem;font-weight:800;background:#fff6e8;border:1px solid #ecd6ab;color:#755826;
+      margin-bottom:12px;
+    }
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .info-card{
+      background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow-soft)
+    }
+    .info-card h3{font-size:1.22rem;margin-bottom:10px}
+    .info-card p{margin:0;color:var(--muted);line-height:1.58}
+    .icon-box{
+      width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+      background:#fff6e8;border:1px solid #ecd6ab;font-size:1.15rem;margin-bottom:12px;
+    }
+
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .list{
+      display:grid;gap:12px;margin-top:16px;
+    }
+    .list-item{
+      background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;
+      line-height:1.55;color:#454545;
+    }
+
+    .quote{
+      background:var(--soft);border:1px solid #e5dccd;border-radius:18px;padding:16px 18px;
+      color:#454545;line-height:1.6
+    }
+
+    .danger-box{
+      background:#fff7f2;border:1px solid #f0d8c8;border-radius:20px;padding:18px 18px;margin-top:16px;
+      color:#5a463e;line-height:1.6;
+    }
+
+    .cta-box{
+      background:linear-gradient(180deg,#fff,#fbf8f1);
+      border:1px solid var(--line);border-radius:28px;
+      padding:26px;box-shadow:var(--shadow);text-align:center;
+    }
+    .cta-box h2{font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.06}
+    .cta-box p{max-width:760px;margin:12px auto 18px;color:var(--muted);line-height:1.62}
+    .cta-actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:760px;margin:0 auto}
+
+    footer{
+      padding:20px 0 34px;color:#6f6f6f;font-size:.93rem;text-align:center
+    }
+
+    @media (max-width:900px){
+      .hero-grid,.grid-3,.split,.cta-actions{grid-template-columns:1fr}
+      .card,.doc-preview,.cta-box,.info-card{padding:20px}
+      .wrap{width:min(var(--max),calc(100% - 22px))}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Rebell mit Herz · Direkt nutzbares Produkt für Eltern</div>
+        <h1>Akteneinsicht PRO</h1>
+        <p class="sub">
+          Fordere endlich vollständig an, <strong>was Jugendamt oder Gericht wirklich über dich gespeichert haben</strong>.
+          Nicht nur Berichte – sondern auch E-Mails, Vermerke, Anhänge, Versionen, Metadaten und die Kommunikation,
+          auf deren Basis später über dein Kind entschieden wird.
+        </p>
+
+        <div class="hero-grid">
+          <div class="card">
+            <div class="price-badge">PRO-Vorlage · Strategisch aufgebaut · Sofort nutzbar</div>
+            <div class="price">9,95 €</div>
+            <p class="small-muted">
+              Für Eltern, die nicht länger im Dunkeln tappen wollen. Diese Vorlage hilft dir,
+              vollständige Akteneinsicht sauber anzufordern, Lücken zu erkennen und problematische
+              Einträge später gezielt anzugreifen.
+            </p>
+
+            <div class="checks">
+              <div class="check"><span>✓</span><span>Du forderst nicht nur „die Akte“, sondern auch E-Mails, Anhänge, Entwürfe, Versionen und Metadaten</span></div>
+              <div class="check"><span>✓</span><span>Du nutzt Jugendamt und Gericht strategisch getrennt und sauber</span></div>
+              <div class="check"><span>✓</span><span>Du erkennst später schneller, wo manipuliert, weggelassen oder einseitig formuliert wurde</span></div>
+              <div class="check"><span>✓</span><span>Du bekommst die Grundlage für Gegendarstellung, Rüge und weitere Schritte</span></div>
+            </div>
+
+            <a class="btn btn-primary" href="https://buy.stripe.com/eVqbJ378og6d0b2ar78og0e" target="_blank" rel="noopener">
+              JETZT FÜR 9,95 € SICHERN
+            </a>
+            <div class="hero-note">Direkter Kauf über Stripe · Sofort digital nutzbar</div>
+          </div>
+
+          <div class="doc-preview">
+            <div class="doc-pill">Mehr als nur ein Standard-Antrag</div>
+            <div class="doc-window">
+              <div class="doc-title">Antrag auf vollständige Akteneinsicht</div>
+              <div class="doc-line w80"></div>
+              <div class="doc-line w92"></div>
+              <div class="doc-line w65"></div>
+              <div class="doc-line w92"></div>
+              <div class="doc-line w72"></div>
+              <div class="doc-line w55"></div>
+              <div class="doc-line w80"></div>
+            </div>
+            <div class="hero-note" style="text-align:left;margin-top:14px;">
+              Für Eltern, die endlich sehen wollen, <strong>welche Berichte, Vermerke und E-Mails wirklich in der Akte stehen</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid-3">
+        <div class="info-card">
+          <div class="icon-box">👁️</div>
+          <h3>Was du bekommst</h3>
+          <p>
+            Eine PRO-Vorlage für Akteneinsicht beim Jugendamt und beim Familiengericht –
+            mit klaren Formulierungen, Fristenlogik und strategischen Zusätzen.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon-box">📂</div>
+          <h3>Was du anforderst</h3>
+          <p>
+            Nicht nur die offensichtlichen Unterlagen, sondern auch Vermerke, Telefonnotizen,
+            E-Mails, Anhänge, Entwürfe, Versionen und Metadaten.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon-box">⚠️</div>
+          <h3>Warum das wichtig ist</h3>
+          <p>
+            Weil fehlerhafte oder einseitige Akten oft die Grundlage für Berichte,
+            Gutachten und Entscheidungen werden – und du das meist zu spät merkst.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="card">
+          <h2>Die eigentliche Gefahr ist nicht nur das, was drinsteht</h2>
+          <p class="sub" style="margin:12px 0 0;max-width:none;">
+            Oft ist das Problem nicht nur ein falscher Satz in der Akte.
+            Das eigentliche Problem ist, dass dir Dinge gar nicht gezeigt werden:
+            fehlende E-Mails, verschwundene Anhänge, keine Telefonvermerke,
+            geänderte Versionen oder einseitige Zusammenfassungen.
+          </p>
+
+          <div class="list">
+            <div class="list-item">Berichte mit wertenden Aussagen statt Fakten</div>
+            <div class="list-item">Telefonnotizen nur zur anderen Seite, aber nicht zu dir</div>
+            <div class="list-item">E-Mails oder Anhänge, die plötzlich „fehlen“</div>
+            <div class="list-item">Entwürfe und Versionen, die Änderungen sichtbar machen würden</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Akteneinsicht gibt dir wieder Kontrolle</h2>
+          <p class="sub" style="margin:12px 0 0;max-width:none;">
+            Diese Vorlage ist nicht nur dafür da, irgendetwas anzufordern.
+            Sie ist dafür gebaut, <strong>vollständige Transparenz</strong> zu verlangen,
+            Lücken zu erkennen und dir die Basis für deine nächsten Schritte zu geben.
+          </p>
+
+          <div class="list">
+            <div class="list-item">Vollständig statt oberflächlich anfordern</div>
+            <div class="list-item">Mit klarer Fristenlogik arbeiten</div>
+            <div class="list-item">Nach Erhalt strukturiert Fehler markieren</div>
+            <div class="list-item">Gegendarstellung und Rüge vorbereiten</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="card">
+          <h2>Das ist enthalten</h2>
+          <div class="list">
+            <div class="list-item"><strong>Vorlage für Akteneinsicht beim Jugendamt</strong><br>Mit sauberer Struktur und erweiterten Anforderungen auf Daten, Unterlagen und Dokumentation.</div>
+            <div class="list-item"><strong>Vorlage für Akteneinsicht beim Familiengericht</strong><br>Damit du auch gerichtliche Unterlagen vollständig anforderst.</div>
+            <div class="list-item"><strong>Fristenlogik und Erinnerung</strong><br>Damit du nicht wartest, sondern rechtzeitig nachfasst und Druck aufbaust.</div>
+            <div class="list-item"><strong>Strategie nach Erhalt der Akte</strong><br>Mit System, um Fehler, Widersprüche und Lücken sichtbar zu machen.</div>
+            <div class="list-item"><strong>Grundlage für Gegendarstellung und weitere Schritte</strong><br>Damit du nach der Akteneinsicht nicht wieder bei null anfängst.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Was diese Vorlage besser macht als Standardmuster</h2>
+          <div class="quote">
+            Standardmuster fordern oft nur pauschal „Akteneinsicht“ an.<br><br>
+            Diese PRO-Vorlage geht weiter und zielt auf genau die Punkte,
+            die sonst gern fehlen: <strong>E-Mails, Anhänge, Entwürfe, Versionen,
+            Metadaten und externe Kommunikation</strong>.
+          </div>
+
+          <div class="danger-box">
+            <strong>Genau da liegt oft der Hebel:</strong><br>
+            Nicht nur lesen, was man dir zeigt – sondern erkennen, <strong>was man dir nicht zeigen wollte</strong>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="card">
+          <h2>Für wen dieses Produkt gemacht ist</h2>
+          <div class="list">
+            <div class="list-item">Für Eltern, die Berichte oder Entscheidungen nicht mehr blind hinnehmen wollen</div>
+            <div class="list-item">Für Eltern, die vermuten, dass die Akte einseitig oder lückenhaft ist</div>
+            <div class="list-item">Für Eltern, die vor einem Termin oder Verfahren endlich Klarheit brauchen</div>
+            <div class="list-item">Für Eltern, die nach Erhalt der Akte gezielt weiterarbeiten wollen</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Was du damit konkret erreichst</h2>
+          <div class="list">
+            <div class="list-item">Du holst Informationen raus, bevor andere damit über dich entscheiden</div>
+            <div class="list-item">Du erkennst Fehler, Auslassungen und Wertungen früher</div>
+            <div class="list-item">Du schaffst eine Basis für Gegendarstellung und gerichtliche Einwände</div>
+            <div class="list-item">Du gehst vorbereitet in den nächsten Schritt statt im Nebel zu bleiben</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div class="card">
+          <h2>Typische Situationen, in denen diese Vorlage Gold wert ist</h2>
+          <div class="list">
+            <div class="list-item">Nach einem Gespräch beim Jugendamt, bei dem du ein komisches Gefühl hast</div>
+            <div class="list-item">Wenn plötzlich ein Bericht auftaucht, der nicht zu deiner Realität passt</div>
+            <div class="list-item">Vor einem Gerichtstermin, wenn du wissen willst, was schon in der Akte liegt</div>
+            <div class="list-item">Nach einem Gutachten oder bei Verdacht auf selektive Darstellung</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Der eigentliche Nutzen</h2>
+          <p class="sub" style="margin:12px 0 0;max-width:none;">
+            Mit dieser Vorlage kaufst du nicht einfach Papier.
+            Du kaufst dir den Zugriff auf die Grundlage, mit der andere über dich urteilen.
+            Und genau das ist der Punkt, an dem viele Verfahren kippen.
+          </p>
+
+          <div class="danger-box">
+            Wer die Akte nicht kennt, reagiert immer zu spät.<br>
+            Wer die Akte kennt, kann Fehler markieren, Gegendarstellungen bauen
+            und den Verlauf viel besser kontrollieren.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap cta-box">
+        <h2>Wenn du nicht weißt, was in der Akte steht,<br>kämpfst du gegen Schatten</h2>
+        <p>
+          Mit <strong>Akteneinsicht PRO</strong> forderst du nicht nur Unterlagen an,
+          sondern holst dir die Grundlage zurück, auf der über dich und dein Kind entschieden wird.
+        </p>
+
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://buy.stripe.com/eVqbJ378og6d0b2ar78og0e" target="_blank" rel="noopener">
+            JETZT FÜR 9,95 € SICHERN
+          </a>
+          <a class="btn btn-secondary" href="elternschutzpaket.html">
+            ZUM ELTERNSCHUTZPAKET
+          </a>
+        </div>
+
+        <div class="hero-note">
+          Wenn dein Fall insgesamt größer ist und du dein ganzes Vorgehen absichern willst,
+          ist das Elternschutzpaket der logische nächste Schritt.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        © Rebell mit Herz · Dateiname:
+        <strong>akteneinsicht.html</strong>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
